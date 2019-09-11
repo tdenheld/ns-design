@@ -30,8 +30,8 @@ $(function () {
 function mouseFollow() {
     const obj = '.js-mouse-follower';
 
-    function follow(obj, x, y) {
-        TweenMax.to(obj, 0.7, {
+    function follow(obj, x, y, t) {
+        TweenMax.to(obj, t, {
             x: x,
             y: y,
             ease: Power4.easeOut
@@ -48,15 +48,16 @@ function mouseFollow() {
     }
 
     if ($(obj)[0]) {
-        $(document).mouseenter(() => {
-            fade(obj, 0, 1, 0.05);
+        $(document).mouseenter((e) => {
+            fade(obj, 0, 1, 0.1);
+            follow(obj, e.clientX, e.clientY, 0);
         });
         $(document).mouseleave(() => {
             fade(obj, 1, 0, 0.7);
         })
-        $(document).mousemove((event) => {
+        $(document).mousemove((e) => {
             requestAnimationFrame(() => {
-                follow(obj, event.clientX, event.clientY);
+                follow(obj, e.clientX, e.clientY, 0.7);
             });
         });
     }
