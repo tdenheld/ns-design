@@ -1,0 +1,28 @@
+<a href="{{ result.url }}"
+    class="unlink abo-tile {% if result.highlight %}abo-tile--hightlight{% endif %} a a-fi a-stag">
+    {% if result.highlight %}
+    <div class="abo-tile__highlight">
+        {{ result.highlight }}
+    </div>
+    {% endif %}
+    <div class="abo-tile__grid">
+        <h2 class="abo-tile__heading">{{ entry.title }}</h2>
+        {% if entry.price-message %}
+        <p class="abo-tile__description abo-tile__description--message">{{ entry.price-message }}</p>
+        {% else %}
+        <div class="abo-tile__price">
+            <h3 class="abo-tile__heading">
+                € {{ entry.price }}
+                <span class="abo-tile__description abo-tile__description--period">
+                    / {{ entry.period }}
+                </span>
+            </h3>
+        </div>
+        {% endif %}
+    </div>
+    <ul class="list-tick list-tick--small">
+        {% for detail in entry.details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+    </ul>
+</a>

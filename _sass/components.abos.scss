@@ -1,0 +1,138 @@
+// hero
+// ---------------------------------
+.abo-hero {
+    position: relative;
+    margin-bottom: $gutter;
+    padding: $gutter 0;
+    background: radial-gradient(circle at 75% 50%, #DDF2FF 0%, #B1E0FF 100%);
+    border-bottom: 1px solid rgba($ns-blue, 0.1);
+
+    @include sm {
+        margin-bottom: $one-half-gutter;
+        padding: $double-gutter 0;
+    }
+}
+
+.abo-hero--factuur {
+    margin-bottom: $one-half-gutter;
+
+    @include sm {
+        margin-bottom: $one-half-gutter * 2;
+    }
+}
+
+// grid
+// ---------------------------------
+.abo-grid {
+    display: grid;
+    grid-gap: 21px;
+
+    @include m {
+        grid-gap: $gutter;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// tile
+// ---------------------------------
+.abo-tile {
+    display: block;
+    position: relative;
+    padding: 21px;
+    cursor: pointer;
+    transition: transform 200ms ease-out;
+
+    &:after {
+        content: '';
+        @include full(absolute);
+        z-index: -1;
+        background: $ns-white;
+        box-shadow: 0 3px 6px rgba($ns-blue, 0.08);
+        border-bottom: 2px solid rgba($ns-yellow, 0);
+        border-radius: $border-radius;
+        transform-origin: 50% 50%;
+        transition: all 400ms ease-out;
+    }
+
+    &:hover {
+        transform: scale(1.025);
+
+        &:after {
+            box-shadow: 0 4px 12px rgba($ns-blue, 0.25);
+            border-color: rgba($ns-yellow, 1);
+            transform: scale(1.03);
+        }
+    }
+}
+
+.abo-tile--hightlight {
+    @include m-max {
+        margin-top: 4px;
+    }
+}
+
+.abo-tile__grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.abo-tile__heading {
+    @include font(18px, bold, $lh-title);
+    color: $ns-blue;
+    margin-bottom: 10px;
+
+    @include sm {
+        font-size: toRem(20px);
+    }
+}
+
+.abo-tile__price {
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    text-align: right;
+}
+
+.abo-tile__description {
+    @include font(14px, normal, $lh-title);
+    color: $ns-blue;
+}
+
+.abo-tile__description--message {
+    margin-left: 7px;
+}
+
+.abo-tile__description--period {
+    @media (min-width: 374px) {
+        display: block;
+    }
+}
+
+.abo-tile__highlight {
+    position: absolute;
+    z-index: 1;
+    top: -13px;
+    right: 10px;
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 100px;
+    background-color: $ns-yellow;
+    color: $ns-blue;
+    font-size: toRem(14px);
+}
+
+// abo detail page cta block
+// ----------------------------------------------------------
+.abo-cta {
+    padding: 21px;
+    border: 1px solid $ns-grey-7;
+    box-shadow: $box-shadow-soft;
+
+    @include md-max {
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,76 @@
+/*-------------------
+      Animation
+--------------------*/
+
+$ease:						cubic-bezier(0.700, 0.270, 0.270, 1);
+$easeInOutExpo:				cubic-bezier(1.000, 0.000, 0.000, 1);
+$ease-out:			        cubic-bezier(0.200, 0.900, 0.400, 1);
+$fade-all: 					all 300ms $ease;
+$fade-link:                 all 200ms $ease;
+$loader-speed:              800ms;
+
+
+
+/*-------------------
+    Media queries
+--------------------*/
+
+$xxs: 359px;
+$xs: 480px;
+$sm: 640px;
+$m: 768px;
+$md: 912px;
+$lg: 1200px;
+
+
+
+/*-------------------
+	   Spacers
+--------------------*/
+
+$grid-gutter-width: 28px;
+
+$triple-gutter:				$grid-gutter-width * 3;
+$double-gutter:				$grid-gutter-width * 2;
+$one-half-gutter:			$grid-gutter-width * 1.5;
+
+$gutter:					$grid-gutter-width;
+$half-gutter:				$grid-gutter-width / 2;
+$quarter-gutter:			$grid-gutter-width / 4;
+
+
+
+
+/*-------------------
+      Typography
+--------------------*/
+
+$lh-copy: 1.5;
+$lh-title: 1.25;
+$lh-solid: 1;
+
+
+
+/*-------------------
+         Misc
+--------------------*/
+
+$navbar-height: 			60px;
+$subnav-breakpoint:			822px;
+$button-height:				45px;
+$border-radius:             4px;
+
+$box-shadow-soft:			0 2px 35px rgba($ns-black, 0.1);
+$box-shadow-medium:			0 5px 35px rgba($ns-black, 0.15);
+$box-shadow-hard:			0 5px 35px rgba($ns-black, 0.25);
+$box-shadow-container:		0 1px 0 rgba($ns-grey, 0.15);
+
+$text-shadow-1:				1px 1px 0 rgba($ns-black, 0.5);
+$text-shadow-2:				0 0 50px rgba($ns-black, 0.15), 1px 1px 0 rgba($ns-black, 0.3);
+$text-shadow-tile:			1px 1px 0 rgba($ns-black, 0.35), 0 0 30px rgba($ns-black, 0.25);
+							
+$gradient-tile: 			linear-gradient(to bottom,
+							rgba($ns-black, 0) 0%,
+							rgba($ns-black, 0) 10%,
+							rgba($ns-black, 0.55) 60%,
+                            rgba($ns-black, 0.85) 100%);                            

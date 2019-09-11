@@ -1,0 +1,59 @@
+.h-xxxl,
+.h-xxl,
+.h-xl,
+.h-l,
+.h-m,
+.h-s,
+.h-xs,
+.h-xxs,
+.h-xxxs {
+    color: $ns-blue;
+}
+
+.h-xxxl {
+    @include font-dls(38px, bold, $lh-title);
+
+    @include xs {
+        @include dls(48px);
+    }
+
+    @include sm {
+        @include dls(60px);
+    }
+
+    @include md {
+        @include dls(80px);
+    }
+}
+
+.h-xxl {
+    @include font-dls(38px, bold, $lh-title);
+
+    @include sm {
+        @include dls(56px);
+    }
+
+    @include md {
+        @include dls(72px);
+    }
+}
+
+.h-xl {
+    @include font-dls(38px, bold, $lh-title);
+
+    @include sm {
+        @include dls(48px);
+    }
+
+    @include md {
+        @include dls(60px);
+    }
+}
+
+.h-l {
+    @include font-dls(32px, bold, $lh-title);
+
+    @include sm {
+        @include dls(42px);
+    }
+}

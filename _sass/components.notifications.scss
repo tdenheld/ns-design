@@ -1,0 +1,15 @@
+.tk-notification {
+    margin-bottom: $gutter;
+    padding: 20px;
+    background-color: $ns-white;
+    border-top: 1px solid $ns-grey-7;
+    border-bottom: 1px solid $ns-grey-7;
+    border-right: 1px solid $ns-grey-7;
+    border-left: 4px solid $ns-red-alert;
+    @include font(14px, normal, $lh-copy);
+    color: $ns-blue;
+
+    @include sm {
+        font-size: toRem(16px);
+    }
+}

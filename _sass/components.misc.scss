@@ -1,0 +1,28 @@
+.tk-safe-pay {
+    display: flex;
+    align-items: center;
+    margin-top: $half-gutter;
+    font-size: toRem(14px);
+
+    p {
+        margin-left: 10px;
+    }
+
+    img {
+        width: 26px;
+    }
+}
+
+.mouse-follower {
+    visibility: hidden;
+    position: fixed;
+    top: -4px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    z-index: 999999;
+    background-color: rgba($ns-blue, 0.7);
+    border-radius: 50%;
+    backface-visibility: hidden;
+    pointer-events: none;
+  }

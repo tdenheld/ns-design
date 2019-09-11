@@ -1,0 +1,94 @@
+/*-------------------
+    Mixins
+--------------------*/
+
+// typography
+// ------------------------------
+@function toRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@function letterSpace($size) {
+    $letterSpacingSize: $size / 75 / 16px;
+    @return -#{$letterSpacingSize}rem;
+}
+
+@mixin font($size, $weight, $factor) {
+    font-size: toRem($size);
+    font-weight: $weight;
+    line-height: $factor;
+}
+
+@mixin dls($size) {
+    font-size: toRem($size);
+    letter-spacing: letterSpace($size);
+}
+
+@mixin font-dls($size, $weight, $factor) {
+    @include dls($size);
+    font-weight: $weight;
+    line-height: $factor;
+}
+
+
+// media queries
+// ------------------------------
+@mixin xs { @media (min-width: $xs) { @content; }} 
+@mixin sm { @media (min-width: $sm) { @content; }}
+@mixin m  { @media (min-width: $m) { @content; }}
+@mixin md { @media (min-width: $md) { @content; }}
+@mixin lg { @media (min-width: $lg) { @content; }}
+
+// max-width breakpoints
+@mixin xxs-max { @media (max-width: $xxs) { @content; }}
+@mixin xs-max  { @media (max-width: $xs) { @content; }}
+@mixin sm-max  { @media (max-width: $sm) { @content; }}
+@mixin m-max   { @media (max-width: $m) { @content; }}
+@mixin md-max  { @media (max-width: $md) { @content; }}
+@mixin lg-max  { @media (max-width: $lg) { @content; }}
+
+// exclusive breakpoints (min-max)
+@mixin sm-ex { @media (min-width: $sm) and (max-width: $m) { @content; }}
+@mixin m-ex  { @media (min-width: $m) and (max-width: $md) { @content; }}
+@mixin md-ex { @media (min-width: $md) and (max-width: $lg) { @content; }}
+
+
+
+// spacers
+// ------------------------------
+@mixin spacer($factor, $property) {
+    $size: $gutter / 4; // 7 pixels 
+    
+    @if $factor == 0 {
+        #{$property}: $factor;
+    } @else {
+        #{$property}: $size * $factor;
+    }
+}
+
+
+
+// lay-out
+// ------------------------------
+@mixin full($p) {
+    position: $p;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin bg($s) {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: $s;
+}
+
+@mixin center($d) {
+    display: $d;
+    align-items: center;
+    justify-content: center;
+}

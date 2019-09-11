@@ -1,0 +1,118 @@
+/*-------------------
+     Transitions
+--------------------*/
+
+/*
+	Base:
+	tr = transition
+	
+	Modifiers:
+	f = fade
+	s = scale
+	i = in
+	o = out
+	stag = staggered
+*/
+
+
+// durations
+// ------------------------------
+
+// none
+.tr-0 {
+	transition: none;
+}
+// 50ms - 1600ms
+@for $i from 1 through 64 {
+	$x: $i * 50;
+    $d: $x * 1ms;
+    
+	.tr-#{$x} {
+		transition: all #{$d} $ease;
+    }
+    .tr-del-#{$x} {
+		transition-delay: #{$d};
+	}
+}
+
+
+// singles
+// ------------------------------
+.tr-fi {
+	opacity: 0;
+	
+	&.is-active {
+		opacity: 1;
+	}
+}
+
+.tr-fi-up {
+	opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition-timing-function: $ease-out;
+	
+	&.is-active {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.tr-si {
+	opacity: 0;
+    transform: scale(0.97);
+    transition-timing-function: $ease-out;
+	
+	&.is-active {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.tr-si--large {
+    transform: scale(0.7);
+}
+
+.tr-fi-up-si {
+	opacity: 0;
+    transform: translate3d(0, 60px, 0) scale(0.95);
+    transition-timing-function: $ease-out;
+	
+	&.is-active {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.tr-fi-up-si--large {
+    transform: translate3d(0, 60px, 0) scale(0.85);
+}
+
+.tr-si-left {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition-timing-function: $ease-out;
+	
+	&.is-active {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+
+// staggered
+// ------------------------------
+.tr-stag {
+	@for $i from 1 through 12 {
+		&:nth-child(#{$i}) {
+			opacity: 0;
+			transform: translate3d(0, (20px + ($i * 8)), 0);
+			transition: all (800ms + ($i * 120)) $ease-out;
+			
+			&.is-active {
+				opacity: 1;
+				transform: none;
+			}
+		}
+	}
+}

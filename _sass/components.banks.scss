@@ -1,0 +1,78 @@
+.tk-banks {
+    display: grid;
+
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $half-gutter;
+    }
+
+    @include md {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tk-banks__item {
+    //layout
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 36px 1fr max-content;
+    grid-gap: 10px;
+    margin-bottom: -1px;
+    padding: 10px 20px 10px 10px;
+    align-items: center;
+
+    // styling
+    border: 1px solid $ns-grey-7;
+    cursor: pointer;
+    transition: $fade-all;
+
+    @include sm {
+        margin: 0;
+        border-radius: 4px;
+    }
+
+    svg {
+        fill: $ns-blue;
+    }
+}
+
+.tk-banks__item--radio {
+    grid-template-columns: max-content 1fr 36px;
+
+    &.is-active {
+        .tk-banks__radio:before {
+            opacity: 1;
+        }
+    }
+}
+
+.tk-banks__title {
+    color: $ns-blue;
+}
+
+.tk-banks__radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $ns-grey-6b;
+    border-radius: 50%;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+        background-color: $ns-light-blue;
+        opacity: 0;
+        transition: $fade-link;
+    }
+}
+
+.no-touch {
+    .tk-banks__item:hover {
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+    }
+}

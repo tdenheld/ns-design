@@ -1,0 +1,34 @@
+/*-------------------
+        Switch
+--------------------*/
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 28px;
+    border-radius: 99px;
+    background-color: $ns-grey-6b;
+    transition: all 200ms $ease;
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 24px;
+        width: 24px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $ns-white;
+        border-radius: 50%;
+        transition: $fade-link;
+    }
+
+    &.is-active {
+        background-color: $ns-light-blue;
+
+        &:before {
+            transform: translateX(20px);
+        }
+    }
+}

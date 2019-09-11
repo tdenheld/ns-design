@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+
+<head>
+
+    <!-- DISPLAY ALL CHARACTER SYMBOLS -->
+    <meta charset="utf-8" />
+
+    <!-- META DATA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <!-- LINKS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/ns.generic.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <script src="/assets/js/modernizr.js"></script>
+
+    <!-- TITLE -->
+    <title>{{ page.title }} | NS</title>
+
+</head>
+
+<body>
+
+    {% include header.html %}
+    <div class="content js-content {{ page.bg }} {% if page.footer-light %}content--footer-light{% endif %}">
+        {{ content }}
+    </div>
+
+    {% unless page.no-footer %}
+        {% if page.footer-light %}
+            {% include footer-light.html %}
+        {% else %}
+            {% include footer.html %}
+        {% endif %}
+    {% endunless %}
+
+    {% if page.full-screen-loader %}
+    {% include ub/full-screen-loader.html class="js-bank-loader" %}
+    {% endif %}
+
+    <div class="mouse-follower js-mouse-follower"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/ns.generic.min.js"></script>
+    <script src="/assets/js/plugins.bundle.min.js"></script>
+    <script src="/assets/js/generic.js"></script>
+    <script src="/assets/js/adn.js"></script>
+
+</body>
+
+</html>

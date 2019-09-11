@@ -1,0 +1,82 @@
+.tk-selector__item {
+    position: relative;
+    margin-bottom: $half-gutter;
+    padding: 20px;
+    border-radius: 4px;
+    transition: $fade-all;
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        @include full(absolute);
+        border: 1px solid $ns-grey-6b;
+        border-radius: 4px;
+        transition: $fade-all;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.is-selected {
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+
+        &:before {
+            border: 2px solid $ns-light-blue;
+        }
+    }
+}
+
+.tk-selector__title {
+    margin: 0 0 4px;
+    @include font(18px, bold, $lh-copy);
+    color: $ns-blue;
+}
+
+.tk-selector__description {
+    margin: 0;
+    @include font(14px, normal, $lh-copy);
+    color: $ns-grey-4;
+}
+
+.tk-selector__divider {
+    border-bottom: 1px solid $ns-grey-7;
+    margin-bottom: 12px;
+    padding-bottom: 14px;
+}
+
+.tk-selector__property {
+    display: grid;
+    grid-template-columns: 1fr max-content $double-gutter;
+    grid-gap: $half-gutter;
+    align-items: center;
+    padding: $half-gutter 0;
+    border-top: 1px solid $ns-grey-7;
+
+    &:last-child {
+        border-bottom: 1px solid $ns-grey-7;
+    }
+}
+
+.tk-selector__edit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 2px;
+    left: -4px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+// no touch
+.no-touch {
+    .tk-selector__item:hover:before {
+        border: 1px solid $ns-grey-5;
+    }
+
+    .tk-selector__item.is-selected:hover:before {
+        border: 2px solid $ns-light-blue;
+    }
+}

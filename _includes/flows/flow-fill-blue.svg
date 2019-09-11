@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 767 423">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(-0.331)">
+      <path class="cls-1" d="M0,423.5H4.523c111.477,0,212.584-43.107,289.315-119.838L477.662,119.838C554.393,43.107,655.954,0,766.977,0H0Z"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" y1="211.5" x2="767" y2="211.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003082" stop-opacity="1"/>
+      <stop offset="1" stop-color="#003082"/>
+    </linearGradient>
+  </defs>
+      <g class="cls-2">
+        <rect class="cls-3" width="767" height="423"/>
+      </g>
+</svg>

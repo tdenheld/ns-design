@@ -1,0 +1,92 @@
+// list with check or ticks (vinkjes)
+// ----------------------------------------------------
+.list-tick {
+    margin: 0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li {
+        position: relative;
+        margin: 0 0 10px;
+        padding-left: 28px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 1px;
+            width: 17px;
+            height: 15px;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Iteratie-2' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Landingspagina---rich' transform='translate(-18.000000, -610.000000)' fill='%2300AA89'%3E%3Cg id='07_icons/01_small/check-fat' transform='translate(18.000000, 609.000000)'%3E%3Cg id='check-fat--small'%3E%3Cpath d='M7,18.25 C6.46961037,18.25 5.96098546,18.0390987 5.586,17.664 L0.586,12.664 C-0.171944419,11.8792422 -0.161104748,10.6318304 0.610362849,9.86036285 C1.38183045,9.08889525 2.62924223,9.07805558 3.414,9.836 L6.886,13.308 L15.982,2.698 C16.4371733,2.12407649 17.1696811,1.8449038 17.8913783,1.97029962 C18.6130754,2.09569544 19.208481,2.60559482 19.4433814,3.29941952 C19.6782817,3.99324422 19.5150897,4.75997335 19.018,5.298 L8.518,17.55 C8.15605369,17.972926 7.63422103,18.2258699 7.078,18.248 L7,18.25 Z' id='Path' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.list-tick--large {
+    li {
+        padding-left: 30px;
+        font-size: toRem(18px);
+
+        &:before {
+            top: 5px;
+        }
+    }
+}
+
+.list-tick--small {
+    li {
+        margin: 0 0 8px;
+        padding-left: 22px;
+        font-size: toRem(14px);
+        color: $ns-grey-4;
+
+        &:before {
+            top: 5px;
+            left: 1px;
+            width: 13px;
+            height: 11px;
+        }
+    }
+}
+
+.list-tick--blue {
+    li {
+        color: $ns-blue;
+    }
+}
+
+.list-icon {
+    margin: 0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        grid-gap: $half-gutter;
+        align-items: center;
+        position: relative;
+        margin: 0 0 12px;
+        padding: 0;
+        @include font(16px, normal, $lh-copy);
+        color: $ns-blue;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        svg {
+            fill: $ns-blue;
+        }
+
+        @include sm {
+            font-size: toRem(18px);
+        }
+    }
+}

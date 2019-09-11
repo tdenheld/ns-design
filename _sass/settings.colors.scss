@@ -1,0 +1,57 @@
+/*-------------------
+        Colors
+--------------------*/
+
+$white:						#fff;
+$off-white: 				#f1f1f1;
+$black: 					#000;
+
+$ns-white: $white;
+$ns-black: $black;
+
+$ns-light-blue: 			#0063d3; // was #0079d3
+$ns-light-blue-2: 			darken($ns-light-blue, 10%); // #004ba0
+
+$ns-blue: 					#003082;
+$ns-blue-2: 				#0050a8;
+$ns-blue-3: 				#0060ba;
+$ns-blue-4: 				mix(#fff, $ns-light-blue, 90%);
+
+$ns-yellow: 				#ffc917;
+$ns-yellow-2: 				#ffb519;
+$ns-yellow-light:           mix(#fff, $ns-yellow, 85%);
+$ns-yellow-gradient:        radial-gradient(circle at 50% 50%, #FFD342 0%, $ns-yellow 100%);
+
+$ns-orange: 				#ff7700;
+$ns-ovchip: 				#ff0098;
+$ns-red-alert: 				#db0029;
+$ns-alert: $ns-red-alert;
+$ns-warning: $ns-yellow-2;
+
+$ns-green: 					#009a42;
+$ns-green-2:				#008a39;
+$ns-green-sexy:             #00AA89;
+$ns-green-sexy-2:           #008670;
+
+$ns-grey: 					#070721;
+$ns-grey-2:  mix(#fff, $ns-grey, 10%); //90%  #1f1f37
+$ns-grey-3:  mix(#fff, $ns-grey, 20%); //80%  #39394d
+$ns-grey-4:  mix(#fff, $ns-grey, 40%); //60%  #6a6a7a
+$ns-grey-5:  mix(#fff, $ns-grey, 60%); //40%  #9c9ca6
+$ns-grey-6:  mix(#fff, $ns-grey, 70%); //30%  #b4b4bc
+$ns-grey-6b: mix(#fff, $ns-grey, 80%); //20%  #cdcdd3
+$ns-grey-7:  mix(#fff, $ns-grey, 90%); //10%  #e6e6e8
+$ns-grey-8:  mix(#fff, $ns-grey, 94%); //5%   #f0f0f2
+
+$ns-grey-alpha: $ns-grey;
+$ns-grey-alpha-0:  rgba($ns-grey, 0.0);
+$ns-grey-alpha-5:  rgba($ns-grey, 0.05);
+$ns-grey-alpha-10: rgba($ns-grey, 0.1);
+$ns-grey-alpha-15: rgba($ns-grey, 0.15);
+$ns-grey-alpha-20: rgba($ns-grey, 0.2);
+$ns-grey-alpha-30: rgba($ns-grey, 0.3); 
+$ns-grey-alpha-40: rgba($ns-grey, 0.4);
+$ns-grey-alpha-60: rgba($ns-grey, 0.6);
+$ns-grey-alpha-70: rgba($ns-grey, 0.7);
+$ns-grey-alpha-90: rgba($ns-grey, 0.9);
+$ns-grey-alpha-95: rgba($ns-grey, 0.95);

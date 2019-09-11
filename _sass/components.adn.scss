@@ -1,0 +1,80 @@
+.adn {
+    position: relative;
+    margin-top: -1px;
+    border-top: 1px solid $ns-grey-7;
+    border-bottom: 1px solid $ns-grey-7;
+    cursor: pointer;
+
+    &:first-child {
+        margin: 0;
+    }
+
+    &.is-active {
+        .adn__icon {
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.adn__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 0;
+
+    &:hover {
+        .adn__title {
+            color: $ns-blue;
+        }
+
+        .adn__icon {
+            svg {
+                fill: $ns-blue;
+            }
+        }
+    }
+}
+
+.adn__title {
+    margin-right: 14px;
+    color: $ns-light-blue;
+    transition: $fade-link;
+    font-size: toRem(18px);
+}
+
+.adn__icon {
+    line-height: 0;
+    flex-shrink: 0;
+    flex-basis: 19px;
+
+    svg {
+        line-height: 0;
+        fill: $ns-light-blue;
+        transition: $fade-link;
+    }
+}
+
+.adn__content {
+    margin-right: 28px;
+    margin-bottom: 21px;
+
+    p {
+        margin-bottom: 21px;
+    }
+
+    ul {
+        margin-top: 7px;
+    }
+
+    h4,
+    b,
+    i {
+        color: $ns-blue;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,88 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+code,
+em,
+img,
+small,
+strong,
+sub,
+sup,
+fieldset,
+figure,
+picture,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+time,
+audio,
+video {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  font-size: 100%;
+  line-height: $lh-copy;
+  font-weight: inherit;
+  color: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+object,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+svg {
+    line-height: 0;
+}

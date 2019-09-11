@@ -1,0 +1,285 @@
+/*-------------------
+        Form
+--------------------*/
+
+$input-border: 1px solid $ns-grey-6b;
+$input-border-hover: 1px solid $ns-grey-5;
+
+$bs-focus: 0 0 0 1px $ns-light-blue,
+0 2px 28px rgba($ns-black, 0.1);
+$bs-autofill: 0 0 0px 1000px $ns-blue-4 inset;
+$bs-autofill-focus: $bs-focus,
+$bs-autofill;
+
+
+
+.tk-formfield {
+    position: relative;
+    margin-bottom: $half-gutter;
+}
+
+.tk-formfield__error {
+    margin: 4px 0 0;
+    @include font(14px, normal, $lh-copy);
+    color: $ns-red-alert;
+}
+
+.tk-input {
+    position: relative;
+}
+
+.tk-input__toggle-password {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-grey-5;
+        transition: $fade-all;
+    }
+
+    span:last-child {
+        display: none;
+    }
+
+    &.is-active {
+        span:first-child {
+            display: none;
+        }
+
+        span:last-child {
+            display: block;
+        }
+    }
+}
+
+.no-touch {
+    .tk-input__toggle-password {
+        &:hover {
+            svg {
+                fill: $ns-grey-4;
+            }
+        }
+    }
+}
+
+.tk-input__text {
+    // lay-out
+    width: 100%;
+    padding: 10px 14px;
+    height: $button-height;
+
+    // styling
+    -webkit-appearance: none;
+    background-color: $ns-white;
+    border: 1px solid $ns-grey-6b;
+    @include font(18px, bold, 25px);
+    color: $ns-blue;
+    transition: $fade-link;
+
+    &.is-error {
+        border: 1px solid $ns-red-alert;
+    }
+
+    &::placeholder {
+        opacity: 1;
+        @include font(16px, normal, 25px);
+        color: $ns-grey-6;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-focus;
+        color: $ns-blue;
+    }
+
+    &:-webkit-autofill {
+        box-shadow: $bs-autofill;
+        -webkit-text-fill-color: $ns-blue;
+    }
+
+    &:-webkit-autofill:focus {
+        box-shadow: $bs-autofill-focus;
+    }
+}
+
+.tk-input__text--no-border {
+    border: 1px solid $ns-white;
+
+    &:focus {
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-focus;
+        color: $ns-blue;
+    }
+
+    &:-webkit-autofill {
+        border: 1px solid $ns-blue-4;
+        box-shadow: $bs-autofill;
+        -webkit-text-fill-color: $ns-blue;
+    }
+
+    &:-webkit-autofill:focus {
+        box-shadow: $bs-autofill-focus;
+    }
+
+    &.is-error {
+        border: 1px solid $ns-red-alert;
+    }
+
+    &.is-error:focus {
+        border: 1px solid $ns-light-blue;
+    }
+}
+
+.no-touch {
+    .tk-input__text:hover {
+        border: 1px solid $ns-grey-5;
+    }
+
+    .tk-input__text:focus {
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-focus;
+    }
+
+    .tk-input__text:-webkit-autofill:focus {
+        box-shadow: $bs-autofill-focus;
+    }
+
+    .tk-input__text--no-border:hover {
+        border: 1px solid $ns-white;
+
+        &.is-error {
+            border: 1px solid $ns-red-alert;
+        }
+
+        &.is-error:focus {
+            border: 1px solid $ns-light-blue;
+        }
+    }
+
+    .tk-input__text--no-border:hover:focus {
+        border: 1px solid $ns-light-blue;
+    }
+
+    .tk-input__text--no-border:-webkit-autofill:hover {
+        border: 1px solid $ns-blue-4;
+        box-shadow: $bs-autofill;
+    }
+
+    .tk-input__text--no-border:-webkit-autofill:hover:focus {
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-autofill-focus;
+    }
+}
+
+
+
+// checkbox
+// ------------------------------------
+.tk-formfield__checkbox {
+    .checkbox__label:after {
+        border: none;
+        transform: none;
+        width: 14px;
+        height: 14px;
+        top: 5px;
+        left: 3px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.25 7.626'%3E%3Cpath fill='%2300AA89' d='M3.25,7.626a.747.747,0,0,1-.53-.22l-2.5-2.5A.75.75,0,1,1,1.28,3.845L3.208,5.773,7.931.262a.75.75,0,1,1,1.138.977L3.819,7.364a.75.75,0,0,1-.54.261Z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        transition: $fade-link;
+    }
+
+    .checkbox__label:before {
+        border: $input-border;
+        transition: $fade-link;
+    }
+
+    .checkbox__input:checked+.checkbox__label:after {
+        opacity: 1;
+    }
+
+    .checkbox__input.is-error+.checkbox__label:before {
+        border: 1px solid $ns-red-alert !important;
+    }
+
+    // remove focus outline
+    .checkbox__label,
+    .checkbox__label:before,
+    .checkbox__input+.checkbox__label:before,
+    .checkbox__input:checked+.checkbox__label:before {
+        outline: none;
+    }
+
+    .checkbox__input:focus+.checkbox__label:before {
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-focus;
+    }
+}
+
+
+
+// radio button
+// ------------------------------------
+.tk-formfield__radio {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tk-ff__radio--card {
+    padding-right: 16px;
+    max-width: 280px;
+}
+
+.radioButton__input+.radioButton__label:before {
+    outline: none !important;
+    border: $input-border;
+    transition: $fade-link;
+}
+
+.radioButton__input:focus+.radioButton__label:before {
+    border: 1px solid $ns-light-blue !important;
+    box-shadow: $bs-focus;
+}
+
+.radioButton__input.is-error+.radioButton__label:before {
+    border: 1px solid $ns-red-alert !important;
+}
+
+.radioButton__input:checked+.radioButton__label:after {
+    background-color: $ns-green-sexy;
+}
+
+.no-touch {
+    .radioButton__input:hover+.radioButton__label:before {
+        border: $input-border-hover;
+    }
+}
+
+
+
+// hide up and down arrows
+// ----------------------------------------
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+// hide autofill safari icon in input field
+// ----------------------------------------
+input::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
