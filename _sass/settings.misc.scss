@@ -51,6 +51,22 @@ $lh-solid: 1;
 
 
 
+
+/*-------------------
+       Forms
+--------------------*/
+
+$input-border: 1px solid $ns-grey-6b;
+$input-border-hover: 1px solid $ns-grey-5;
+
+$bs-focus: 0 0 0 1px $ns-light-blue,
+0 2px 28px rgba($ns-black, 0.1);
+$bs-autofill: 0 0 0px 1000px $ns-blue-4 inset;
+$bs-autofill-focus: $bs-focus,
+$bs-autofill;
+
+
+
 /*-------------------
          Misc
 --------------------*/

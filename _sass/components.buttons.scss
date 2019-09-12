@@ -2,368 +2,102 @@
        Buttons
 --------------------*/
 
-.btn {
-    position: relative;
+.button {
     transition: $fade-link;
+    border: 1px solid rgba($ns-blue, 0);
 
-    &--rounded {
-        border-radius: $border-radius;
-    }
-
-    &--pill {
-        border-radius: 100px;
-        min-width: 160px;
-        font-weight: bold;
-    }
-
-    &--yellow {
-        background: linear-gradient(110deg, $ns-yellow 0%, #FFE48A 100%);
-    }
-
-    &--blue {
-        background: linear-gradient(110deg, #0050A8 0%, $ns-light-blue 100%);
-    }
-
-    &--small {
-        height: 38px;
-        font-size: 14px;
-        line-height: 1;
-        width: auto !important;
-    }
-
-    svg {
-        position: absolute;
-    }
-
-    &.is-loading,
-    &.is-loading:hover {
-        background-color: $ns-grey-8;
-        box-shadow: inset 0 -2px $ns-grey-7;
-        outline: none;
-
-        &:after {
-            transition: $fade-link;
-            background: none;
-        }
-
-        .btn__content {
-            opacity: 0;
-        }
+    &:hover {
+        box-shadow: inset 0 (-$button-height) 0 $ns-light-blue-2;
     }
 
     &:focus {
-        border: 0;
-        outline: 0;
-    }
-}
-
-.touch {
-    .btn:hover {
-        box-shadow: inset 0 -2px $ns-light-blue-2;
-    }
-}
-
-.btn__loader-icon {
-    position: absolute;
-    top: 10px;
-    left: calc(50% - 9px);
-    opacity: 0;
-    transition: $fade-link;
-
-    svg {
-        position: relative;
-        fill: $ns-grey-5;
-        animation: rotate $loader-speed linear infinite;
-        transition: $fade-link;
-    }
-
-    &.is-active {
-        opacity: 1;
-    }
-}
-
-.btn__content {
-    transition: $fade-link;
-}
-
-.btn--login {
-    margin-bottom: $half-gutter;
-    min-width: 132px;
-    width: 100%;
-
-    @include sm {
-        margin-bottom: 0;
-        width: auto;
-    }
-
-    &.is-loading,
-    &.is-loading:hover {
-        background-color: $ns-light-blue;
-        box-shadow: inset 0 -2px $ns-light-blue-2;
-    }
-
-    .btn__loader-icon {
-        svg {
-            fill: $ns-white;
-        }
-    }
-}
-
-
-
-// ghost button styles
-// --------------------------------------------
-.btn-ghost {
-    background: transparent;
-    border: 1px solid $ns-light-blue;
-    box-shadow: none;
-    color: $ns-light-blue;
-    transition: $fade-link;
-
-    &:active:hover,
-    &:focus:hover,
-    &:visited:hover,
-    &:hover {
-        border: 1px solid $ns-blue;
-        box-shadow: none;
-        color: $ns-blue;
-
-        svg {
-            fill: $ns-blue;
-        }
-    }
-
-    &:active,
-    &:focus,
-    &:visited {
-        background: transparent;
-        box-shadow: none;
         outline: none;
-        color: $ns-light-blue;
+        border: 1px solid $ns-blue;
+        box-shadow: inset 0 -2px 0 $ns-light-blue-2,
+            0 0 0 1px $ns-blue,
+            0 2px 28px rgba($ns-black, 0.1);
     }
 
-    svg {
+    &:hover:focus {
+        box-shadow: inset 0 (-$button-height) 0 $ns-light-blue-2,
+            0 0 0 1px $ns-blue,
+            0 2px 28px rgba($ns-black, 0.1);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        top: 12px;
+        left: calc(50% - 9px);
+        opacity: 0;
         transition: $fade-link;
-        fill: $ns-light-blue;
+        animation: rotate $loader-speed linear infinite;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath fill='%23fff' d='M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z'/%3E%3Cpath fill='%23fff' d='M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z'/%3E%3C/svg%3E");
     }
 
-    &--white {
-        color: $ns-white;
-        text-shadow: 1px 1px rgba($ns-grey, 0.5);
-        border: 1px solid $white;
-        box-shadow: 0 1px 0 $white;
-        background-color: rgba($ns-white, 0);
+    &.is-loading {
+        color: transparent;
+
+        &:after {
+            opacity: 1;
+        }
 
         &:hover {
-            box-shadow: 0 1px 0 $white;
-            color: $ns-white;
-            background-color: rgba($ns-white, 0.1);
+            color: transparent;
+            border: 1px solid rgba($ns-blue, 0);
+            box-shadow: inset 0 -2px 0 $ns-light-blue-2;
         }
 
-        svg {
-            fill: $ns-white;
+        &:focus {
+            border: 1px solid $ns-blue;
+            box-shadow: inset 0 -2px 0 $ns-light-blue-2,
+                0 0 0 1px $ns-blue,
+                0 2px 28px rgba($ns-black, 0.1);
         }
-    }
-
-    &--small {
-        height: 38px;
-        font-size: 14px;
-        line-height: 1;
-        width: auto !important;
-        box-shadow: none;
     }
 }
 
-.button-tile {
-    padding: $half-gutter;
+.button--secondary {
+    background-color: transparent;
     border: 1px solid $ns-light-blue;
-    border-radius: $border-radius;
-    color: $ns-light-blue;
-    transition: $fade-link;
-
-    &:hover {
-        border-color: $ns-blue;
-        color: $ns-blue;
-
-        svg {
-            fill: $ns-blue;
-        }
-
-        .button-tile__description {
-            color: $ns-blue;
-        }
-    }
-
-    svg {
-        transition: $fade-link;
-        fill: $ns-light-blue;
-    }
-}
-
-.button-tile__description {
-    font-size: toRem(14px);
-    color: $ns-grey-4;
-    transition: $fade-link;
-}
-
-
-
-
-// links
-// -------------------------------------------
-.tk-link-reset,
-.tk-link-reset:hover,
-.tk-link-reset:visited,
-.tk-link-reset:focus {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: inherit;
-    font-weight: inherit;
     box-shadow: none;
-    outline: none;
-    text-decoration: none;
-}
-
-.tk-link {
-    color: $ns-light-blue;
-    box-shadow: 0 1px 0 rgba($ns-light-blue, 1);
-    font-weight: normal;
-    transition: $fade-link;
 
     &:hover {
+        box-shadow: none;
+        border: 1px solid $ns-blue;
         color: $ns-blue;
-        box-shadow: 0 1px 0 rgba($ns-blue, 1);
-    }
-}
-
-.tk-link-blue {
-    color: $ns-blue;
-    box-shadow: 0 1px 0 $ns-grey-alpha-40;
-    font-weight: normal;
-
-    &:hover {
-        box-shadow: 0 1px 0 rgba($ns-blue, 1);
-    }
-}
-
-// icon link
-.tk-link-icon {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    color: $ns-light-blue;
-    transition: color 250ms $ease;
-    @include font(16px, normal, 0.6);
-
-    svg {
-        margin-right: $half-gutter;
-        fill: $ns-light-blue;
-        transition: $fade-link;
     }
 
-    &:hover {
+    &:focus {
+        box-shadow: 0 0 0 1px $ns-light-blue,
+            0 2px 28px rgba($ns-black, 0.1);
+        border: 1px solid $ns-light-blue;
+    }
+
+    &:hover:focus {
+        box-shadow: 0 0 0 1px $ns-blue,
+            0 2px 28px rgba($ns-black, 0.1);
+        border: 1px solid $ns-blue;
         color: $ns-blue;
-
-        svg {
-            fill: $ns-blue;
-            transform: translateX(5px);
-        }
-    }
-}
-
-.tk-link-icon--blue {
-    color: $ns-blue;
-
-    svg {
-        fill: $ns-blue;
-    }
-}
-
-
-
-
-// round scroll down button
-// ----------------------------------------
-.btn-round {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: $ns-white;
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba($ns-grey, 0.25);
-    cursor: pointer;
-    transition: transform 200ms $ease;
-
-    &:hover {
-        transform: scale(1.15);
     }
 
-    &--down {
-        svg {
-            position: relative;
-            top: 2px;
-            transform: rotate(90deg);
-        }
+    &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath fill='%230063d3' d='M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z'/%3E%3Cpath fill='%230063d3' d='M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z'/%3E%3C/svg%3E");
     }
 
-    svg {
-        fill: $ns-blue;
-    }
-}
-
-
-
-
-// scroll down indicator
-// ----------------------------------------
-.scroll-down {
-    cursor: pointer;
-}
-
-.scroll-down__icon {
-    // size and styling
-    width: 36px;
-    height: 72px;
-    border: 2px solid $ns-white;
-    border-radius: 36px;
-}
-
-.scroll-down__icon-circle {
-
-    // animation
-    // this one is a potential chrome helper CPU killer on retina screens
-    @keyframes fall-down {
-        0% {
-            transform: none;
+    &.is-loading {
+        &:hover {
+            box-shadow: none;
+            border: 1px solid $ns-light-blue;
         }
 
-        48% {
-            transform: translate3d(0, 32px, 0);
-        }
-
-        96% {
-            transform: translate3d(0, 32px, 0);
-        }
-
-        100% {
-            transform: none;
+        &:focus {
+            color: transparent;
+            border: 1px solid $ns-light-blue;
+            box-shadow: 0 0 0 1px $ns-light-blue,
+                0 2px 28px rgba($ns-black, 0.1);
         }
     }
-
-    animation: fall-down 3s infinite;
-    animation-timing-function: $ease;
-    animation-delay: 1.5s;
-
-    // size and styling
-    width: 12px;
-    height: 12px;
-    border: 2px solid $ns-white;
-    border-radius: 100%;
-
-    // positioning
-    margin: 0 auto;
-    margin-top: 12px;
 }

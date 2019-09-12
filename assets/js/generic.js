@@ -1,7 +1,7 @@
 // basic functions
 // ------------------------------------------------------------
 function toggle() {
-    var obj = $('.js-toggle');
+    const obj = $('.js-toggle');
     if (obj[0]) {
         obj.click(function () {
             $(this).toggleClass('is-active');
@@ -10,7 +10,7 @@ function toggle() {
 }
 
 function clearSession() {
-    var obj = $('.js-clear-session');
+    const obj = $('.js-clear-session');
     if (obj[0]) {
         obj.click(function () {
             sessionStorage.clear();
@@ -18,9 +18,19 @@ function clearSession() {
     }
 }
 
+function button() {
+    const obj = $('.button');
+    if (obj[0]) {
+        obj.click(function () {
+            $(this).toggleClass('is-loading');
+        });
+    }
+}
+
 $(function () {
     toggle();
     clearSession();
+    button();
 });
 
 

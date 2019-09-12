@@ -12,18 +12,3 @@
         width: 26px;
     }
 }
-
-.cursor {
-    $cursor-size: 30px;
-    visibility: hidden;
-    position: fixed;
-    width: $cursor-size;
-    height: $cursor-size;
-    top: -$cursor-size / 2;
-    left: -$cursor-size / 2;
-    border: 1px solid rgba($ns-blue, 0.4);
-    z-index: 999999;
-    border-radius: 50%;
-    backface-visibility: hidden;
-    pointer-events: none;
-}

@@ -2,69 +2,130 @@
         Form
 --------------------*/
 
-$input-border: 1px solid $ns-grey-6b;
-$input-border-hover: 1px solid $ns-grey-5;
-
-$bs-focus: 0 0 0 1px $ns-light-blue,
-0 2px 28px rgba($ns-black, 0.1);
-$bs-autofill: 0 0 0px 1000px $ns-blue-4 inset;
-$bs-autofill-focus: $bs-focus,
-$bs-autofill;
-
-
-
-.tk-formfield {
+// formfield items
+// ----------------------------------------
+.ff {
     position: relative;
-    margin-bottom: $half-gutter;
+    margin-bottom: $gutter;
 }
 
-.tk-formfield__error {
+// modifiers
+.ff--grid {
+    display: grid;
+    grid-column-gap: $gutter;
+    grid-row-gap: 4px;
+    max-width: 600px;
+
+    @include sm {
+        margin-bottom: $half-gutter;
+        grid-template-columns: 2fr 5fr;
+    }
+
+    .ff__label {
+        @include sm {
+            position: relative;
+            top: 11px;
+            text-align: right;
+            line-height: $lh-title;
+        }
+    }
+}
+
+.ff--radio {
+    margin: $gutter 0;
+    grid-row-gap: 8px;
+
+    .ff__label {
+        @include sm {
+            top: 0;
+        }
+    }
+}
+
+// elements
+.ff__error {
     margin: 4px 0 0;
     @include font(14px, normal, $lh-copy);
     color: $ns-red-alert;
 }
 
-.tk-input {
-    position: relative;
+.ff__label {
+    color: $ns-blue;
 }
 
-.tk-input__toggle-password {
+.ff__description {
+    margin: 7px 0 0;
+    @include font(14px, normal, $lh-copy);
+    color: $ns-grey-4;
+}
+
+
+// icons
+// ----------------------------------------------
+.ff__icon {
+    transition: $fade-all;
     position: absolute;
-    top: 12px;
+    top: 13px;
     right: 14px;
-    cursor: pointer;
+}
 
+.ff__icon--left {
+    left: 28px;
+    right: auto;
+}
+
+.ff__icon--loading {
     svg {
-        fill: $ns-grey-5;
-        transition: $fade-all;
+        transform-origin: 50% 50%;
+        animation: rotate $loader-speed linear infinite;
+        fill: $ns-blue;
+        transition: $fade-link;
     }
+}
 
-    span:last-child {
-        display: none;
-    }
+
+// event states
+// ----------------------------------------------
+.ff-opacity-hidden {
+    opacity: 0;
 
     &.is-active {
-        span:first-child {
-            display: none;
-        }
-
-        span:last-child {
-            display: block;
-        }
+        opacity: 1;
     }
 }
 
-.no-touch {
-    .tk-input__toggle-password {
-        &:hover {
-            svg {
-                fill: $ns-grey-4;
-            }
-        }
+
+// section
+// ----------------------------------------------
+.ff-section {
+    margin: $gutter 0;
+    padding-top: $gutter;
+    border-top: 1px solid $ns-grey-7;
+
+    @include sm {
+        margin: $one-half-gutter 0;
+        padding-top: $one-half-gutter;
     }
 }
 
-.tk-input__text {
+
+// cta
+// ----------------------------------------------
+.ff-cta {
+    margin: $gutter 0;
+    padding-top: $half-gutter;
+    border-top: 1px solid $ns-grey-7;
+    text-align: right;
+
+    @include sm {
+        margin: $one-half-gutter 0;
+    }
+}
+
+
+// input field
+// ----------------------------------------------
+.ff-input {
     // lay-out
     width: 100%;
     padding: 10px 14px;
@@ -85,7 +146,7 @@ $bs-autofill;
     &::placeholder {
         opacity: 1;
         @include font(16px, normal, 25px);
-        color: $ns-grey-6;
+        color: $ns-grey-4;
     }
 
     &:focus {
@@ -105,7 +166,7 @@ $bs-autofill;
     }
 }
 
-.tk-input__text--no-border {
+.ff-input--no-border {
     border: 1px solid $ns-white;
 
     &:focus {
@@ -133,21 +194,30 @@ $bs-autofill;
     }
 }
 
+.ff-input--select {
+    line-height: $lh-solid;
+}
+
+.ff-input--textarea {
+    height: 120px;
+    resize: none;
+}
+
 .no-touch {
-    .tk-input__text:hover {
+    .ff-input:hover {
         border: 1px solid $ns-grey-5;
     }
 
-    .tk-input__text:focus {
+    .ff-input:focus {
         border: 1px solid $ns-light-blue;
         box-shadow: $bs-focus;
     }
 
-    .tk-input__text:-webkit-autofill:focus {
+    .ff-input:-webkit-autofill:focus {
         box-shadow: $bs-autofill-focus;
     }
 
-    .tk-input__text--no-border:hover {
+    .ff-input--no-border:hover {
         border: 1px solid $ns-white;
 
         &.is-error {
@@ -159,26 +229,62 @@ $bs-autofill;
         }
     }
 
-    .tk-input__text--no-border:hover:focus {
+    .ff-input--no-border:hover:focus {
         border: 1px solid $ns-light-blue;
     }
 
-    .tk-input__text--no-border:-webkit-autofill:hover {
+    .ff-input--no-border:-webkit-autofill:hover {
         border: 1px solid $ns-blue-4;
         box-shadow: $bs-autofill;
     }
 
-    .tk-input__text--no-border:-webkit-autofill:hover:focus {
+    .ff-input--no-border:-webkit-autofill:hover:focus {
         border: 1px solid $ns-light-blue;
         box-shadow: $bs-autofill-focus;
     }
 }
 
+// toggle password
+.ff-input__toggle-password {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-grey-5;
+        transition: $fade-all;
+    }
+
+    span:last-child {
+        display: none;
+    }
+
+    &.is-active {
+        span:first-child {
+            display: none;
+        }
+
+        span:last-child {
+            display: block;
+        }
+    }
+}
+
+.no-touch {
+    .ff-input__toggle-password {
+        &:hover {
+            svg {
+                fill: $ns-grey-4;
+            }
+        }
+    }
+}
 
 
 // checkbox
 // ------------------------------------
-.tk-formfield__checkbox {
+.ff-checkbox {
     .checkbox__label:after {
         border: none;
         transform: none;
@@ -223,7 +329,7 @@ $bs-autofill;
 
 // radio button
 // ------------------------------------
-.tk-formfield__radio {
+.ff-radio {
     margin-bottom: 10px;
 
     &:last-child {
@@ -231,9 +337,13 @@ $bs-autofill;
     }
 }
 
-.tk-ff__radio--card {
+.ff-radio--card {
     padding-right: 16px;
     max-width: 280px;
+}
+
+.ff-radio__content {
+    margin: 10px 0 $gutter;
 }
 
 .radioButton__input+.radioButton__label:before {
@@ -260,7 +370,6 @@ $bs-autofill;
         border: $input-border-hover;
     }
 }
-
 
 
 // hide up and down arrows
