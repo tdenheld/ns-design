@@ -1,0 +1,15 @@
+/*-------------------
+        Links
+--------------------*/
+
+a {
+    color: $ns-light-blue;
+    box-shadow: 0 1px 0 rgba($ns-light-blue, 1);
+    font-weight: inherit;
+    transition: $fade-link;
+
+    &:hover {
+        color: $ns-blue;
+        box-shadow: 0 1px 0 rgba($ns-blue, 1);
+    }
+}

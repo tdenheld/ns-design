@@ -54,6 +54,57 @@
     @include font-dls(32px, bold, $lh-title);
 
     @include sm {
-        @include dls(42px);
+        @include dls(40px);
     }
+}
+
+.h-m {
+    @include font-dls(28px, bold, $lh-title);
+
+    @include sm {
+        @include dls(36px);
+    }
+}
+
+.h-s {
+    @include font-dls(24px, bold, $lh-title);
+
+    @include sm {
+        @include dls(32px);
+    }
+}
+
+.h-xs {
+    @include font-dls(20px, bold, $lh-title);
+
+    @include sm {
+        @include dls(28px);
+    }
+}
+
+.h-xxs {
+    @include font-dls(20px, bold, $lh-title);
+
+    @include sm {
+        @include dls(24px);
+    }
+}
+
+
+// body
+// --------------------------------------------
+.txt-body {
+    @include font(18px, normal, $lh-copy);
+}
+
+.txt-default {
+    @include font(16px, normal, $lh-copy);
+}
+
+.txt-small {
+    @include font(14px, normal, $lh-copy);
+}
+
+.txt-tiny {
+    @include font(12px, normal, $lh-copy);
 }

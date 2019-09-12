@@ -13,15 +13,16 @@
     }
 }
 
-.mouse-follower {
+.cursor {
+    $cursor-size: 30px;
     visibility: hidden;
     position: fixed;
-    top: -4px;
-    left: -4px;
-    width: 8px;
-    height: 8px;
+    width: $cursor-size;
+    height: $cursor-size;
+    top: -$cursor-size / 2;
+    left: -$cursor-size / 2;
+    border: 1px solid rgba($ns-blue, 0.4);
     z-index: 999999;
-    background-color: rgba($ns-blue, 0.7);
     border-radius: 50%;
     backface-visibility: hidden;
     pointer-events: none;

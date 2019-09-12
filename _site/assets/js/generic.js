@@ -25,47 +25,6 @@ $(function () {
 
 
 
-// mouse follower
-// ------------------------------------------------------------
-function mouseFollow() {
-    const obj = '.js-mouse-follower';
-
-    function follow(obj, x, y, t) {
-        TweenMax.to(obj, t, {
-            x: x,
-            y: y,
-            ease: Power4.easeOut
-        });
-    }
-
-    function fade(obj, a, b, t) {
-        TweenMax.fromTo(obj, t, {
-            autoAlpha: a
-        }, {
-            autoAlpha: b,
-            ease: Power4.easeOut
-        });
-    }
-
-    if ($(obj)[0]) {
-        $(document).mouseenter((e) => {
-            fade(obj, 0, 1, 0.1);
-            follow(obj, e.clientX, e.clientY, 0);
-        });
-        $(document).mouseleave(() => {
-            fade(obj, 1, 0, 0.7);
-        })
-        $(document).mousemove((e) => {
-            requestAnimationFrame(() => {
-                follow(obj, e.clientX, e.clientY, 0.7);
-            });
-        });
-    }
-}
-mouseFollow();
-
-
-
 // preloader
 // ------------------------------------------------------------	
 function loader() {
