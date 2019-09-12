@@ -21,3 +21,9 @@ defaults:
     values:
       layout: "default"
       title: "NS Design 2020"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      permalink: /:title
