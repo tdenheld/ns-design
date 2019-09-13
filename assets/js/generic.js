@@ -22,7 +22,9 @@ function button() {
     const obj = $('.button');
     if (obj[0]) {
         obj.click(function () {
-            $(this).toggleClass('is-loading');
+            if ($(this).attr('data-loader')) {
+                $(this).toggleClass('is-loading');
+            }
         });
     }
 }

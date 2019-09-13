@@ -3,7 +3,7 @@
 -------------------*/
 
 .content {
-    background-color: $ns-grey-8;
+    background-color: transparent;
     margin-top: $navbar-height - 1;
     min-height: calc(100vh - 500px);
 }
@@ -46,11 +46,6 @@ input,
 .inputSpacer__displayContainer,
 .select {
     border-radius: 4px;
-}
-
-.button--buy:before {
-    left: auto;
-    margin-left: toRem(-35px);
 }
 
 .checkbox__label:before {

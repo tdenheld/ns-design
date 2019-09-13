@@ -24,24 +24,19 @@
 
 </head>
 
-<body>
+<body class="{{ page.bg }}">
 
-    {% include header.html %}
-    <div class="content js-content {{ page.bg }} {% if page.footer-light %}content--footer-light{% endif %}">
+    <header class="pv-3 bg-white bs-c">
+        <div class="container container--narrow">
+            <a href="/" aria-label="logo" class="unlink">
+                <img src="/assets/img/NS_logo.svg" alt="logo" />
+                <span class="f18 f-blue fw-b ml-1 lh-solid pos-r top-2px">NS Design 2020</span>
+            </a>
+        </div>
+    </header>
+    <main>
         {{ content }}
-    </div>
-
-    {% unless page.no-footer %}
-        {% if page.footer-light %}
-            {% include footer-light.html %}
-        {% else %}
-            {% include footer.html %}
-        {% endif %}
-    {% endunless %}
-
-    {% if page.full-screen-loader %}
-    {% include ub/full-screen-loader.html class="js-bank-loader" %}
-    {% endif %}
+    </main>
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>
