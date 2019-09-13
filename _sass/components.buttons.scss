@@ -68,18 +68,12 @@
             opacity: 1;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: transparent;
             border-color: transparent;
             border-bottom-color: $ns-light-blue-2;
             box-shadow: inset 0 -1px 0 $ns-light-blue-2;
-        }
-
-        &:focus {
-            border-color: $ns-blue;
-            box-shadow: inset 0 -1px 0 $ns-light-blue-2,
-                0 0 0 1px $ns-blue,
-                0 2px 28px rgba($ns-black, 0.1);
         }
     }
 }
@@ -133,16 +127,11 @@
     }
 
     &.is-loading {
-        &:hover {
-            box-shadow: none;
-            border-color: $ns-light-blue;
-        }
-
+        &:hover,
         &:focus {
             color: transparent;
+            box-shadow: none;
             border-color: $ns-light-blue;
-            box-shadow: 0 0 0 1px $ns-light-blue,
-                0 2px 28px rgba($ns-black, 0.1);
         }
     }
 }
@@ -243,15 +232,11 @@
     &.is-loading {
         color: transparent;
 
-        &:hover {
+        &:hover,
+        &:focus {
+            border-color: transparent;
             border-bottom-color: $ns-yellow-2;
             box-shadow: inset 0 -1px 0 $ns-yellow-2;
-        }
-
-        &:focus {
-            box-shadow: 0 0 0 1px $ns-light-blue,
-                0 2px 28px rgba($ns-black, 0.1);
-            border-color: $ns-light-blue;
         }
     }
 }
