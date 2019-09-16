@@ -1,5 +1,31 @@
 ---
 title: Buttons
+buttonGroup:
+  - title: Primairy / Default
+    button:
+    - loader: true
+    - loader: true
+      modifier: button--buy
+    - disabled: true
+  - title: Secondary
+    button:
+    - loader: true
+      modifier: button--secondary
+    - loader: true
+      modifier: button--secondary button--buy
+    - disabled: true
+  - title: Tertiary
+    button:
+    - modifier: button--tertiary
+    - modifier: button--tertiary
+      disabled: true
+  - title: Brand
+    button:
+    - loader: true
+      modifier: button--brand
+    - loader: true
+      modifier: button--brand button--buy
+    - disabled: true
 ---
 
 <section class="mv-4 mv-8-sm">
@@ -9,72 +35,18 @@ title: Buttons
             <hr>
         </header>
 
+        {% for buttonGroup in page.buttonGroup %}
         <div class="g g-2-sm g-4-md gap-4 mb-4">
+            {% for button in buttonGroup.button %}
             <div>
-                <button class="button" data-loader="true">
-                    Primairy / Default
+                <button class="button {{ button.modifier }}"
+                        {% if button.loader %}data-loader="true"{% endif %}
+                        {% if button.disabled %}disabled{% endif %}>
+                    {{ buttonGroup.title }}
                 </button>
             </div>
-            <div>
-                <button class="button button--buy" data-loader="true">
-                    Primairy / Default
-                </button>
-            </div>
-            <div>
-                <button class="button" data-loader="true" disabled>
-                    Primairy / Default
-                </button>
-            </div>
+            {% endfor %}
         </div>
-
-        <div class="g g-2-sm g-4-md gap-4 mb-4">
-            <div>
-                <button class="button button--secondary" data-loader="true">
-                    Secondary
-                </button>
-            </div>
-            <div>
-                <button class="button button--secondary button--buy" data-loader="true">
-                    Secondary
-                </button>
-            </div>
-            <div>
-                <button class="button button--secondary" data-loader="true" disabled>
-                    Secondary
-                </button>
-            </div>
-        </div>
-
-        <div class="g g-2-sm g-4-md gap-4 mb-4">
-            <div>
-                <button class="button button--tertiary">
-                    Tertiary
-                </button>
-            </div>
-            <div class="hidden-xs"></div>
-            <div>
-                <button class="button button--tertiary" disabled>
-                    Tertiary
-                </button>
-            </div>
-        </div>
-
-        <div class="g g-2-sm g-4-md gap-4 mb-4">
-            <div>
-                <button class="button button--brand" data-loader="true">
-                    Brand
-                </button>
-            </div>
-            <div>
-                <button class="button button--brand button--buy" data-loader="true">
-                    Brand
-                </button>
-            </div>
-            <div>
-                <button class="button button--brand" data-loader="true" disabled>
-                    Brand
-                </button>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
