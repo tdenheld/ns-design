@@ -1,0 +1,52 @@
+- title: Primairy / Default
+  button:
+    - loader: true
+    - loader: true
+      modifier: button--buy
+    - disabled: true
+
+- title: Secondary
+  button:
+    - loader: true
+      modifier: button--secondary
+    - loader: true
+      modifier: button--secondary button--buy
+    - disabled: true
+
+- title: Tertiary
+  button:
+    - modifier: button--tertiary
+    -
+    - modifier: button--tertiary
+      disabled: true
+
+- title: Bestellen
+  button:
+    - loader: true
+      modifier: button--brand
+    - loader: true
+      modifier: button--brand button--buy
+    - disabled: true
+      modifier: button--brand
+    - disabled: true
+      modifier: button--brand button--buy
+    - loader: true
+      modifier: button--brand button--arrowRight
+    - disabled: true
+      modifier: button--brand
+    - disabled: true
+      modifier: button--brand button--arrowRight
+
+- title: Subtle
+  button:
+    - modifier: button--subtle
+    -
+    - modifier: button--subtle
+      disabled: true
+
+- title: Floating
+  button:
+    - loader: true
+      modifier: button--floating
+    - loader: true
+      modifier: button--floating button--buy
