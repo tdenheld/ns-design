@@ -103,8 +103,7 @@
     }
 
     &:focus {
-        box-shadow: 0 0 0 1px $ns-light-blue,
-            $box-shadow-soft;
+        box-shadow: 0 0 0 1px $ns-light-blue,$box-shadow-soft;
         border-color: $ns-light-blue;
         color: $ns-light-blue;
     }
@@ -173,8 +172,7 @@
         left: -7px;
         height: 100%;
         border-radius: $border-radius;
-        box-shadow: 0 0 0 1px $ns-light-blue,
-            $box-shadow-soft;
+        box-shadow: 0 0 0 1px $ns-light-blue, $box-shadow-soft;
         border: 1px solid $ns-light-blue;
     }
 
@@ -194,8 +192,7 @@
         color: $ns-blue;
 
         &:after {
-            box-shadow: 0 0 0 1px $ns-blue,
-                $box-shadow-soft;
+            box-shadow: 0 0 0 1px $ns-blue, $box-shadow-soft;
             border: 1px solid $ns-blue;
         }
     }
@@ -336,8 +333,7 @@
         left: -7px;
         height: 29px;
         border-radius: $border-radius;
-        box-shadow: 0 0 0 1px $ns-light-blue,
-            $box-shadow-soft;
+        box-shadow: 0 0 0 1px $ns-light-blue, $box-shadow-soft;
         border: 1px solid $ns-light-blue;
     }
 
@@ -357,8 +353,7 @@
         color: $ns-blue;
 
         &:after {
-            box-shadow: 0 0 0 1px $ns-blue,
-                $box-shadow-soft;
+            box-shadow: 0 0 0 1px $ns-blue, $box-shadow-soft;
             border: 1px solid $ns-blue;
         }
     }
@@ -396,8 +391,7 @@
     &:focus {
         border-color: $ns-light-blue;
         background-color: $ns-white;
-        box-shadow: 0 0 0 1px $ns-light-blue,
-            $box-shadow-soft;
+        box-shadow: 0 0 0 1px $ns-light-blue, $box-shadow-soft;
         color: $ns-light-blue;
     }
 
