@@ -6,15 +6,20 @@
 .toggleButton {
     float: initial;
     margin-left: -1px;
+    width: 100%;
 
     &:first-child {
         margin: 0;
+    }
+
+    @include sm {
+        width: auto;
     }
 }
 
 .toggleButton__label {
     transition: $fade-link;
-    width: 150px;
+    width: 100%;
     position: relative;
     border: 1px solid $ns-grey-6b;
     color: $ns-light-blue;
@@ -30,6 +35,10 @@
 
     &:focus {
         outline: none;
+    }
+
+    @include sm {
+        width: 100px;
     }
 }
 
