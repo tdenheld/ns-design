@@ -13,7 +13,7 @@ title: Buttons
         <h2 class="h-xxs mb-2">{{ buttonGroup.title }}</h2>
         <div class="g g-2-sm g-4-md gap-4 mb-4">
             {% for button in buttonGroup.button %}
-            <div>
+            <div class="{{ button.bg }}">
                 {% if button %}
                 <button class="button {{ button.modifier }}" {% if button.loader %}data-loader="true" {% endif %}
                     {% if button.disabled %}disabled{% endif %}>

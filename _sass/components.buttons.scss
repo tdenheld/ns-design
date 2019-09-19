@@ -62,6 +62,11 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath fill='%23fff' d='M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z'/%3E%3Cpath fill='%23fff' d='M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z'/%3E%3C/svg%3E");
     }
 
+    svg {
+        transition: $fade-link;
+        fill: $ns-white;
+    }
+
     &.is-loading {
         color: transparent;
 
@@ -82,9 +87,34 @@
         }
     }
 
-    svg {
-        transition: $fade-link;
-        fill: $ns-white;
+    &.button--contrast {
+        border-bottom: 1px solid $ns-grey-8;
+        background-color: $ns-white;
+        color: $ns-light-blue;
+        box-shadow: inset 0 -1px 0 $ns-grey-8;
+
+        &:hover {
+            box-shadow: inset 0 (-$button-height) 0 $ns-grey-8;
+            border-color: $ns-grey-8;
+        }
+
+        &:focus {
+            border-color: $ns-yellow;
+            box-shadow: inset 0 -1px 0 $ns-grey-8,
+                0 0 0 1px $ns-yellow,
+                $box-shadow-soft;
+        }
+
+        &:hover:focus {
+            border-color: $ns-yellow;
+            box-shadow: inset 0 (-$button-height) 0 $ns-grey-8,
+                0 0 0 1px $ns-yellow,
+                $box-shadow-soft;
+        }
+
+        svg {
+            fill: $ns-light-blue;
+        }
     }
 }
 
@@ -138,6 +168,17 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath fill='%230063d3' d='M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z'/%3E%3Cpath fill='%230063d3' d='M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z'/%3E%3C/svg%3E");
     }
 
+    svg {
+        fill: $ns-light-blue;
+    }
+
+    &:hover,
+    &:hover:focus {
+        svg {
+            fill: $ns-blue;
+        }
+    }
+
     &.is-loading {
 
         &:hover,
@@ -148,14 +189,26 @@
         }
     }
 
-    svg {
-        fill: $ns-light-blue;
-    }
+    &.button--contrast {
+        background-color: transparent;
+        border-color: rgba($ns-white, 0.5);
+        box-shadow: none;
+        color: $ns-white;
 
-    &:hover,
-    &:hover:focus {
+        &:hover {
+            box-shadow: none;
+            border-color: $ns-white;
+            color: $ns-white;
+        }
+
+        &:focus,
+        &:hover:focus {
+            border-color: $ns-white;
+            box-shadow: 0 0 0 1px $ns-white, $box-shadow-soft;
+        }
+
         svg {
-            fill: $ns-blue;
+            fill: $ns-light-blue;
         }
     }
 }
@@ -281,6 +334,10 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath fill='%23003082' d='M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z'/%3E%3Cpath fill='%23003082' d='M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z'/%3E%3C/svg%3E");
     }
 
+    svg {
+        fill: $ns-blue;
+    }
+
     &.is-loading {
         color: transparent;
 
@@ -290,10 +347,6 @@
             border-bottom-color: $ns-yellow-2;
             box-shadow: inset 0 -1px 0 $ns-yellow-2;
         }
-    }
-
-    svg {
-        fill: $ns-blue;
     }
 }
 
@@ -435,6 +488,17 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cpath fill='%230063d3' d='M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z'/%3E%3Cpath fill='%230063d3' d='M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z'/%3E%3C/svg%3E");
     }
 
+    svg {
+        fill: $ns-light-blue;
+    }
+
+    &:hover,
+    &:hover:focus {
+        svg {
+            fill: $ns-blue;
+        }
+    }
+
     &.is-loading {
         &:hover {
             background-color: $ns-white;
@@ -447,17 +511,6 @@
             color: transparent;
             border-color: transparent;
             box-shadow: $box-shadow-soft;
-        }
-    }
-
-    svg {
-        fill: $ns-light-blue;
-    }
-
-    &:hover,
-    &:hover:focus {
-        svg {
-            fill: $ns-blue;
         }
     }
 }

@@ -4,6 +4,8 @@
     - loader: true
       modifier: button--buy
     - disabled: true
+    - modifier: button--contrast
+      bg: pa-2 bg-blue txt-c
 
 - title: Secondary
   button:
@@ -12,6 +14,8 @@
     - loader: true
       modifier: button--secondary button--buy
     - disabled: true
+    - modifier: button--secondary button--contrast
+      bg: pa-2 bg-blue txt-c
 
 - title: Tertiary
   button:
