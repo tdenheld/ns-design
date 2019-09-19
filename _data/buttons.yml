@@ -16,6 +16,8 @@
     - disabled: true
     - modifier: button--secondary button--contrast
       bg: pa-2 bg-blue txt-c
+    - modifier: button--secondary button--contrastYellow
+      bg: pa-2 bg-yellow txt-c
 
 - title: Tertiary
   button:

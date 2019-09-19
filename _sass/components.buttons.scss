@@ -86,36 +86,6 @@
             box-shadow: inset 0 -1px 0 $ns-light-blue-2;
         }
     }
-
-    &.button--contrast {
-        border-bottom: 1px solid $ns-grey-8;
-        background-color: $ns-white;
-        color: $ns-light-blue;
-        box-shadow: inset 0 -1px 0 $ns-grey-8;
-
-        &:hover {
-            box-shadow: inset 0 (-$button-height) 0 $ns-grey-8;
-            border-color: $ns-grey-8;
-        }
-
-        &:focus {
-            border-color: $ns-light-blue;
-            box-shadow: inset 0 -1px 0 $ns-grey-8,
-                0 0 0 1px $ns-light-blue,
-                $box-shadow-soft-contrast;
-        }
-
-        &:hover:focus {
-            border-color: $ns-light-blue;
-            box-shadow: inset 0 (-$button-height) 0 $ns-grey-8,
-                0 0 0 1px $ns-light-blue,
-                $box-shadow-soft-contrast;
-        }
-
-        svg {
-            fill: $ns-light-blue;
-        }
-    }
 }
 
 
@@ -186,29 +156,6 @@
             color: transparent;
             box-shadow: none;
             border-color: $ns-light-blue;
-        }
-    }
-
-    &.button--contrast {
-        background-color: transparent;
-        border-color: rgba($ns-white, 0.5);
-        box-shadow: none;
-        color: $ns-white;
-
-        &:hover {
-            box-shadow: none;
-            border-color: $ns-white;
-            color: $ns-white;
-        }
-
-        &:focus,
-        &:hover:focus {
-            border-color: $ns-white;
-            box-shadow: 0 0 0 1px $ns-white, $box-shadow-soft-contrast;
-        }
-
-        svg {
-            fill: $ns-light-blue;
         }
     }
 }
@@ -549,8 +496,101 @@
             border-radius: 0 4px 4px 0;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             z-index: 2;
         }
+    }
+}
+
+
+// contrasts
+// ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+.button--contrast {
+    border-bottom: 1px solid $ns-grey-8;
+    background-color: $ns-white;
+    color: $ns-light-blue;
+    box-shadow: inset 0 -1px 0 $ns-grey-8;
+
+    &:hover {
+        box-shadow: inset 0 (-$button-height) 0 $ns-grey-8;
+        border-color: $ns-grey-8;
+        color: $ns-light-blue;
+    }
+
+    &:focus {
+        border-color: $ns-light-blue;
+        box-shadow: inset 0 -1px 0 $ns-grey-8,
+            0 0 0 1px $ns-light-blue,
+            $box-shadow-soft-contrast;
+        color: $ns-light-blue;
+    }
+
+    &:hover:focus {
+        border-color: $ns-light-blue;
+        box-shadow: inset 0 (-$button-height) 0 $ns-grey-8,
+            0 0 0 1px $ns-light-blue,
+            $box-shadow-soft-contrast;
+    }
+
+    svg {
+        fill: $ns-light-blue;
+    }
+}
+
+.button--secondary.button--contrast {
+    background-color: transparent;
+    border-color: rgba($ns-white, 0.5);
+    box-shadow: none;
+    color: $ns-white;
+
+    &:hover {
+        box-shadow: none;
+        border-color: $ns-white;
+        color: $ns-white;
+    }
+
+    &:focus,
+    &:hover:focus {
+        border-color: $ns-white;
+        box-shadow: 0 0 0 1px $ns-white, $box-shadow-soft-contrast;
+
+        svg {
+            fill: $ns-white;
+        }
+    }
+
+    svg {
+        fill: $ns-white;
+    }
+}
+
+.button--contrastYellow {
+    background-color: transparent;
+    border-color: mix($ns-grey, $ns-yellow, 20%);
+    box-shadow: none;
+    color: $ns-blue;
+
+    &:hover {
+        box-shadow: none;
+        border-color: $ns-blue;
+        color: $ns-blue;
+    }
+
+    &:focus {
+        color: $ns-blue;
+        border-color: $ns-light-blue;
+        box-shadow: 0 0 0 1px $ns-light-blue, $box-shadow-soft;
+    }
+
+    &:hover:focus {
+        color: $ns-blue;
+        border-color: $ns-blue;
+        box-shadow: 0 0 0 1px $ns-blue, $box-shadow-soft;
+    }
+
+    svg {
+        fill: $ns-blue;
     }
 }
