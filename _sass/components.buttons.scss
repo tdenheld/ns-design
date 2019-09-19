@@ -99,17 +99,17 @@
         }
 
         &:focus {
-            border-color: $ns-yellow;
+            border-color: $ns-light-blue;
             box-shadow: inset 0 -1px 0 $ns-grey-8,
-                0 0 0 1px $ns-yellow,
-                $box-shadow-soft;
+                0 0 0 1px $ns-light-blue,
+                $box-shadow-soft-contrast;
         }
 
         &:hover:focus {
-            border-color: $ns-yellow;
+            border-color: $ns-light-blue;
             box-shadow: inset 0 (-$button-height) 0 $ns-grey-8,
-                0 0 0 1px $ns-yellow,
-                $box-shadow-soft;
+                0 0 0 1px $ns-light-blue,
+                $box-shadow-soft-contrast;
         }
 
         svg {
@@ -204,7 +204,7 @@
         &:focus,
         &:hover:focus {
             border-color: $ns-white;
-            box-shadow: 0 0 0 1px $ns-white, $box-shadow-soft;
+            box-shadow: 0 0 0 1px $ns-white, $box-shadow-soft-contrast;
         }
 
         svg {
