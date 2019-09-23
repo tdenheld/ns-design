@@ -8,11 +8,11 @@
 .h-xxs,
 .h-xxxs {
     color: $ns-blue;
+    letter-spacing: $ls-heading;
 }
 
 .h-xxxl {
     @include font(38px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include xs {
         font-size: toRem(48px);
@@ -29,7 +29,6 @@
 
 .h-xxl {
     @include font(38px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include sm {
         font-size: toRem(56px);
@@ -42,7 +41,6 @@
 
 .h-xl {
     @include font(38px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include sm {
         font-size: toRem(48px);
@@ -55,7 +53,6 @@
 
 .h-l {
     @include font(32px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include sm {
         font-size: toRem(40px);
@@ -64,7 +61,6 @@
 
 .h-m {
     @include font(28px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include sm {
         font-size: toRem(36px);
@@ -73,7 +69,6 @@
 
 .h-s {
     @include font(24px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include sm {
         font-size: toRem(32px);
@@ -82,7 +77,6 @@
 
 .h-xs {
     @include font(20px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include sm {
         font-size: toRem(28px);
@@ -91,7 +85,6 @@
 
 .h-xxs {
     @include font(20px, bold, $lh-title);
-    letter-spacing: $ls-heading;
 
     @include sm {
         font-size: toRem(24px);
