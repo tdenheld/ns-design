@@ -11,82 +11,90 @@
 }
 
 .h-xxxl {
-    @include font-dls(38px, bold, $lh-title);
+    @include font(38px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include xs {
-        @include dls(48px);
+        font-size: toRem(48px);
     }
 
     @include sm {
-        @include dls(60px);
+        font-size: toRem(60px);
     }
 
     @include md {
-        @include dls(80px);
+        font-size: toRem(80px);
     }
 }
 
 .h-xxl {
-    @include font-dls(38px, bold, $lh-title);
+    @include font(38px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include sm {
-        @include dls(56px);
+        font-size: toRem(56px);
     }
 
     @include md {
-        @include dls(72px);
+        font-size: toRem(72px);
     }
 }
 
 .h-xl {
-    @include font-dls(38px, bold, $lh-title);
+    @include font(38px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include sm {
-        @include dls(48px);
+        font-size: toRem(48px);
     }
 
     @include md {
-        @include dls(60px);
+        font-size: toRem(60px);
     }
 }
 
 .h-l {
-    @include font-dls(32px, bold, $lh-title);
+    @include font(32px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include sm {
-        @include dls(40px);
+        font-size: toRem(40px);
     }
 }
 
 .h-m {
-    @include font-dls(28px, bold, $lh-title);
+    @include font(28px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include sm {
-        @include dls(36px);
+        font-size: toRem(36px);
     }
 }
 
 .h-s {
-    @include font-dls(24px, bold, $lh-title);
+    @include font(24px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include sm {
-        @include dls(32px);
+        font-size: toRem(32px);
     }
 }
 
 .h-xs {
-    @include font-dls(20px, bold, $lh-title);
+    @include font(20px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include sm {
-        @include dls(28px);
+        font-size: toRem(28px);
     }
 }
 
 .h-xxs {
-    @include font-dls(20px, bold, $lh-title);
+    @include font(20px, bold, $lh-title);
+    letter-spacing: $ls-heading;
 
     @include sm {
-        @include dls(24px);
+        font-size: toRem(24px);
     }
 }
 

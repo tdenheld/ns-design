@@ -9,24 +9,8 @@
     @return #{$remSize}rem;
 }
 
-@function letterSpace($size) {
-    $letterSpacingSize: $size / 75 / 16px;
-    @return -#{$letterSpacingSize}rem;
-}
-
 @mixin font($size, $weight, $factor) {
     font-size: toRem($size);
-    font-weight: $weight;
-    line-height: $factor;
-}
-
-@mixin dls($size) {
-    font-size: toRem($size);
-    letter-spacing: letterSpace($size);
-}
-
-@mixin font-dls($size, $weight, $factor) {
-    @include dls($size);
     font-weight: $weight;
     line-height: $factor;
 }

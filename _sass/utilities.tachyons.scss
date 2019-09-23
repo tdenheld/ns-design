@@ -901,10 +901,8 @@
 
 // letter-spacing
 // ----------------------------------------------------------------------
-.ls-normal { letter-spacing: initial;}
-.ls-3 {letter-spacing: toRem(-0.3px);}
-.ls-5 {letter-spacing: toRem(-0.5px);}
-.ls-8 {letter-spacing: toRem(-0.8px);}
+.ls-normal {letter-spacing: initial;}
+.ls-heading {letter-spacing: $ls-heading;}
 
 // word wraps
 // ----------------------------------------------------------------------
