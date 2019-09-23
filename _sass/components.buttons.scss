@@ -492,6 +492,10 @@
             border-radius: 4px 0 0 4px;
         }
 
+        &:not(:first-child):not(:hover):not(:focus) {
+            border-left-color: transparent;
+        }
+
         &:last-of-type {
             border-radius: 0 4px 4px 0;
         }
@@ -568,7 +572,7 @@
 
 .button--contrastYellow {
     background-color: transparent;
-    border-color: mix($ns-grey, $ns-yellow, 20%);
+    border-color: $ns-grey-alpha-20;
     box-shadow: none;
     color: $ns-blue;
 
