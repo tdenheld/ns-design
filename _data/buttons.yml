@@ -37,11 +37,11 @@
     - disabled: true
       modifier: button--brand button--buy
     - loader: true
-      modifier: button--brand button--arrowRight
+      modifier: button--brand button--arrow
     - disabled: true
       modifier: button--brand
     - disabled: true
-      modifier: button--brand button--arrowRight
+      modifier: button--brand button--arrow
 
 - title: Subtle
   button:
