@@ -72,6 +72,8 @@
 // ----------------------------------------------------
 .toggle--subtle {
     .toggleButton {
+        width: auto;
+        
         &:first-child {
             .toggleButton__label {
                 padding-left: 0;
