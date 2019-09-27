@@ -77,27 +77,6 @@
        Spacers
 --------------------*/
 
-/*
-	Base:
-	p = padding
-	m = margin
-	
-	Modifiers:
-	a = all
-	h = horizontal
-	v = vertical
-	t = top
-	r = right
-	b = bottom
-	l = left
-	
-	Media Query Extensions:
-     -sm = min-width $sm
-     -sm-max = min-width $sm-max (only mobile)
-     -md = min-width $md
-     -lg = min-width $lg
-*/
-
 // auto-margins
 // rem padding (NS tile padding)
 .ma-auto {margin: auto;}
@@ -688,18 +667,6 @@
       Typography
 --------------------*/
 
-/*
-	Base:
-	f = font
-    fw = font-weight
-    ls = letter-spacing
-	
-	Media Query Extensions:
-     -sm = min-width $sm
-     -md = min-width $md
-     -lg = min-width $lg
-*/
-
 // font sizes
 // ----------------------------------------------------------------------
 .f12 {font-size: toRem(12px);}
@@ -871,6 +838,7 @@
 .f-blue {color: $ns-blue;}
 .f-light-blue {color: $ns-light-blue;}
 .f-green-sexy {color: $ns-green-sexy;}
+.f-green-sexy-2 {color: $ns-green-sexy-2;}
 .f-red {color: $ns-red-alert;}
 .f-grey {color: $ns-grey;}
 .f-grey-2 {color: $ns-grey-2;}
@@ -916,21 +884,6 @@
       Text align
 --------------------*/
 
-/*
-	Base:
-	txt = text-align
-	
-	Modifiers
-    l = left
-    r = right
-    c = center
-    j = justify
-    
-	Media Query Extensions:
-     -sm = min-width $sm
-     -md = min-width $md
-     -lg = min-width $lg
-*/
 .txt-l  { text-align: left; }
 .txt-r  { text-align: right; }
 .txt-c  { text-align: center; }
@@ -991,26 +944,6 @@
 /*-------------------
        Borders
 --------------------*/
-
-/*
-	Base:
-	bo = border
-	br = border-radius
-	
-	Modifiers:
-	-a = all
-	-h = horizontal
-	-v = vertical
-	-t = top
-	-r = right
-	-b = bottom
-	-l = left
-	
-	Media Query Extensions:
-     -sm = min-width $sm
-     -md = min-width $md
-     -lg = min-width $lg
-*/
 
 // default border is $ns-grey-7 (#e8e8e6)
 .bo-none {border: none;}
@@ -1075,12 +1008,6 @@
        Shadows
 --------------------*/
 
-/*
-	Base:
-	bs = box shadow
-	ts = text shadow
-*/
-
 // box shadows
 // -------------------------
 .bs-none {box-shadow: none;}
@@ -1102,16 +1029,6 @@
 /*-------------------
      Backgrounds
 --------------------*/
-
-/*
-	Base:
-	bg = background
-	gd = gradient
-	
-	Modifiers:
-	-r = radial
-	-110 = degrees
-*/
 
 // size
 // --------------------------------------------
