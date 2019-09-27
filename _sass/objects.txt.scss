@@ -6,7 +6,8 @@
 .h-s,
 .h-xs,
 .h-xxs,
-.h-xxxs {
+.h-xxxs,
+.h-xxxxs {
     color: $ns-blue;
     letter-spacing: $ls-heading;
 }
@@ -52,6 +53,14 @@
 }
 
 .h-l {
+    @include font(36px, bold, $lh-title);
+
+    @include sm {
+        font-size: toRem(48px);
+    }
+}
+
+.h-m {
     @include font(32px, bold, $lh-title);
 
     @include sm {
@@ -59,7 +68,7 @@
     }
 }
 
-.h-m {
+.h-s {
     @include font(28px, bold, $lh-title);
 
     @include sm {
@@ -67,7 +76,7 @@
     }
 }
 
-.h-s {
+.h-xs {
     @include font(24px, bold, $lh-title);
 
     @include sm {
@@ -75,7 +84,7 @@
     }
 }
 
-.h-xs {
+.h-xxs {
     @include font(20px, bold, $lh-title);
 
     @include sm {
@@ -83,12 +92,25 @@
     }
 }
 
-.h-xxs {
+.h-xxxs {
     @include font(20px, bold, $lh-title);
 
     @include sm {
         font-size: toRem(24px);
     }
+}
+
+.h-xxxxs {
+    @include font(18px, bold, $lh-title);
+
+    @include sm {
+        font-size: toRem(20px);
+    }
+}
+
+.h--normal {
+    font-weight: normal;
+    letter-spacing: 0;
 }
 
 
