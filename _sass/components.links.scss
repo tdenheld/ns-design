@@ -13,3 +13,29 @@ a {
         box-shadow: 0 1px 0 rgba($ns-blue, 1);
     }
 }
+
+.link-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $ns-light-blue;
+    transition: color 250ms $ease;
+    box-shadow: inherit;
+    @include font(16px, normal, 0.6);
+
+    svg {
+        margin-right: $half-gutter;
+        fill: $ns-light-blue;
+        transition: all 250ms $ease;
+    }
+
+    &:hover {
+        color: $ns-blue;
+        box-shadow: inherit;
+
+        svg {
+            fill: $ns-blue;
+            transform: translateX(5px);
+        }
+    }
+}

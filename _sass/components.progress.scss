@@ -1,0 +1,177 @@
+.progress {
+    padding: $half-gutter 0;
+    background-color: $ns-grey-8;
+    border-bottom: 1px solid $ns-grey-7;
+
+    @include md {
+        padding: $gutter 0;
+    }
+}
+
+.progress__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    line-height: 1;
+}
+
+// circle
+.progress__circle {
+    // lay-out
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+
+    //styling
+    background-color: $ns-white;
+    border: 3px solid $ns-grey-6b;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    color: $ns-grey-4;
+}
+
+.progress__description {
+    margin-top: 10px;
+    font-size: toRem(14px);
+    text-align: center;
+    color: $ns-grey-4;
+}
+
+.progress__step {
+    position: relative;
+    display: grid;
+    justify-content: center;
+}
+
+.progress__step--active {
+    .progress__description {
+        font-weight: bold;
+
+        @keyframes color-descr {
+            from {
+                color: $ns-grey-4;
+            }
+
+            to {
+                color: $ns-green-sexy;
+            }
+        }
+
+        animation: color-descr 400ms $ease both 400ms;
+    }
+
+    .progress__circle {
+        @keyframes color-in {
+            from {
+                border: 3px solid $ns-grey-6b;
+                background-color: $ns-white;
+                color: $ns-grey-4;
+            }
+
+            to {
+                border: none;
+                background-color: $ns-green-sexy;
+                color: $ns-white;
+            }
+        }
+
+        animation: color-in 400ms $ease both 400ms;
+    }
+}
+
+// circle tick
+@mixin circle-tick($url) {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+$tick-green: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.75 8.125'%3E%3Ctitle%3Echeck-fat--small%3C/title%3E%3Cpath fill='%2300AA89' d='M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z'/%3E%3C/svg%3E");
+$tick-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.75 8.125'%3E%3Ctitle%3Echeck-fat--small%3C/title%3E%3Cpath fill='%23ffffff' d='M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z'/%3E%3C/svg%3E");
+$tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.75 8.125'%3E%3Ctitle%3Echeck-fat--small%3C/title%3E%3Cpath fill='%236a6a7a' d='M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z'/%3E%3C/svg%3E");
+
+.progress__step--done {
+    .progress__description {
+        color: $ns-green-sexy;
+    }
+
+    .progress__circle {
+        border: 3px solid $ns-green-sexy;
+
+        &:before {
+            @include circle-tick($tick-green);
+        }
+    }
+}
+
+.progress__step--last {
+    .progress__circle {
+        &:before {
+            @include circle-tick($tick-grey);
+        }
+    }
+}
+
+.progress__step--finished {
+    .progress__circle {
+        &:after {
+            position: absolute;
+            @extend .a;
+            @extend .a-fi;
+            @extend .a-del-200;
+            @include circle-tick($tick-white);
+        }
+    }
+}
+
+// bar
+.progress__bar {
+    position: relative;
+    top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+}
+
+.progress__bar--3 {
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+.progress__line {
+    background-color: $ns-grey-6b;
+    height: 3px;
+}
+
+.progress__line--active {
+    background-color: $ns-green-sexy;
+}
+
+.progress__line--done {
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $ns-green-sexy;
+        transform: scaleX(0);
+
+        @keyframes scale-in-line {
+            from {
+                transform: scaleX(0);
+            }
+
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        animation: scale-in-line 600ms $ease both 100ms;
+        transform-origin: 0 0;
+    }
+}

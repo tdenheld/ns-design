@@ -1,0 +1,14 @@
+.video {
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 85px;
+        top: calc(50% - 42px);
+        left: calc(50% - 30px);
+        background-image: url("/assets/img/btn-play.svg");
+    }
+}

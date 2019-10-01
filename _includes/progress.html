@@ -1,0 +1,120 @@
+<section class="progress">
+    <div class="container">
+    {% if page.step == 1 %}
+    <div class="a a-fi-down">
+        <div class="progress__bar">
+            <div></div>
+            <div class="progress__line"></div>
+            <div class="progress__line"></div>
+            <div class="progress__line"></div>
+            <div></div>
+        </div>
+        <div class="progress__grid">
+            <div class="progress__step progress__step--active">
+                <div class="progress__circle">1</div>
+                <div class="progress__description hidden-xs">{{ site.data.progress.report.step1 }}</div>
+            </div>
+            <div class="progress__step">
+                <div class="progress__circle">2</div>
+                <div class="progress__description hidden-xs">{{ site.data.progress.report.step2 }}</div>
+            </div>
+            <div class="progress__step">
+                <div class="progress__circle">3</div>
+                <div class="progress__description hidden-xs">{{ site.data.progress.report.step3 }}</div>
+            </div>
+            <div class="progress__step progress__step--last">
+                <div class="progress__circle"></div>
+                <div class="progress__description hidden-xs">{{ site.data.progress.report.step4 }}</div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if page.step == 2 %}
+    <div class="progress__bar">
+        <div></div>
+        <div class="progress__line progress__line--done"></div>
+        <div class="progress__line"></div>
+        <div class="progress__line"></div>
+        <div></div>
+    </div>
+    <div class="progress__grid">
+        <a onclick="window.history.go(-1)" class="unlink">
+            <div class="progress__step progress__step--done">
+                <div class="progress__circle"></div>
+                <div class="progress__description hidden-xs">{{ site.data.progress.report.step1 }}</div>
+            </div>
+        </a>
+        <div class="progress__step progress__step--active">
+            <div class="progress__circle">2</div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step2 }}</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">3</div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step3 }}</div>
+        </div>
+        <div class="progress__step progress__step--last">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step4 }}</div>
+        </div>
+    </div>
+    {% endif %}
+    {% if page.step == 3 %}
+    <div class="progress__bar">
+        <div></div>
+        <div class="progress__line progress__line--active"></div>
+        <div class="progress__line progress__line--done"></div>
+        <div class="progress__line"></div>
+        <div></div>
+    </div>
+    <div class="progress__grid">
+        <a onclick="window.history.go(-2)" class="unlink">
+            <div class="progress__step progress__step--done">
+                <div class="progress__circle"></div>
+                <div class="progress__description hidden-xs">{{ site.data.progress.report.step1 }}</div>
+            </div>
+        </a>
+        <a onclick="window.history.go(-1)" class="unlink">
+            <div class="progress__step progress__step--done">
+                <div class="progress__circle"></div>
+                <div class="progress__description hidden-xs">{{ site.data.progress.report.step2 }}</div>
+            </div>
+        </a>
+        <div class="progress__step progress__step--active">
+            <div class="progress__circle">3</div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step3 }}</div>
+        </div>
+        <div class="progress__step progress__step--last">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step4 }}</div>
+        </div>
+    </div>
+    {% endif %}
+    {% if page.step == 4 %}
+    <div class="progress__bar">
+        <div></div>
+        <div class="progress__line progress__line--active"></div>
+        <div class="progress__line progress__line--active"></div>
+        <div class="progress__line progress__line--done"></div>
+        <div></div>
+    </div>
+    <div class="progress__grid">
+        <div class="progress__step progress__step--done">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step1 }}</div>
+        </div>
+        <div class="progress__step progress__step--done">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step2 }}</div>
+        </div>
+        <div class="progress__step progress__step--done">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step3 }}</div>
+        </div>
+        <div class="progress__step progress__step--last progress__step--active progress__step--finished">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">{{ site.data.progress.report.step4 }}</div>
+        </div>
+    </div>
+    {% endif %}
+    </div>
+</section>
