@@ -24,13 +24,18 @@
         &:before {
             border: 2px solid $ns-light-blue;
         }
+
+        .selector__title {
+            color: $ns-blue;
+        }
     }
 }
 
 .selector__title {
     margin: 0 0 4px;
     @include font(18px, bold, $lh-copy);
-    color: $ns-blue;
+    color: $ns-light-blue;
+    transition: $fade-all;
 }
 
 .selector__description {
@@ -72,11 +77,14 @@
 
 // no touch
 .no-touch {
-    .selector__item:hover:before {
-        border: 1px solid $ns-grey-5;
-    }
-
-    .selector__item.is-selected:hover:before {
-        border: 2px solid $ns-light-blue;
+    .selector__item {
+        &:hover:not(.is-selected) {
+            &:before {
+                border: 1px solid $ns-grey-5;
+            }
+            .selector__title {
+                color: $ns-blue;
+            }
+        }
     }
 }

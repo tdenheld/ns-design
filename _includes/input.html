@@ -1,0 +1,41 @@
+<div class="ff ff--grid js-formfield" id="formfield-{{ include.title }}">
+    {% capture ID %}{{ include.title | replace: ' ', '_' | replace: '/', '_' | replace: '-', '_' }}{% endcapture %}
+
+    <!-- label -->
+    <label class="ff__label" for="{{ ID }}">
+        <span>{{ include.title | capitalize }}</span>
+        {% unless include.required %}
+        <span class="ff__description"> (optioneel)</span>
+        {% endunless %}
+    </label>
+
+    <!-- input field -->
+    <div>
+        <div class="{% if include.title-2 %}g g-2 col-gap-2{% endif %}">
+            <div class="pos-r {{ include.width }}">
+                <input class="ff-input" type="{{ include.type }}" id="{{ ID }}" name="{{ ID }}"
+                    placeholder="{{ include.placeholder }}" value="{{ include.value }}" {{ include.required }} />
+                {% if include.date-icon %}
+                <span class="tk-datepicker-icon js-dp-btn js-dp-bs-btn">
+                    {% include /icons/calendar--small.svg %}
+                    <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
+                </span>
+                {% endif %}
+            </div>
+
+            <!-- optional 2nd field -->
+            {% if include.title-2 %}
+            <div class="pos-r {{ include.width-2 }}">
+                <input class="ff-input" type="{{ include.type-2 }}" id="{{ include.title-2 }}"
+                    name="{{ include.title-2 }}" placeholder="{{ include.placeholder-2 }}" value="{{ include.value-2 }}"
+                    {{ include.required-2 }} />
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- description text below -->
+        {% if include.description %}
+        <p class="ff__description">{{ include.description }}</p>
+        {% endif %}
+    </div>
+</div>
