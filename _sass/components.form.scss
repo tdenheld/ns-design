@@ -26,7 +26,6 @@
             position: relative;
             top: 11px;
             text-align: right;
-            line-height: $lh-title;
         }
     }
 }
@@ -119,6 +118,31 @@
 
     @include sm {
         margin: $one-half-gutter 0;
+    }
+}
+
+
+// filled state
+// ----------------------------------------------
+.ff-filled {
+    @include font(18px, bold, ($button-height - 4));
+    color: $ns-blue;
+}
+
+.ff-filled__icon {
+    position: relative;
+    top: -2px;
+    margin-left: 7px;
+
+    svg {
+        transition: $fade-link;
+        fill: $ns-light-blue;
+    }
+
+    &:hover {
+        svg {
+            fill: $ns-blue;
+        }
     }
 }
 
@@ -357,7 +381,7 @@
     box-shadow: $bs-focus;
 }
 
-.radioButton__input.is-error+.radioButton__label:before {
+.radioButton__input.is-error:not(:focus)+.radioButton__label:before {
     border: 1px solid $ns-red-alert !important;
 }
 
@@ -374,8 +398,11 @@
 
 // hide up and down arrows
 // ----------------------------------------
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
+input::-webkit-calendar-picker-indicator,
+input::-webkit-clear-button {
+    display: none;
     -webkit-appearance: none;
 }
 
@@ -392,6 +419,8 @@ input::-webkit-contacts-auto-fill-button {
     position: absolute;
     right: 0;
 }
+
+
 
 // overrides
 // ----------------------------------------------------------
