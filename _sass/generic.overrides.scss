@@ -65,3 +65,11 @@ input,
         min-height: calc(100vh - 14px);
     }
 }
+
+.overlay__body {
+    padding-bottom: 84px;
+    
+    @include sm {
+        padding-bottom: $gutter;
+    }
+}
