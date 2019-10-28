@@ -18,12 +18,11 @@
     &:after {
         content: '';
         position: absolute;
-        bottom: -32px;
-        left: -4px;
-        border-left: 14px solid transparent;
-        border-right: 14px solid transparent;
+        bottom: -33px;
+        left: -10px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
         border-bottom: 30px solid $ns-grey-8;
-        margin-bottom: -1px;
         opacity: 0;
         transition: $fade-link;
     }
