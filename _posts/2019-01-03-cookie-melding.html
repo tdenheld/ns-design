@@ -1,0 +1,68 @@
+---
+title: Cookie melding
+---
+
+<section class="pv-4 pv-8-sm">
+    <div class="container container--narrow">
+        <header class="mb-4 mb-8-sm">
+            <h1 class="f-blue">{{ page.title }}</h1>
+            <hr>
+        </header>
+    </div>
+</section>
+
+<div class="overlay is-in-dom is-visible" aria-live="polite" role="dialog">
+    <div class="overlay__scrollContainer" tabindex="-1">
+        <div class="overlay__contentPositioner">
+            <div class="overlay__sticky-bottom visible-xs">
+                <div class="bg-white pa-3">
+                    <button class="button overlay__close w-100">Akkoord</button>
+                </div>
+            </div>
+            <div class="overlay__content">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__unit s-4-4 m-10-12 m-push-left-1-12 xl-8-12 xl-push-left-1-12">
+                            <div class="overlay__body pb-8">
+                                <header class="mb-4">
+                                    <h2 class="h-m mb-3">{{ site.data.cookies.title }}</h2>
+                                    <p>{{ site.data.cookies.description }}</p>
+                                </header>
+
+                                {% for entry in site.data.cookies.settings %}
+                                <div class="selector__property">
+                                    <div class="selector__property-container">
+                                        <p class="f-blue">
+                                            {{ entry.title }}
+                                        </p>
+                                        <div class="tooltip js-tooltip">
+                                            {% include icons/info--small.svg %}
+                                        </div>
+                                        <div class="selector__toggle">
+                                            <div class="switch js-toggle"></div>
+                                        </div>
+                                    </div>
+                                    <p class="tooltip__content js-tooltip-content">
+                                        {{ entry.details }}
+                                    </p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="grid__unit s-4-4 m-10-12 m-push-left-1-12 xl-push-left-1-12 hidden-xs">
+                            <div class="bg-white pt-2 bo-t txt-r">
+                                <button class="button overlay__close">Akkoord</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="closeButton overlay__close">
+                <span class="icon">
+                    <span class="alt">Sluiten</span>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="darkener"></div>
+</div>

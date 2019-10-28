@@ -1,0 +1,45 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-grey-4;
+        transition: $fade-link;
+    }
+
+    &:hover {
+        svg {
+            fill: $ns-blue;
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -32px;
+        left: -4px;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-bottom: 30px solid $ns-grey-8;
+        margin-bottom: -1px;
+        opacity: 0;
+        transition: $fade-link;
+    }
+
+    &.is-active:after {
+        opacity: 1;
+    }
+}
+
+.tooltip__content {
+    position: relative;
+    top: -2px;
+    display: block;
+    margin-top: 10px;
+    @include font(14px, normal, $lh-copy);
+    color: $ns-grey-3;
+    padding: $quarter-gutter;
+    background-color: $ns-grey-8;
+}

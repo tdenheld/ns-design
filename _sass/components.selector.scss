@@ -51,16 +51,25 @@
 }
 
 .selector__property {
-    display: grid;
-    grid-template-columns: 1fr max-content $double-gutter;
-    grid-gap: $half-gutter;
-    align-items: center;
+    position: relative;
     padding: $half-gutter 0;
     border-top: 1px solid $ns-grey-7;
 
     &:last-child {
         border-bottom: 1px solid $ns-grey-7;
     }
+}
+
+.selector__property-container {
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    grid-column-gap: $half-gutter;
+    align-items: center;
+}
+
+.selector__toggle {
+    display: flex;
+    align-items: center;
 }
 
 .selector__edit {

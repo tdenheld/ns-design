@@ -1,0 +1,11 @@
+<div class="collapsible js-collapsible">
+    <header class="collapsible__header js-collapsible-header">
+        <h3 class="collapsible__title">{{ entry.title }}</h3>
+        <figure class="collapsible__icon">{% include icons/plus--small.svg %}</figure>
+    </header>
+    <div class="collapsible__content js-collapsible-content is-hidden">
+        {% for content in entry.content %}
+        {{ content | markdownify }}
+        {% endfor %}
+    </div>
+</div>

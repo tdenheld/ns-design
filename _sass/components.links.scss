@@ -12,6 +12,10 @@ a {
         color: $ns-blue;
         box-shadow: 0 1px 0 rgba($ns-blue, 1);
     }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .link-icon {

@@ -101,8 +101,38 @@ const button = () => {
     });
 }
 
+// const tooltip = () => {
+//     const obj = '.js-tooltip';
+//     const content = '.js-tooltip-content';
+
+//     if (!exists(obj)) return;
+//     $(content).hide();
+//     ß(obj).map((el) => {
+//         el.onclick = (e) => {
+//             $(e.target).next(content).slideToggle(150);
+//             $(e.target).toggleClass('is-active');
+//         }
+//     });
+// }
+
+// tooltip
+// ------------------------------------------------------------
+function tooltip() {
+    const obj = $('.js-tooltip');
+    const content = '.js-tooltip-content';
+
+    if (obj[0]) {
+        $(content).hide();
+        obj.click(function () {
+            $(this).parents().next(content).slideToggle(150);
+            $(this).toggleClass('is-active');
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     toggle();
     clearSession();
     button();
+    tooltip();
 });

@@ -51,3 +51,17 @@ input,
 .checkbox__label:before {
     border-radius: 2px;
 }
+
+.overlay__sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 14px);
+    z-index: 999;
+    box-shadow: 0 -1px 0 $ns-grey-alpha-15;
+}
+
+.overlay__content {
+    @include sm-max {
+        min-height: calc(100vh - 14px);
+    }
+}

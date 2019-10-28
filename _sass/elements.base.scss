@@ -11,3 +11,15 @@ li {
         margin-bottom: 0;
     }
 }
+
+summary {
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
