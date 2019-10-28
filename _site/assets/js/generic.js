@@ -78,56 +78,34 @@ const ß = (node, element) => {
 const toggle = () => {
     const obj = '.js-toggle';
     if (!exists(obj)) return;
-    ß(obj).map((el) => {
-        el.onclick = () => el.classList.toggle('is-active');
-    });
+    ß(obj).map((el) => el.onclick = () => el.classList.toggle('is-active'));
 }
 
 const clearSession = () => {
     const obj = '.js-clear-session';
     if (!exists(obj)) return;
-    ß(obj).map((el) => {
-        el.onclick = () => sessionStorage.clear();
-    });
+    ß(obj).map((el) => el.onclick = () => sessionStorage.clear());
 }
 
 const button = () => {
     const obj = '.button';
     if (!exists(obj)) return;
-    ß(obj).map((el) => {
-        el.onclick = () => {
-            if (el.hasAttribute('data-loader')) el.classList.toggle('is-loading');
-        }
+    ß(obj).map((el) => el.onclick = () => {
+        if (el.hasAttribute('data-loader')) el.classList.toggle('is-loading');
     });
 }
 
-// const tooltip = () => {
-//     const obj = '.js-tooltip';
-//     const content = '.js-tooltip-content';
-
-//     if (!exists(obj)) return;
-//     $(content).hide();
-//     ß(obj).map((el) => {
-//         el.onclick = (e) => {
-//             $(e.target).next(content).slideToggle(150);
-//             $(e.target).toggleClass('is-active');
-//         }
-//     });
-// }
-
-// tooltip
-// ------------------------------------------------------------
-function tooltip() {
-    const obj = $('.js-tooltip');
+const tooltip = () => {
+    const obj = '.js-tooltip';
     const content = '.js-tooltip-content';
 
-    if (obj[0]) {
-        $(content).hide();
-        obj.click(function () {
-            $(this).parents().next(content).slideToggle(150);
-            $(this).toggleClass('is-active');
-        });
-    }
+    if (!exists(obj)) return;
+    ß(content).map((el) => el.style.display = 'none');
+
+    ß(obj).map((el) => el.onclick = () => {
+        $(el).parent().next(content).slideToggle(150);
+        el.classList.toggle('is-active');
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

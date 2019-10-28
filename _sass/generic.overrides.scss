@@ -52,24 +52,24 @@ input,
     border-radius: 2px;
 }
 
+.overlay__content--cookie {
+    @include sm-max {
+        min-height: calc(100vh - 14px);
+    }
+}
+
+.overlay__body--cookie {
+    padding-bottom: 84px;
+    
+    @include sm {
+        padding-bottom: $gutter;
+    }
+}
+
 .overlay__sticky-bottom {
     position: fixed;
     bottom: 0;
     width: calc(100% - 14px);
     z-index: 999;
     box-shadow: 0 -1px 0 $ns-grey-alpha-15;
-}
-
-.overlay__content {
-    @include sm-max {
-        min-height: calc(100vh - 14px);
-    }
-}
-
-.overlay__body {
-    padding-bottom: 84px;
-    
-    @include sm {
-        padding-bottom: $gutter;
-    }
 }
