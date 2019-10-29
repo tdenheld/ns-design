@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function collapsible() {
     const obj = '.js-collapsible';
