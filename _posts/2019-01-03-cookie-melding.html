@@ -72,7 +72,7 @@ title: Cookie melding
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         Array.from(document.querySelectorAll('.overlay__close')).map((el) => {
-            el.addEventListener('click', e => { 
+            el.addEventListener('click', () => { 
                 document.querySelector('.overlay').remove();
             });
         });
