@@ -73,3 +73,7 @@ input,
     z-index: 999;
     box-shadow: 0 -1px 0 $ns-grey-alpha-15;
 }
+
+.closeButton:focus {
+    outline: none;
+}
