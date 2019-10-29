@@ -43,9 +43,11 @@ title: Cookie melding
                                             <div class="switch js-toggle is-active"></div>
                                         </div>
                                     </div>
-                                    <p class="tooltip__content js-tooltip-content">
-                                        {{ entry.details }}
-                                    </p>
+                                    <div class="is-hidden">
+                                        <p class="tooltip__content">
+                                            {{ entry.details }}
+                                        </p>
+                                    </div>
                                 </div>
                                 {% endfor %}
                             </div>

@@ -69,6 +69,10 @@ const slideUp = (node, duration, callback) => {
     });
 }
 
+const slideToggle = (n, d, c) => {
+    isHidden(n) ? slideDown(n, d, c) : slideUp(n, d, c);
+}
+
 const ß = (node, element) => {
     const obj = element || document;
     const qs = obj.querySelectorAll(node);
@@ -97,13 +101,10 @@ const button = () => {
 
 const tooltip = () => {
     const obj = '.js-tooltip';
-    const content = '.js-tooltip-content';
-
     if (!exists(obj)) return;
-    ß(content).map((el) => el.style.display = 'none');
 
     ß(obj).map((el) => el.onclick = () => {
-        $(el).parent().next(content).slideToggle(150);
+        slideToggle(el.parentElement.nextElementSibling, 200);
         el.classList.toggle('is-active');
     });
 }
