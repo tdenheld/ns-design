@@ -1,3 +1,9 @@
+const ß = (node, element) => {
+    const obj = element || document;
+    const qs = obj.querySelectorAll(node);
+    return Array.from(qs);
+}
+
 const exists = node => {
     return document.body.contains(document.querySelector(node));
 }
@@ -12,6 +18,11 @@ const valueInArray = (value, array) => {
 
 const removeAllChilds = node => {
     while (node.firstChild) node.removeChild(node.firstChild);
+}
+
+const inViewport = (node, hook) => {
+    const pos = node.getBoundingClientRect();
+    return !(pos.top > innerHeight * hook || pos.bottom < 0);
 }
 
 const getHeight = node => {
@@ -73,12 +84,6 @@ const slideToggle = (n, d, c) => {
     isHidden(n) ? slideDown(n, d, c) : slideUp(n, d, c);
 }
 
-const ß = (node, element) => {
-    const obj = element || document;
-    const qs = obj.querySelectorAll(node);
-    return Array.from(qs);
-}
-
 const toggle = () => {
     const obj = '.js-toggle';
     if (!exists(obj)) return;
@@ -111,9 +116,17 @@ const tooltip = () => {
     });
 }
 
+const revealOnScroll = (node, hook) => {
+    (reveal = () => ß(node).map((el) => {
+        if (inViewport(el, hook)) el.classList.add('is-active');
+    }))();
+    document.addEventListener('scroll', () => reveal());
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     toggle();
     clearSession();
     button();
     tooltip();
+    revealOnScroll('.js-tr', 0.95);
 });
