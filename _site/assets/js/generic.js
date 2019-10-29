@@ -1,3 +1,5 @@
+"use strict";
+
 const ß = (node, element) => {
     const obj = element || document;
     const qs = obj.querySelectorAll(node);
@@ -117,9 +119,10 @@ const tooltip = () => {
 }
 
 const revealOnScroll = (node, hook) => {
-    (reveal = () => ß(node).map((el) => {
+    const reveal = () => ß(node).map((el) => {
         if (inViewport(el, hook)) el.classList.add('is-active');
-    }))();
+    });
+    reveal();
     document.addEventListener('scroll', () => reveal());
 }
 

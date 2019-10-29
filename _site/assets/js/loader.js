@@ -1,4 +1,6 @@
-const loader = () => {
+"use strict";
+
+(() => {
     const loader = '.js-loader';
     if (!exists(loader)) return;
 
@@ -10,5 +12,4 @@ const loader = () => {
             display: 'none',
         });
     });
-}
-loader();
+})()

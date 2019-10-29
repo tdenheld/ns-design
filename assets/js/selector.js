@@ -1,4 +1,6 @@
-function selector() {
+"use strict";
+
+(() => {
     const time = 250;
     const obj = ".js-selector-item";
     const toggleClass = "is-selected";
@@ -6,33 +8,29 @@ function selector() {
     const content = ".js-selector-content";
     let paynow = true;
 
-    if ($(obj)[0]) {
-        $(obj).each(function (i) {
-            $(this).attr("id", "js-selector-item-" + i);
-        });
-    };
+    if ($(obj)[0]) return
+    $(obj).each(function (i) {
+        $(this).attr("id", "js-selector-item-" + i);
+    });
 
-    if ($(obj)[0]) {
-        $(content).slideUp(time);
-        $(initID + " " + content).slideDown(0);
-        $(initID).addClass(toggleClass);
+    $(content).slideUp(time);
+    $(initID + " " + content).slideDown(0);
+    $(initID).addClass(toggleClass);
 
-        $(obj).click(function () {
-            if (!$(this).hasClass(toggleClass)) {
-                $(obj).removeClass(toggleClass);
-                $(this).addClass(toggleClass);
-                $(content).slideUp(time);
-                $(content, this).slideDown(time);
+    $(obj).click(function () {
+        if (!$(this).hasClass(toggleClass)) {
+            $(obj).removeClass(toggleClass);
+            $(this).addClass(toggleClass);
+            $(content).slideUp(time);
+            $(content, this).slideDown(time);
 
-                if (paynow) {
-                    $(".js-pay-now").delay(time).slideUp(time);
-                    paynow = false;
-                } else {
-                    $(".js-pay-now").delay(time).slideDown(time);
-                    paynow = true;
-                };
-            };
-        });
-    };
-};
-selector();
+            if (paynow) {
+                $(".js-pay-now").delay(time).slideUp(time);
+                paynow = false;
+            } else {
+                $(".js-pay-now").delay(time).slideDown(time);
+                paynow = true;
+            }
+        }
+    });
+})()
