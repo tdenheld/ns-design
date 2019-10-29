@@ -23,14 +23,6 @@
             $(this).addClass(toggleClass);
             $(content).slideUp(time);
             $(content, this).slideDown(time);
-
-            if (paynow) {
-                $(".js-pay-now").delay(time).slideUp(time);
-                paynow = false;
-            } else {
-                $(".js-pay-now").delay(time).slideDown(time);
-                paynow = true;
-            }
         }
     });
 })()
