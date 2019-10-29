@@ -31,4 +31,12 @@
             transform: translateX(20px);
         }
     }
+
+    &.is-disabled {
+        background-color: rgba($ns-light-blue, 0.25);
+
+        &:before {
+            transform: translateX(20px);
+        }
+    }
 }

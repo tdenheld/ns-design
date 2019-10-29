@@ -106,6 +106,8 @@ const tooltip = () => {
     ß(obj).map((el) => el.onclick = () => {
         slideToggle(el.parentElement.nextElementSibling, 200);
         el.classList.toggle('is-active');
+        const offset = -el.parentElement.offsetHeight / 2 + 4 + 'px';
+        el.querySelector('.js-tooltip-arrow').style.bottom = offset;
     });
 }
 

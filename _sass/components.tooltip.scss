@@ -14,21 +14,20 @@
         }
     }
 
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 4px;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-bottom: 8px solid $ns-grey-8;
-        opacity: 0;
-        transition: $fade-link;
-    }
-
-    &.is-active:after {
+    &.is-active .tooltip__arrow {
         opacity: 1;
     }
+}
+
+.tooltip__arrow {
+    position: absolute;
+    bottom: -10px;
+    left: 4px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid $ns-grey-8;
+    opacity: 0;
+    transition: opacity 200ms $ease;
 }
 
 .tooltip__content {

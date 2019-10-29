@@ -49,8 +49,8 @@
         <div class="overlay__contentPositioner">
             <div class="overlay__sticky-bottom visible-xs">
                 <div class="bg-white pt-3 ph-3">
-                    <button class="button overlay__close w-100">Akkoord</button>
-                    <button class="button button--tertiary">Niet akkoord</button>
+                    <button class="button w-100 overlay__close">Akkoord</button>
+                    <button class="button button--tertiary overlay__close">Niet akkoord</button>
                 </div>
             </div>
             <div class="overlay__content overlay__content--cookie">
@@ -71,9 +71,12 @@
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
+                                            <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
                                         <div class="selector__toggle">
-                                            <div class="switch js-toggle is-active"></div>
+                                            <div
+                                                class="switch js-toggle is-active is-disabled">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="is-hidden">
@@ -90,9 +93,12 @@
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
+                                            <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
                                         <div class="selector__toggle">
-                                            <div class="switch js-toggle is-active"></div>
+                                            <div
+                                                class="switch js-toggle is-active ">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="is-hidden">
@@ -109,9 +115,12 @@
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
+                                            <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
                                         <div class="selector__toggle">
-                                            <div class="switch js-toggle is-active"></div>
+                                            <div
+                                                class="switch js-toggle is-active ">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="is-hidden">
@@ -128,9 +137,12 @@
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
+                                            <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
                                         <div class="selector__toggle">
-                                            <div class="switch js-toggle is-active"></div>
+                                            <div
+                                                class="switch js-toggle is-active ">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="is-hidden">
@@ -144,22 +156,27 @@
                         </div>
                         <div class="grid__unit s-4-4 m-10-12 m-push-left-1-12 xl-push-left-1-12 hidden-xs">
                             <div class="bg-white pt-2 bo-t txt-r">
-                                <button class="button button--tertiary mr-2">Niet akkoord</button>
+                                <button class="button button--tertiary mr-2 overlay__close">Niet akkoord</button>
                                 <button class="button overlay__close">Akkoord</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="#" class="closeButton overlay__close">
-                <span class="icon">
-                    <span class="alt">Sluiten</span>
-                </span>
-            </a>
         </div>
     </div>
     <div class="darkener"></div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        Array.from(document.querySelectorAll('.overlay__close')).map((el) => {
+            el.addEventListener('click', e => { 
+                document.querySelector('.overlay').remove();
+            });
+        });
+    });
+</script>
     </main>
 
     <!-- JAVASCRIPT -->

@@ -16,8 +16,8 @@ title: Cookie melding
         <div class="overlay__contentPositioner">
             <div class="overlay__sticky-bottom visible-xs">
                 <div class="bg-white pt-3 ph-3">
-                    <button class="button overlay__close w-100">Akkoord</button>
-                    <button class="button button--tertiary">Niet akkoord</button>
+                    <button class="button w-100 overlay__close">Akkoord</button>
+                    <button class="button button--tertiary overlay__close">Niet akkoord</button>
                 </div>
             </div>
             <div class="overlay__content overlay__content--cookie">
@@ -38,9 +38,12 @@ title: Cookie melding
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             {% include icons/info--small.svg %}
+                                            <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
                                         <div class="selector__toggle">
-                                            <div class="switch js-toggle is-active"></div>
+                                            <div
+                                                class="switch js-toggle is-active {% if entry.disabled %}is-disabled{% endif %}">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="is-hidden">
@@ -54,19 +57,24 @@ title: Cookie melding
                         </div>
                         <div class="grid__unit s-4-4 m-10-12 m-push-left-1-12 xl-push-left-1-12 hidden-xs">
                             <div class="bg-white pt-2 bo-t txt-r">
-                                <button class="button button--tertiary mr-2">Niet akkoord</button>
+                                <button class="button button--tertiary mr-2 overlay__close">Niet akkoord</button>
                                 <button class="button overlay__close">Akkoord</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="#" class="closeButton overlay__close">
-                <span class="icon">
-                    <span class="alt">Sluiten</span>
-                </span>
-            </a>
         </div>
     </div>
     <div class="darkener"></div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        Array.from(document.querySelectorAll('.overlay__close')).map((el) => {
+            el.addEventListener('click', e => { 
+                document.querySelector('.overlay').remove();
+            });
+        });
+    });
+</script>
