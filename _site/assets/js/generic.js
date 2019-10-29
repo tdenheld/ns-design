@@ -119,11 +119,13 @@ const tooltip = () => {
 }
 
 const revealOnScroll = (node, hook) => {
+    if (!exists(node)) return;
     const reveal = () => ß(node).map((el) => {
         if (inViewport(el, hook)) el.classList.add('is-active');
     });
     reveal();
-    document.addEventListener('scroll', () => reveal());
+    window.addEventListener('scroll', () => requestAnimationFrame(reveal));
+    window.addEventListener('resize', () => requestAnimationFrame(reveal));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
