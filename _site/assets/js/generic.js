@@ -22,11 +22,6 @@ const removeAllChilds = node => {
     while (node.firstChild) node.removeChild(node.firstChild);
 }
 
-const inViewport = (node, hook) => {
-    const pos = node.getBoundingClientRect();
-    return !(pos.top > innerHeight * hook || pos.bottom < 0);
-}
-
 const getHeight = node => {
     node.style.display = 'block';
     node.style.visibility = 'hidden';
@@ -118,12 +113,22 @@ const tooltip = () => {
     });
 }
 
-const revealOnScroll = (node, hook) => {
+const revealOnScroll = () => {
+    const hook = 0.94;
+    const node = '.js-scroll';
     if (!exists(node)) return;
+
     const reveal = () => ß(node).map((el) => {
-        if (inViewport(el, hook)) el.classList.add('is-active');
+        const nodePosition = el.getBoundingClientRect();
+        const inViewport = !(nodePosition.top > innerHeight * hook);
+        
+        if (inViewport) {
+            ß('.js-tr', el).map((ae) => ae.classList.add('is-active'));
+            if (el.classList.contains('js-tr')) el.classList.add('is-active');
+        }
     });
     reveal();
+
     window.addEventListener('scroll', () => requestAnimationFrame(reveal));
     window.addEventListener('resize', () => requestAnimationFrame(reveal));
 }
@@ -133,5 +138,5 @@ document.addEventListener('DOMContentLoaded', () => {
     clearSession();
     button();
     tooltip();
-    revealOnScroll('.js-tr', 0.95);
+    revealOnScroll();
 });
