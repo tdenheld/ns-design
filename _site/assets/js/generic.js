@@ -15,7 +15,7 @@ const isHidden = node => {
 }
 
 const valueInArray = (value, array) => {
-    if (array.includes(value)) return true;
+    return array.includes(value);
 }
 
 const removeAllChilds = node => {
