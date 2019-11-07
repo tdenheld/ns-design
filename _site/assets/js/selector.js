@@ -7,7 +7,8 @@
     const initID = '#js-selector-item-0'; // set default on current card
     const content = '.js-selector-content';
 
-    if ($(obj)[0]) return
+    if (!$(obj)[0]) return
+    
     $(obj).each(function (i) {
         $(this).attr('id', 'js-selector-item-' + i);
     });
