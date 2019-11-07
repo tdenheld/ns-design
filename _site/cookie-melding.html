@@ -48,9 +48,10 @@
     <div class="overlay__scrollContainer" tabindex="-1">
         <div class="overlay__contentPositioner">
             <div class="overlay__sticky-bottom visible-xs">
-                <div class="bg-white pt-3 ph-3">
+                <div class="bg-white pt-3 ph-3" data-type="btn-bottom">
                     <button class="button w-100 overlay__close">Akkoord</button>
-                    <button class="button button--tertiary overlay__close">Niet akkoord</button>
+                    <button class="button button--tertiary" data-type="cookie-edit">Cookie-instellingen
+                        aanpassen</button>
                 </div>
             </div>
             <div class="overlay__content overlay__content--cookie">
@@ -65,17 +66,17 @@
 
                                 
                                 <div class="selector__property">
-                                    <div class="selector__property-container">
+                                    <div class="selector__property-container" data-type="selector-property-container">
                                         <p class="f-blue">
-                                            Functioneel
+                                            Cookies voor een goed en veilig werkende website
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
                                             <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
-                                        <div class="selector__toggle">
-                                            <div
-                                                class="switch js-toggle is-active is-disabled">
+                                        <div class="selector__toggle dn" data-type="selector-toggle">
+                                            <div class="switch js-toggle is-active 
+                                                            is-disabled">
                                             </div>
                                         </div>
                                     </div>
@@ -87,17 +88,17 @@
                                 </div>
                                 
                                 <div class="selector__property">
-                                    <div class="selector__property-container">
+                                    <div class="selector__property-container" data-type="selector-property-container">
                                         <p class="f-blue">
-                                            Personalisatie bij NS
+                                            Cookies voor een gepersonaliseerde website
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
                                             <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
-                                        <div class="selector__toggle">
-                                            <div
-                                                class="switch js-toggle is-active ">
+                                        <div class="selector__toggle dn" data-type="selector-toggle">
+                                            <div class="switch js-toggle is-active 
+                                                            ">
                                             </div>
                                         </div>
                                     </div>
@@ -109,39 +110,17 @@
                                 </div>
                                 
                                 <div class="selector__property">
-                                    <div class="selector__property-container">
+                                    <div class="selector__property-container" data-type="selector-property-container">
                                         <p class="f-blue">
-                                            Personalisatie via derden
+                                            Cookies voor de beste gebruikerservaring op deze en andere websites
                                         </p>
                                         <div class="tooltip js-tooltip">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
                                             <div class="tooltip__arrow js-tooltip-arrow"></div>
                                         </div>
-                                        <div class="selector__toggle">
-                                            <div
-                                                class="switch js-toggle is-active ">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="is-hidden">
-                                        <p class="tooltip__content">
-                                            De websites van NS Groep N.V. maken gebruik van cookies en daarmee vergelijkbare technieken. NS gebruikt functionele en analytische cookies om u een optimale gebruikerservaring te bieden op haar websites. Daarnaast plaatsen NS en derde partijen tracking cookies. Deze cookies kunnen informatie over u verzamelen en uw internet-, aankoop- en leesgedrag (van nieuwsbrieven) binnen (en mogelijk ook buiten) onze websites volgen. Met deze informatie kunnen advertenties, content en commerciële e-mailcommunicatie aan uw interesses en profiel worden aangepast. Klik op "Akkoord" of "Niet akkoord" om de tracking cookies te accepteren of te weigeren. U kunt uw gegeven toestemming altijd weer intrekken.
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <div class="selector__property">
-                                    <div class="selector__property-container">
-                                        <p class="f-blue">
-                                            Personalisatie via sociale media
-                                        </p>
-                                        <div class="tooltip js-tooltip">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
-                                            <div class="tooltip__arrow js-tooltip-arrow"></div>
-                                        </div>
-                                        <div class="selector__toggle">
-                                            <div
-                                                class="switch js-toggle is-active ">
+                                        <div class="selector__toggle dn" data-type="selector-toggle">
+                                            <div class="switch js-toggle is-active 
+                                                            ">
                                             </div>
                                         </div>
                                     </div>
@@ -156,7 +135,8 @@
                         </div>
                         <div class="grid__unit s-4-4 m-10-12 m-push-left-1-12 xl-push-left-1-12 hidden-xs">
                             <div class="bg-white pt-2 bo-t txt-r">
-                                <button class="button button--tertiary mr-2 overlay__close">Niet akkoord</button>
+                                <button class="button button--tertiary mr-2" data-type="cookie-edit">Cookie-instellingen
+                                    aanpassen</button>
                                 <button class="button overlay__close">Akkoord</button>
                             </div>
                         </div>
@@ -167,16 +147,6 @@
     </div>
     <div class="darkener"></div>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        Array.from(document.querySelectorAll('.overlay__close')).map((el) => {
-            el.addEventListener('click', () => { 
-                document.querySelector('.overlay').remove();
-            });
-        });
-    });
-</script>
     </main>
 
     <!-- JAVASCRIPT -->
@@ -184,6 +154,7 @@
     <script src="/assets/js/plugins.bundle.min.js"></script>
     <script src="/assets/js/generic.js"></script>
     <script src="/assets/js/collapsible.js"></script>
+    <script src="/assets/js/cookies.js"></script>
     <script src="/assets/js/loader.js"></script>
 
 </body>
