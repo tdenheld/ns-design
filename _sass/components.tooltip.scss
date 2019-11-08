@@ -33,7 +33,6 @@
 .tooltip__content {
     position: relative;
     top: -2px;
-    display: block;
     margin-top: 10px;
     @include font(14px, normal, $lh-copy);
     color: $ns-grey-3;

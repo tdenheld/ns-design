@@ -1,17 +1,16 @@
 'use strict';
 
-function collapsible() {
+(() => {
     const obj = '.js-collapsible';
-    const header = obj + '-header';
-    const content = obj + '-content';
+    if (!exists(obj)) return;
 
-    if ($(obj)[0]) {
-        $(obj).each(function () {
-            $(header, this).click(() => {
-                $(this).toggleClass('is-active');
-                $(content, this).slideToggle(200);
-            });
-        });
-    };
-};
-collapsible();
+    ß(obj).map((el) => {
+        const header = el.querySelector('.js-collapsible-header');
+        const content = el.querySelector('.js-collapsible-content');
+
+        header.onclick = () => {
+            el.classList.toggle('is-active');
+            slideToggle(content, 200);
+        }
+    });
+})();

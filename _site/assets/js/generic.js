@@ -36,20 +36,28 @@ const slideDown = (node, duration, d, callback) => {
     if (!isHidden(node)) return;
     const display = d || 'block';
     const height = getHeight(node);
+    const marginTop = getComputedStyle(node).marginTop;
+    const marginBottom = getComputedStyle(node).marginBottom;
 
     node.style.display = display;
     node.style.height = 0;
-    node.style.transition = `height ${duration}ms cubic-bezier(0.700, 0.270, 0.270, 1)`;
+    node.style.marginTop = 0;
+    node.style.marginBottom = 0;
+    node.style.transition = `all ${duration}ms cubic-bezier(0.700, 0.270, 0.270, 1)`;
     node.style.overflow = 'hidden';
 
     requestAnimationFrame(() => {
         node.style.height = height;
+        node.style.marginTop = marginTop;
+        node.style.marginBottom = marginBottom;
     });
 
     node.addEventListener('transitionend', () => {
         node.style.height = '';
         node.style.transition = '';
         node.style.overflow = '';
+        node.style.marginTop = '';
+        node.style.marginBottom = '';
         if (callback) callback();
     }, {
         once: true
@@ -58,18 +66,22 @@ const slideDown = (node, duration, d, callback) => {
 
 const slideUp = (node, duration, callback) => {
     if (isHidden(node)) return;
-    node.style.height = node.scrollHeight + 'px';
-    node.style.transition = `height ${duration}ms cubic-bezier(0.700, 0.270, 0.270, 1)`;
+    node.style.height = node.offsetHeight + 'px';
+    node.style.transition = `all ${duration}ms cubic-bezier(0.700, 0.270, 0.270, 1)`;
     node.style.overflow = 'hidden';
 
     requestAnimationFrame(() => {
         node.style.height = 0;
+        node.style.marginTop = 0;
+        node.style.marginBottom = 0;
     });
 
     node.addEventListener('transitionend', () => {
         node.style.height = '';
         node.style.transition = '';
         node.style.overflow = '';
+        node.style.marginTop = '';
+        node.style.marginBottom = '';
         node.style.display = 'none';
         if (callback) callback();
     }, {
@@ -77,8 +89,9 @@ const slideUp = (node, duration, callback) => {
     });
 }
 
-const slideToggle = (n, d, c) => {
-    isHidden(n) ? slideDown(n, d, c) : slideUp(n, d, c);
+const slideToggle = (n, d, u) => {
+    const dur = u || d
+    isHidden(n) ? slideDown(n, d) : slideUp(n, dur);
 }
 
 const toggle = () => {
