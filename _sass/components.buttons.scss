@@ -10,7 +10,7 @@
     background-color: $ns-light-blue;
     color: $ns-white;
     box-shadow: inset 0 -1px 0 $ns-light-blue-2;
-    padding: 0 toRem(18px);
+    padding: toRem(9px) toRem(18px);
 
     &:hover {
         box-shadow: inset 0 (-$button-height) 0 $ns-light-blue-2;
