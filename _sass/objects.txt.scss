@@ -85,7 +85,7 @@
 }
 
 .h-xxs {
-    @include font(20px, bold, $lh-title);
+    @include font(24px, bold, $lh-title);
 
     @include sm {
         font-size: toRem(28px);
@@ -111,6 +111,7 @@
 .h--normal {
     font-weight: normal;
     letter-spacing: 0;
+    line-height: $lh-copy;
 }
 
 
