@@ -10,6 +10,7 @@
     background-color: $ns-light-blue;
     color: $ns-white;
     box-shadow: inset 0 -1px 0 $ns-light-blue-2;
+    padding: 0 toRem(18px);
 
     &:hover {
         box-shadow: inset 0 (-$button-height) 0 $ns-light-blue-2;
@@ -228,6 +229,8 @@
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
 .button--buy {
+    padding-left: toRem(53px);
+
     &:before {
         left: auto;
         margin-left: toRem(-35px);
@@ -469,6 +472,7 @@
 // ----------------------------------------------------------------------
 .button--icon {
     @include center(inline-flex);
+    padding: 0;
     width: 45px;
     height: 45px;
     min-width: auto;
