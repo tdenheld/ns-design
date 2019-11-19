@@ -126,33 +126,48 @@ const tooltip = () => {
     });
 }
 
+const scrollRevealer = (node, hook, inView, outView) => {
+    const reveal = () => {
+        const nodePosition = node.getBoundingClientRect();
+        const inViewport = !(nodePosition.top > innerHeight * hook || nodePosition.bottom < 0);
+        if (inViewport) {
+            if (inView) inView();
+        } else {
+            if (outView) outView();
+        }
+    }
+    reveal();
+
+    window.addEventListener('scroll', () => requestAnimationFrame(reveal));
+    window.addEventListener('resize', () => requestAnimationFrame(reveal));
+}
+
 const revealOnScroll = () => {
     const section = '.js-scroll';
-    const richTxt = '.js-scroll-rt > *';
-    if (!exists(section) && !exists(richTxt)) return;
+    if (!exists(section)) return;
 
     const init = (node) => {
-        const reveal = () => ß(node).map((el) => {
+        ß(node).map((el) => {
             const defaultHook = 0.92;
             const hook = el.getAttribute('data-hook') || defaultHook;
-
-            const nodePosition = el.getBoundingClientRect();
-            const inViewport = !(nodePosition.top > innerHeight * hook);
-
-            if (inViewport) {
+            scrollRevealer(el, hook, () => {
                 ß('.js-tr', el).map((ae) => ae.classList.add('is-active'));
                 if (el.classList.contains('js-tr')) el.classList.add('is-active');
-            }
+            });
         });
-        reveal();
-
-        window.addEventListener('scroll', () => requestAnimationFrame(reveal));
-        window.addEventListener('resize', () => requestAnimationFrame(reveal));
     }
 
-    ß(richTxt).map((el) => el.classList.add('js-tr', 'tr-fi-up', 'tr-1500'));
-    init(richTxt);
     init(section);
+}
+
+const videoReveal = () => {
+    const obj = '[data-type="video-container"]';
+    if (!exists(obj)) return;
+    
+    ß(obj).map(el => {
+        const video = el.querySelector('[data-type="video"]');
+        scrollRevealer(el, 1, () => video.play(), () => video.pause());
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -161,4 +176,5 @@ document.addEventListener('DOMContentLoaded', () => {
     button();
     tooltip();
     revealOnScroll();
+    videoReveal();
 });
