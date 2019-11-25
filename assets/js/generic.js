@@ -32,14 +32,13 @@ const getHeight = node => {
     return height;
 }
 
-const slideDown = (node, duration, d, callback) => {
+const slideDown = (node, duration, callback) => {
     if (!isHidden(node)) return;
-    const display = d || 'block';
     const height = getHeight(node);
     const marginTop = getComputedStyle(node).marginTop;
     const marginBottom = getComputedStyle(node).marginBottom;
 
-    node.style.display = display;
+    node.style.display = 'block';
     node.style.height = 0;
     node.style.marginTop = 0;
     node.style.marginBottom = 0;
