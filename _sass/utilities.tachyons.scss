@@ -646,6 +646,8 @@
 // visibility breakpoints
 // ----------------------------------------------------------------------
 .visible-xs { @include sm     { display: none; }}
+.visible-lg { @include lg-max { display: none; }}
+
 .hidden-xxs { @include xs-max { display: none; }}
 .hidden-xs  { @include sm-max { display: none; }}
 .hidden-m   { @include m-max  { display: none; }}
