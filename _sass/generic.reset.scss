@@ -73,6 +73,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img,
