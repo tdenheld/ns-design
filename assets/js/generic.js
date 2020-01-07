@@ -22,6 +22,17 @@ const removeAllChilds = node => {
     while (node.firstChild) node.removeChild(node.firstChild);
 }
 
+const debounce = (callback, time) => {
+    let interval;
+    return (...args) => {
+        clearTimeout(interval);
+        interval = setTimeout(() => {
+            interval = null;
+            callback(...args);
+        }, time);
+    }
+}
+
 const getHeight = node => {
     node.style.display = 'block';
     node.style.visibility = 'hidden';
@@ -125,55 +136,9 @@ const tooltip = () => {
     });
 }
 
-const scrollRevealer = (node, hook, inView, outView) => {
-    const reveal = () => {
-        const nodePosition = node.getBoundingClientRect();
-        const inViewport = !(nodePosition.top > innerHeight * hook || nodePosition.bottom < 0);
-        if (inViewport) {
-            if (inView) inView();
-        } else {
-            if (outView) outView();
-        }
-    }
-    reveal();
-
-    window.addEventListener('scroll', () => requestAnimationFrame(reveal));
-    window.addEventListener('resize', () => requestAnimationFrame(reveal));
-}
-
-const revealOnScroll = () => {
-    const section = '.js-scroll';
-    if (!exists(section)) return;
-
-    const init = (node) => {
-        ß(node).map((el) => {
-            const defaultHook = 0.92;
-            const hook = el.getAttribute('data-hook') || defaultHook;
-            scrollRevealer(el, hook, () => {
-                ß('.js-tr', el).map((ae) => ae.classList.add('is-active'));
-                if (el.classList.contains('js-tr')) el.classList.add('is-active');
-            });
-        });
-    }
-
-    init(section);
-}
-
-const videoReveal = () => {
-    const obj = '[data-type="video-container"]';
-    if (!exists(obj)) return;
-    
-    ß(obj).map(el => {
-        const video = el.querySelector('[data-type="video"]');
-        scrollRevealer(el, 1, () => video.play(), () => video.pause());
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     toggle();
     clearSession();
     button();
     tooltip();
-    revealOnScroll();
-    videoReveal();
 });

@@ -10,3 +10,33 @@ title: Forms
         </header>
     </div>
 </section>
+
+<section>
+    <div class="container container--narrow">
+        <form id="js-form" action="#">
+            {% include input.html
+                title='Label'
+                type='text'
+                required='required'
+                placeholder='Placeholder'
+            %}
+
+            {% include input.html
+                title='Tussenvoegsel'
+                type='text'
+            %}
+
+            {% include input.html
+                title='e-mailadres'
+                type='email'
+                required='required'
+                description='Voor de bevestiging en status updates.'
+            %}
+            <div class="ff-cta">
+                <button class="button button--brand button--arrow w-100 w-auto-sm" type="submit">
+                    Verder
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
