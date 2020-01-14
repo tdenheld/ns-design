@@ -1,0 +1,237 @@
+/*-------------------
+      Datepicker
+--------------------*/
+
+// overlay
+// -------------------------------
+.datepicker-overlay {
+    display: none;
+    z-index: 999;
+    @include full(fixed);
+}
+
+.datepicker-overlay__bg {
+    @include full(absolute);
+    background-color: rgba($ns-black, 0.2);
+}
+
+
+
+
+// input field style icon
+// -------------------------------
+.datepicker-icon {
+    position: absolute;
+    top: 9px;
+    right: 14px;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-blue;
+    }
+}
+
+
+
+
+
+// container desktop
+// ---------------------------------
+.datepicker-lg {
+    display: none;
+    width: 336px;
+    position: absolute;
+    top: 34px;
+    right: calc(100% - 336px / 2);
+    padding: 14px 0 0;
+    border-radius: 4px;
+    background-color: $ns-white;
+    box-shadow: 0 2px 35px rgba($ns-black, 0.15);
+    transform-origin: 0 0;
+    opacity: 0;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -8px;
+        left: calc(50% + 2px);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 14px solid $ns-white;
+    }
+}
+
+
+
+
+
+// container bottom sheet
+// -------------------------------
+.datepicker-bs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+    padding-top: $half-gutter;
+    background-color: $ns-white;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 60px rgba($ns-black, 0.18);
+}
+
+.datepicker-bs--swiper {
+    padding: 0;
+    height: 370px;
+}
+
+.datepicker-bs--label {
+    padding: 0;
+    height: 402px;
+
+    .datepicker-bs__close {
+        top: 18px;
+    }
+}
+
+.datepicker-bs__label {
+    @include font(18px, bold, 1.5);
+    color: $ns-blue;
+    padding: $half-gutter 0;
+    margin-bottom: $half-gutter;
+    border-bottom: 1px solid $ns-grey-7;
+    text-align: center;
+}
+
+.datepicker-bs__close {
+    position: absolute;
+    width: 31px;
+    height: 35px;
+    top: -35px;
+    right: 0;
+}
+
+.datepicker-bs__swiper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 20px;
+}
+
+.datepicker-bs__swiper-icon {
+    background-color: $ns-grey-6b;
+    width: 28px;
+    height: 4px;
+    border-radius: 40px;
+}
+
+
+
+
+
+// datepicker component
+// ----------------------------------------------
+.datepicker {
+    text-align: center;
+}
+
+.datepicker__header {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+}
+
+.datepicker__month {
+    position: relative;
+    top: 1px;
+    @include font(16px, bold, 1.5);
+    color: $ns-light-blue;
+    transition: $fade-link;
+    cursor: pointer;
+
+    &:hover {
+        color: $ns-blue;
+    }
+}
+
+.datepicker__chevron-down {
+    position: relative;
+    top: -1px;
+    margin-left: 3px;
+}
+
+.datepicker__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row-gap: 4px;
+    margin-bottom: 4px;
+}
+
+.datepicker__day {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba($ns-grey-6b, 0);
+    transition: $fade-all;
+
+    &.is-active {
+        background-color: $ns-light-blue;
+        color: $ns-white;
+        
+        &:before {
+            background-color: $ns-white;
+        }
+    }
+}
+
+.datepicker__day--enabled {
+    font-weight: bold;
+    color: $ns-light-blue;
+    cursor: pointer;
+}
+
+.datepicker__day--disabled {
+    font-weight: normal;
+    color: $ns-grey-5;
+    cursor: default;
+}
+
+.datepicker__day--today {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 32px;
+        width: 4px;
+        height: 4px;
+        background-color: $ns-light-blue;
+        border-radius: 50%;
+        transform: $fade-all;
+    }
+}
+
+
+
+
+// for no touch devices
+// -----------------------------------------
+.no-touch {
+    .datepicker__day--enabled {
+        &:hover {
+            border: 1px solid $ns-grey-6b;
+        }
+        &.is-active {
+            &:hover {
+                border: 1px solid rgba($ns-light-blue, 1);
+            }
+        }
+    }
+}

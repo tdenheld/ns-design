@@ -16,9 +16,9 @@
                 <input class="ff-input" type="{{ include.type }}" id="{{ ID }}" name="{{ ID }}"
                     placeholder="{{ include.placeholder }}" value="{{ include.value }}" {{ include.required }} />
                 {% if include.date-icon %}
-                <span class="tk-datepicker-icon js-dp-btn js-dp-bs-btn">
+                <span class="datepicker-icon js-dp-btn js-dp-bs-btn">
                     {% include /icons/calendar--small.svg %}
-                    <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
+                    <div class="datepicker-lg">{% include datepicker.html %}</div>
                 </span>
                 {% endif %}
             </div>

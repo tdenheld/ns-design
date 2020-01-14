@@ -12,7 +12,7 @@ title: Forms
 </section>
 
 <section>
-    <div class="container container--narrow">
+    <div class="container container--narrow" style="min-height: 80vw;">
         <form id="js-form" action="#">
             {% include input.html
                 title='Label'
@@ -24,6 +24,7 @@ title: Forms
             {% include input.html
                 title='Tussenvoegsel'
                 type='text'
+                width='mxw-150'
             %}
 
             {% include input.html
@@ -32,6 +33,41 @@ title: Forms
                 required='required'
                 description='Voor de bevestiging en status updates.'
             %}
+
+            {% include input.html
+                title='datum'
+                type='text'
+                placeholder='dd-mm-jjjj'
+                value='18-07-2019'
+                width='mxw-250'
+                required='required'
+                date-icon='true'
+            %}
+
+            <div class="ff ff--grid ff--radio">
+                <label class="ff__label">Zat er een hoesje omheen?</label>
+                <div>
+                    <div class="radioButton ff-radio js-radio">
+                        <input type="radio" class="radioButton__input" id="hoesje-1" name="hoesje" required>
+                        <label class="radioButton__label" for="hoesje-1">
+                            Geen hoesje
+                        </label>
+                    </div>
+                    <div class="radioButton ff-radio js-radio">
+                        <input type="radio" class="radioButton__input" id="hoesje-2" name="hoesje">
+                        <label class="radioButton__label" for="hoesje-2">
+                            Hoesje om de achterkant
+                        </label>
+                    </div>
+                    <div class="radioButton ff-radio js-radio">
+                        <input type="radio" class="radioButton__input" id="hoesje-3" name="hoesje">
+                        <label class="radioButton__label" for="hoesje-3">
+                            Hoesje om de voor- en achterkant
+                        </label>
+                    </div>
+                </div>
+            </div>
+
             <div class="ff-cta">
                 <button class="button button--brand button--arrow w-100 w-auto-sm" type="submit">
                     Verder
@@ -40,3 +76,5 @@ title: Forms
         </form>
     </div>
 </section>
+
+{% include datepicker-bottom-sheet.html %}
