@@ -18,7 +18,7 @@ title: Forms
                 title='Label'
                 type='text'
                 required='required'
-                placeholder='Placeholder'
+                placeholder='placeholder'
             %}
 
             {% include input.html
@@ -38,7 +38,7 @@ title: Forms
                 title='datum'
                 type='text'
                 placeholder='dd-mm-jjjj'
-                value='18-07-2019'
+                maxlength='10'
                 width='mxw-250'
                 required='required'
                 date-icon='true'
@@ -46,26 +46,24 @@ title: Forms
 
             <div class="ff ff--grid ff--radio">
                 <label class="ff__label">Zat er een hoesje omheen?</label>
-                <div>
-                    <div class="js-ff-rc">
-                        <div class="radioButton ff-radio js-radio">
-                            <input type="radio" class="radioButton__input" id="hoesje-1" name="hoesje" required>
-                            <label class="radioButton__label" for="hoesje-1">
-                                Geen hoesje
-                            </label>
-                        </div>
-                        <div class="radioButton ff-radio js-radio">
-                            <input type="radio" class="radioButton__input" id="hoesje-2" name="hoesje">
-                            <label class="radioButton__label" for="hoesje-2">
-                                Hoesje om de achterkant
-                            </label>
-                        </div>
-                        <div class="radioButton ff-radio js-radio">
-                            <input type="radio" class="radioButton__input" id="hoesje-3" name="hoesje">
-                            <label class="radioButton__label" for="hoesje-3">
-                                Hoesje om de voor- en achterkant
-                            </label>
-                        </div>
+                <div class="js-ff-rc">
+                    <div class="radioButton ff-radio js-radio">
+                        <input type="radio" class="radioButton__input" id="hoesje-1" name="hoesje" required>
+                        <label class="radioButton__label" for="hoesje-1">
+                            Geen hoesje
+                        </label>
+                    </div>
+                    <div class="radioButton ff-radio js-radio">
+                        <input type="radio" class="radioButton__input" id="hoesje-2" name="hoesje">
+                        <label class="radioButton__label" for="hoesje-2">
+                            Hoesje om de achterkant
+                        </label>
+                    </div>
+                    <div class="radioButton ff-radio js-radio">
+                        <input type="radio" class="radioButton__input" id="hoesje-3" name="hoesje">
+                        <label class="radioButton__label" for="hoesje-3">
+                            Hoesje om de voor- en achterkant
+                        </label>
                     </div>
                 </div>
             </div>
@@ -74,13 +72,11 @@ title: Forms
 
             <div class="ff ff--grid">
                 <div></div>
-                <div>
-                    <div class="checkbox formfield__checkbox ff-checkbox js-ff-rc">
-                        <input type="checkbox" class="checkbox__input" id="conditions" name="conditions" required>
-                        <label class="checkbox__label" for="conditions">
-                            Ja, ik ga akkoord met de algemene voorwaarden
-                        </label>
-                    </div>
+                <div class="checkbox formfield__checkbox ff-checkbox js-ff-rc">
+                    <input type="checkbox" class="checkbox__input" id="conditions" name="conditions" required>
+                    <label class="checkbox__label" for="conditions">
+                        Ja, ik ga akkoord met de algemene voorwaarden
+                    </label>
                 </div>
             </div>
 

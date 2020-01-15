@@ -1,6 +1,6 @@
 'use strict';
 
-(() => {
+const form = () => {
     const form = $('#js-form');
     const formField = $('.js-formfield');
     const errorLabelClass = 'ff__error is-hidden js-formfield-error';
@@ -9,10 +9,10 @@
     form.validate({
         onkeyup: false,
         errorClass: 'is-error',
-        errorPlacement: function (label, element) {
+        errorPlacement(label, element) {
             label.addClass(errorLabelClass);
             if (element.attr('type') === 'radio' || element.attr('type') === 'checkbox') {
-                label.insertAfter($(element).parents('.js-ff-rc'));
+                $(element).closest('.js-ff-rc').append(label);
             } else {
                 label.insertAfter(element);
             }
@@ -32,7 +32,7 @@
             van: 'Vul een geldig vertrekstation in.',
             naar: 'Vul een geldig aankomststation in.',
             station: 'Vul een geldig station in.',
-            datum: 'Vul een geldige datum in. (Vandaag of in het verleden.)',
+            datum: 'Vul een geldige datum in.',
             voorletters: 'Vul je voorletters in.',
             achternaam: 'Vul je achternaam in',
             postcode: 'Vul een geldige postcode in.',
@@ -60,4 +60,24 @@
         });
     });
 
-})();
+
+    // date masking
+    (() => {
+        const input = $('#datum');
+
+        // only numbers are valid input
+        input.keydown(e => {
+            if (isNaN(e.key) && e.key !== 'Backspace' && e.key !== 'Tab') return false;
+        });
+
+        input.keyup(e => {
+            // add hyphen when digits are typed
+            const n = input.val();
+            if (e.key !== 'Backspace') {
+                if (n.length == 2 || n.length == 5) input.val(n + "-");
+            }
+        });
+    })();
+}
+
+document.addEventListener('DOMContentLoaded', () => form());
