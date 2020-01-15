@@ -15,7 +15,8 @@
             <div class="pos-r {{ include.width }}">
                 <input class="ff-input" type="{{ include.type }}" id="{{ ID }}" name="{{ ID }}"
                     placeholder="{{ include.placeholder }}" value="{{ include.value }}"
-                    maxlength="{{ include.maxlength }}" {{ include.required }} />
+                    {% if include.maxlength %}maxlength="{{ include.maxlength }}"{% endif %}
+                    {{ include.required }} />
                 {% if include.date-icon %}
                 <span class="datepicker-icon js-dp-btn js-dp-bs-btn">
                     {% include /icons/calendar--small.svg %}
