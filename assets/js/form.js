@@ -95,6 +95,27 @@ const form = () => {
             el.addEventListener('change', e => check(e.target));
         });
     })();
+
+    // reveal content when choosing an option in a radiobutton
+    (() => {
+        const obj = $('.js-radio');
+        const allContent = $('.js-radio-content');
+
+        if (!exists('.js-radio')) return;
+
+        obj.each(function () {
+            const radio = $('input[type="radio"]', this);
+            const content = $('.js-radio-content', this);
+
+            radio.change(() => {
+                allContent.slideUp(200);
+                content.slideDown(200);
+            });
+
+            if (radio.is(':checked')) content.slideDown(200);
+        });
+
+    })();
 }
 
 document.addEventListener('DOMContentLoaded', () => form());
