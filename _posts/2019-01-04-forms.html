@@ -68,7 +68,32 @@ title: Forms
                 </div>
             </div>
 
-            <hr class="mb-4">
+            <div class="ff ff--grid js-formfield">
+                <label class="ff__label" for="kleur">Kleur</label>
+                <div>
+                    <select class="select ff-input ff-input--select js-select-other" id="kleur" name="kleur" required>
+                        <option selected disabled>Kies een kleur</option>
+                        <optgroup label="----------------"></optgroup>
+                        <option>Grijs / Zilver / Chroom</option>
+                        <option>Wit</option>
+                        <option>Zwart</option>
+                        <optgroup label="----------------"></optgroup>
+                        <option>Blauw</option>
+                        <option>Doorzichtig</option>
+                        <option>Geel / Goud</option>
+                        <option>Groen</option>
+                        <option>Paars</option>
+                        <option>Rood</option>
+                        <option value="other">Anders namelijk...</option>
+                    </select>
+                    <div class="is-hidden">
+                        <textarea class="ff-input ff-input--textarea mt-2" id="andere-kleur" name="andere-kleur"
+                            required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-6 mb-4">
 
             <div class="ff ff--grid">
                 <div></div>

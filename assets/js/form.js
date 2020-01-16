@@ -78,6 +78,23 @@ const form = () => {
             }
         });
     })();
+
+    // select other items in select box
+    (() => {
+        const check = (el) => {
+            const n = el.nextElementSibling;
+            if (el.value === 'other') {
+                slideDown(n, 200, () => n.firstElementChild.focus());
+            } else {
+                slideUp(n, 150);
+            }
+        }
+
+        ß('.js-select-other').map((el) => {
+            if (el.value === 'other') slideDown(el.nextElementSibling, 200);
+            el.addEventListener('change', e => check(e.target));
+        });
+    })();
 }
 
 document.addEventListener('DOMContentLoaded', () => form());
