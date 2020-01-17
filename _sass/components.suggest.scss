@@ -17,6 +17,7 @@
     align-items: center;
     padding: $half-gutter;
     color: $ns-light-blue;
+    cursor: pointer;
 
     &.is-active {
         background-color: $ns-light-blue;
