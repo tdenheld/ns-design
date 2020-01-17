@@ -14,12 +14,15 @@ title: Forms
 <section>
     <div class="container container--narrow" style="min-height: 40vw;">
         <form id="js-form" action="#">
-            {% include input.html
-                title='Label'
-                type='text'
-                required='required'
-                placeholder='placeholder'
-            %}
+            <div class="ff ff--grid js-formfield">
+                <label class="ff__label" for="station">
+                    Station
+                </label>
+                <div class="pos-r js-formfield js-input-station">
+                    <input class="ff-input" type="text" id="station" name="station" autocomplete="off" required />
+                    <div class="suggest js-suggest is-hidden"></div>
+                </div>
+            </div>
 
             {% include input.html
                 title='Tussenvoegsel'
