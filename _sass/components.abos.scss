@@ -66,6 +66,14 @@
             border-color: rgba($ns-yellow, 1);
             transform: scale(1.03);
         }
+
+        .abo-tile__heading svg {
+            transform: translateX(3px);
+        }
+
+        .abo-tile__heading--underline:after {
+            transform: scaleX(1);
+        }
     }
 }
 
@@ -87,6 +95,27 @@
 
     @include sm {
         font-size: toRem(20px);
+    }
+
+    svg {
+        fill: $ns-blue;
+        margin-left: 4px;
+        transition: all 300ms ease-out;
+    }
+}
+
+.abo-tile__heading--underline {
+    &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 16px);
+        height: 1px;
+        bottom: 3px;
+        left: 0;
+        background-color: $ns-blue;
+        transition: all 150ms ease-out;
+        transform-origin: 0 0;
+        transform: scaleX(0);
     }
 }
 
