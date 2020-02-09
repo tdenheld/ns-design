@@ -67,12 +67,14 @@
             transform: scale(1.03);
         }
 
-        .abo-tile__heading svg {
-            transform: translateX(3px);
-        }
+        @include m {
+            .abo-tile__heading svg {
+                transform: translateX(3px);
+            }
 
-        .abo-tile__heading--underline:after {
-            transform: scaleX(1);
+            .abo-tile__heading--underline:after {
+                transform: scaleX(1);
+            }
         }
     }
 }
