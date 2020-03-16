@@ -351,8 +351,14 @@
             box-shadow: $bs-focus;
         }
 
-        &:hover:not(:focus, :checked)+.checkbox__label:before {
+        &:hover:not(:focus)+.checkbox__label:before {
             border: $input-border-hover;
+        }
+
+        /* extra line because :not(:focus, :checked)
+           is not working in chrome */
+        &:checked:hover:not(:focus)+.checkbox__label:before {
+            border-color: $ns-green-sexy;
         }
     }
 
