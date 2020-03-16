@@ -125,7 +125,7 @@
 // filled state
 // ----------------------------------------------
 .ff-filled {
-    @include font(18px, bold, ($button-height - 4));
+    @include font(16px, bold, ($button-height - 4));
     color: $ns-blue;
 }
 
@@ -159,7 +159,7 @@
     -webkit-appearance: none;
     background-color: $ns-white;
     border: 1px solid $ns-grey-6b;
-    @include font(18px, bold, 25px);
+    @include font(16px, bold, 25px);
     color: $ns-blue;
     transition: $fade-link;
 
