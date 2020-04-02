@@ -1,8 +1,8 @@
 .collapsible {
     position: relative;
     margin-top: -1px;
-    border-top: 1px solid $ns-grey-7;
-    border-bottom: 1px solid $ns-grey-7;
+    border-top: 1px solid $ns-grey-90;
+    border-bottom: 1px solid $ns-grey-90;
     overflow: hidden;
     cursor: pointer;
 
@@ -87,7 +87,7 @@
 // ----------------------------------------------
 .collapsible--exp-nav {
     margin: 0 0 14px;
-    border: 1px solid $ns-grey-7;
+    border: 1px solid $ns-grey-90;
     border-radius: $border-radius;
     transition: $fade-all;
 

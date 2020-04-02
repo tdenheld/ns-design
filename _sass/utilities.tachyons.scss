@@ -842,14 +842,14 @@
 .f-green-sexy-2 {color: $ns-green-sexy-2;}
 .f-red {color: $ns-red-alert;}
 .f-grey {color: $ns-grey;}
-.f-grey-2 {color: $ns-grey-2;}
-.f-grey-3 {color: $ns-grey-3;}
-.f-grey-4 {color: $ns-grey-4;}
-.f-grey-5 {color: $ns-grey-5;}
-.f-grey-6 {color: $ns-grey-6;}
-.f-grey-6b {color: $ns-grey-6b;}
-.f-grey-7 {color: $ns-grey-7;}
-.f-grey-8 {color: $ns-grey-8;} 
+.f-grey-10 {color: $ns-grey-10;}
+.f-grey-20 {color: $ns-grey-20;}
+.f-grey-40 {color: $ns-grey-40;}
+.f-grey-60 {color: $ns-grey-60;}
+.f-grey-70 {color: $ns-grey-70;}
+.f-grey-80 {color: $ns-grey-80;}
+.f-grey-90 {color: $ns-grey-90;}
+.f-grey-94 {color: $ns-grey-94;} 
 .f-a60 {color: $ns-grey-alpha-60;} 
 
 // font weights
@@ -929,14 +929,14 @@
 .svg-green svg {fill: $ns-green;}
 .svg-green-sexy svg {fill: $ns-green-sexy;}
 .svg-grey svg {fill: $ns-grey;}
-.svg-grey-2 svg {fill: $ns-grey-2;}
-.svg-grey-3 svg {fill: $ns-grey-3;}
-.svg-grey-4 svg {fill: $ns-grey-4;}
-.svg-grey-5 svg {fill: $ns-grey-5;}
-.svg-grey-6 svg {fill: $ns-grey-6;}
-.svg-grey-6b svg {fill: $ns-grey-6b;}
-.svg-grey-7 svg {fill: $ns-grey-7;}
-.svg-grey-8 svg {fill: $ns-grey-8;}
+.svg-grey-10 svg {fill: $ns-grey-10;}
+.svg-grey-20 svg {fill: $ns-grey-20;}
+.svg-grey-40 svg {fill: $ns-grey-40;}
+.svg-grey-60 svg {fill: $ns-grey-60;}
+.svg-grey-70 svg {fill: $ns-grey-70;}
+.svg-grey-80 svg {fill: $ns-grey-80;}
+.svg-grey-90 svg {fill: $ns-grey-90;}
+.svg-grey-94 svg {fill: $ns-grey-94;}
 .svg-link {svg {cursor: pointer; transition: $fade-link; fill: $ns-light-blue;} &:hover {svg {fill: $ns-blue;}}}
 .svg-btn {display: inline-flex; justify-content: center; align-items: center; width: 35px; height: 35px; cursor: pointer; line-height: 0; svg {transition: $fade-link; fill: $ns-light-blue;} &:hover {svg {fill: $ns-blue;}}}
 
@@ -946,16 +946,16 @@
        Borders
 --------------------*/
 
-// default border is $ns-grey-7 (#e8e8e6)
+// default border is $ns-grey-90 (#e8e8e6)
 .bo-none {border: none;}
 
-.bo-a {border: 1px solid $ns-grey-7;}
-.bo-h {border-right: 1px solid $ns-grey-7; border-left: 1px solid $ns-grey-7;}
-.bo-v {border-top: 1px solid $ns-grey-7; border-bottom: 1px solid $ns-grey-7;}
-.bo-t {border-top: 1px solid $ns-grey-7;}
-.bo-b {border-bottom: 1px solid $ns-grey-7;}
-.bo-l {border-left: 1px solid $ns-grey-7;}
-.bo-r {border-right: 1px solid $ns-grey-7;}
+.bo-a {border: 1px solid $ns-grey-90;}
+.bo-h {border-right: 1px solid $ns-grey-90; border-left: 1px solid $ns-grey-90;}
+.bo-v {border-top: 1px solid $ns-grey-90; border-bottom: 1px solid $ns-grey-90;}
+.bo-t {border-top: 1px solid $ns-grey-90;}
+.bo-b {border-bottom: 1px solid $ns-grey-90;}
+.bo-l {border-left: 1px solid $ns-grey-90;}
+.bo-r {border-right: 1px solid $ns-grey-90;}
  
 .bo-a-white {border: 1px solid $ns-white;}
 .bo-h-white {border-right: 1px solid $ns-white; border-left: 1px solid $ns-white;}
@@ -965,21 +965,21 @@
 .bo-l-white {border-left: 1px solid $ns-white;}
 .bo-r-white {border-right: 1px solid $ns-white;}
 
-.bo-a-6 {border: 1px solid $ns-grey-6;}
-.bo-h-6 {border-right: 1px solid $ns-grey-6; border-left: 1px solid $ns-grey-6;}
-.bo-v-6 {border-top: 1px solid $ns-grey-6; border-bottom: 1px solid $ns-grey-6;}
-.bo-t-6 {border-top: 1px solid $ns-grey-6;}
-.bo-b-6 {border-bottom: 1px solid $ns-grey-6;}
-.bo-l-6 {border-left: 1px solid $ns-grey-6;}
-.bo-r-6 {border-right: 1px solid $ns-grey-6;}
+.bo-a-6 {border: 1px solid $ns-grey-70;}
+.bo-h-6 {border-right: 1px solid $ns-grey-70; border-left: 1px solid $ns-grey-70;}
+.bo-v-6 {border-top: 1px solid $ns-grey-70; border-bottom: 1px solid $ns-grey-70;}
+.bo-t-6 {border-top: 1px solid $ns-grey-70;}
+.bo-b-6 {border-bottom: 1px solid $ns-grey-70;}
+.bo-l-6 {border-left: 1px solid $ns-grey-70;}
+.bo-r-6 {border-right: 1px solid $ns-grey-70;}
 
-.bo-a-6b {border: 1px solid $ns-grey-6b;}
-.bo-h-6b {border-right: 1px solid $ns-grey-6b; border-left: 1px solid $ns-grey-6b;}
-.bo-v-6b {border-top: 1px solid $ns-grey-6b; border-bottom: 1px solid $ns-grey-6b;}
-.bo-t-6b {border-top: 1px solid $ns-grey-6b;}
-.bo-b-6b {border-bottom: 1px solid $ns-grey-6b;}
-.bo-l-6b {border-left: 1px solid $ns-grey-6b;}
-.bo-r-6b {border-right: 1px solid $ns-grey-6b;}
+.bo-a-6b {border: 1px solid $ns-grey-80;}
+.bo-h-6b {border-right: 1px solid $ns-grey-80; border-left: 1px solid $ns-grey-80;}
+.bo-v-6b {border-top: 1px solid $ns-grey-80; border-bottom: 1px solid $ns-grey-80;}
+.bo-t-6b {border-top: 1px solid $ns-grey-80;}
+.bo-b-6b {border-bottom: 1px solid $ns-grey-80;}
+.bo-l-6b {border-left: 1px solid $ns-grey-80;}
+.bo-r-6b {border-right: 1px solid $ns-grey-80;}
 
 .bo-a-a15 {border: 1px solid $ns-grey-alpha-15;}
 .bo-h-a15 {border-right: 1px solid $ns-grey-alpha-15; border-left: 1px solid $ns-grey-alpha-15;}
@@ -1046,14 +1046,14 @@
 .bg-white {background-color: $ns-white;}
 .bg-red {background-color: $ns-red-alert;}
 .bg-grey {background-color: $ns-grey;}
-.bg-grey-2 {background-color: $ns-grey-2;}
-.bg-grey-3 {background-color: $ns-grey-3;}
-.bg-grey-4 {background-color: $ns-grey-4;}
-.bg-grey-5 {background-color: $ns-grey-5;}
-.bg-grey-6 {background-color: $ns-grey-6;}
-.bg-grey-6b {background-color: $ns-grey-6b;}
-.bg-grey-7 {background-color: $ns-grey-7;}
-.bg-grey-8 {background-color: $ns-grey-8;}
+.bg-grey-10 {background-color: $ns-grey-10;}
+.bg-grey-20 {background-color: $ns-grey-20;}
+.bg-grey-40 {background-color: $ns-grey-40;}
+.bg-grey-60 {background-color: $ns-grey-60;}
+.bg-grey-70 {background-color: $ns-grey-70;}
+.bg-grey-80 {background-color: $ns-grey-80;}
+.bg-grey-90 {background-color: $ns-grey-90;}
+.bg-grey-94 {background-color: $ns-grey-94;}
 
 // gradients
 // --------------------------------------------
@@ -1063,8 +1063,8 @@
 .gd-90-cobalt {background: linear-gradient(to bottom,rgba($ns-blue, 1) 0%,rgba($ns-blue, 0) 80%);}
 .gd-90-black {background: linear-gradient(to bottom,rgba($ns-black, 1) 20%,rgba($ns-black, 0) 100%);}	
 .gd-110-blue {background: linear-gradient(110deg, #0050A8 0%, $ns-blue 100%);}	
-.gd-110-light-grey {background: linear-gradient(110deg, $ns-white 0%, $ns-grey-7 100%);}	
-.gd-110-grey {background: linear-gradient(110deg, $ns-grey-8 0%, $ns-grey-7 100%);}	
+.gd-110-light-grey {background: linear-gradient(110deg, $ns-white 0%, $ns-grey-90 100%);}	
+.gd-110-grey {background: linear-gradient(110deg, $ns-grey-94 0%, $ns-grey-90 100%);}	
 .gd-110-yellow {background: linear-gradient(110deg, $ns-yellow 0%, #FFE48A 100%);}	
 .gd-110-turquoise {background: linear-gradient(110deg, #79CEC3 0%, #BCFFF0 100%);}
 

@@ -35,14 +35,14 @@
 
     &:disabled {
         border-color: transparent;
-        border-bottom-color: $ns-grey-7;
-        box-shadow: inset 0 -1px 0 $ns-grey-7;
-        color: $ns-grey-5;
+        border-bottom-color: $ns-grey-90;
+        box-shadow: inset 0 -1px 0 $ns-grey-90;
+        color: $ns-grey-60;
     }
 
     &:hover:disabled {
-        box-shadow: inset 0 -1px 0 $ns-grey-7;
-        color: $ns-grey-5;
+        box-shadow: inset 0 -1px 0 $ns-grey-90;
+        color: $ns-grey-60;
     }
 
     &:before {
@@ -126,7 +126,7 @@
     }
 
     &:disabled {
-        border-color: $ns-grey-6b;
+        border-color: $ns-grey-80;
         box-shadow: none;
         background: none;
     }
@@ -277,7 +277,7 @@
 
     &:disabled {
         border-color: transparent;
-        border-bottom-color: $ns-grey-7;
+        border-bottom-color: $ns-grey-90;
     }
 
     &:before {
@@ -522,20 +522,20 @@
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
 .button--contrast {
-    border-bottom: 1px solid $ns-grey-8;
+    border-bottom: 1px solid $ns-grey-94;
     background-color: $ns-white;
     color: $ns-light-blue;
-    box-shadow: inset 0 -1px 0 $ns-grey-8;
+    box-shadow: inset 0 -1px 0 $ns-grey-94;
 
     &:hover {
-        box-shadow: inset 0 (-$button-height) 0 $ns-grey-8;
-        border-color: $ns-grey-8;
+        box-shadow: inset 0 (-$button-height) 0 $ns-grey-94;
+        border-color: $ns-grey-94;
         color: $ns-light-blue;
     }
 
     &:focus {
         border-color: $ns-light-blue;
-        box-shadow: inset 0 -1px 0 $ns-grey-8,
+        box-shadow: inset 0 -1px 0 $ns-grey-94,
             0 0 0 1px $ns-light-blue,
             $box-shadow-soft-contrast;
         color: $ns-light-blue;
@@ -543,7 +543,7 @@
 
     &:hover:focus {
         border-color: $ns-light-blue;
-        box-shadow: inset 0 (-$button-height) 0 $ns-grey-8,
+        box-shadow: inset 0 (-$button-height) 0 $ns-grey-94,
             0 0 0 1px $ns-light-blue,
             $box-shadow-soft-contrast;
     }

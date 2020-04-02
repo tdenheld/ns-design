@@ -34,14 +34,16 @@ $ns-green-sexy:             #00AA89;
 $ns-green-sexy-2:           #008670;
 
 $ns-grey: 					#070721;
-$ns-grey-2:  mix(#fff, $ns-grey, 10%);
-$ns-grey-3:  mix(#fff, $ns-grey, 20%);
-$ns-grey-4:  mix(#fff, $ns-grey, 40%);
-$ns-grey-5:  mix(#fff, $ns-grey, 60%);
-$ns-grey-6:  mix(#fff, $ns-grey, 70%);
-$ns-grey-6b: mix(#fff, $ns-grey, 80%);
-$ns-grey-7:  mix(#fff, $ns-grey, 90%);
-$ns-grey-8:  mix(#fff, $ns-grey, 94%);
+$ns-grey-10:  mix(#fff, $ns-grey, 10%); // was $ns-grey-2
+$ns-grey-20:  mix(#fff, $ns-grey, 20%); // was $ns-grey-3
+$ns-grey-30:  mix(#fff, $ns-grey, 30%);
+$ns-grey-40:  mix(#fff, $ns-grey, 40%); // was $ns-grey-4
+$ns-grey-50:  mix(#fff, $ns-grey, 50%);
+$ns-grey-60:  mix(#fff, $ns-grey, 60%); // was $ns-grey-5
+$ns-grey-70:  mix(#fff, $ns-grey, 70%); // was $ns-grey-6
+$ns-grey-80:  mix(#fff, $ns-grey, 80%); // was $ns-grey-6b
+$ns-grey-90:  mix(#fff, $ns-grey, 90%); // was $ns-grey-7
+$ns-grey-94:  mix(#fff, $ns-grey, 94%); // was $ns-grey-8
 
 $ns-grey-alpha: $ns-grey;
 $ns-grey-alpha-0:  rgba($ns-grey, 0.0);

@@ -55,7 +55,7 @@
 .ff__description {
     margin: 7px 0 0;
     @include font(14px, normal, $lh-copy);
-    color: $ns-grey-4;
+    color: $ns-grey-40;
 }
 
 
@@ -99,7 +99,7 @@
 .ff-section {
     margin: $gutter 0;
     padding-top: $gutter;
-    border-top: 1px solid $ns-grey-7;
+    border-top: 1px solid $ns-grey-90;
 
     @include sm {
         margin: $one-half-gutter 0;
@@ -113,7 +113,7 @@
 .ff-cta {
     margin: $gutter 0;
     padding-top: $half-gutter;
-    border-top: 1px solid $ns-grey-7;
+    border-top: 1px solid $ns-grey-90;
     text-align: right;
 
     @include sm {
@@ -158,7 +158,7 @@
     // styling
     -webkit-appearance: none;
     background-color: $ns-white;
-    border: 1px solid $ns-grey-6b;
+    border: 1px solid $ns-grey-80;
     @include font(16px, bold, 25px);
     color: $ns-blue;
     transition: $fade-link;
@@ -170,7 +170,7 @@
     &::placeholder {
         opacity: 1;
         @include font(16px, normal, 25px);
-        color: $ns-grey-4;
+        color: $ns-grey-40;
     }
 
     &:focus {
@@ -229,7 +229,7 @@
 
 .no-touch {
     .ff-input:hover {
-        border: 1px solid $ns-grey-5;
+        border: 1px solid $ns-grey-60;
     }
 
     .ff-input:focus {
@@ -276,7 +276,7 @@
     cursor: pointer;
 
     svg {
-        fill: $ns-grey-5;
+        fill: $ns-grey-60;
         transition: $fade-all;
     }
 
@@ -299,7 +299,7 @@
     .ff-input__toggle-password {
         &:hover {
             svg {
-                fill: $ns-grey-4;
+                fill: $ns-grey-40;
             }
         }
     }

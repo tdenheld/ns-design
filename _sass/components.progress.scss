@@ -1,7 +1,7 @@
 .progress {
     padding: $half-gutter 0;
-    background-color: $ns-grey-8;
-    border-bottom: 1px solid $ns-grey-7;
+    background-color: $ns-grey-94;
+    border-bottom: 1px solid $ns-grey-90;
 
     @include md {
         padding: $gutter 0;
@@ -27,18 +27,18 @@
 
     //styling
     background-color: $ns-white;
-    border: 3px solid $ns-grey-6b;
+    border: 3px solid $ns-grey-80;
     border-radius: 50%;
     text-align: center;
     font-weight: bold;
-    color: $ns-grey-4;
+    color: $ns-grey-40;
 }
 
 .progress__description {
     margin-top: 10px;
     font-size: toRem(14px);
     text-align: center;
-    color: $ns-grey-4;
+    color: $ns-grey-40;
 }
 
 .progress__step {
@@ -53,7 +53,7 @@
 
         @keyframes color-descr {
             from {
-                color: $ns-grey-4;
+                color: $ns-grey-40;
             }
 
             to {
@@ -67,9 +67,9 @@
     .progress__circle {
         @keyframes color-in {
             from {
-                border: 3px solid $ns-grey-6b;
+                border: 3px solid $ns-grey-80;
                 background-color: $ns-white;
-                color: $ns-grey-4;
+                color: $ns-grey-40;
             }
 
             to {
@@ -144,7 +144,7 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
 }
 
 .progress__line {
-    background-color: $ns-grey-6b;
+    background-color: $ns-grey-80;
     height: 3px;
 }
 

@@ -100,7 +100,7 @@
     color: $ns-blue;
     padding: $half-gutter 0;
     margin-bottom: $half-gutter;
-    border-bottom: 1px solid $ns-grey-7;
+    border-bottom: 1px solid $ns-grey-90;
     text-align: center;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .datepicker-bs__swiper-icon {
-    background-color: $ns-grey-6b;
+    background-color: $ns-grey-80;
     width: 28px;
     height: 4px;
     border-radius: 40px;
@@ -178,7 +178,7 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 1px solid rgba($ns-grey-6b, 0);
+    border: 1px solid rgba($ns-grey-80, 0);
     transition: $fade-all;
 
     &.is-active {
@@ -199,7 +199,7 @@
 
 .datepicker__day--disabled {
     font-weight: normal;
-    color: $ns-grey-5;
+    color: $ns-grey-60;
     cursor: default;
 }
 
@@ -226,7 +226,7 @@
 .no-touch {
     .datepicker__day--enabled {
         &:hover {
-            border: 1px solid $ns-grey-6b;
+            border: 1px solid $ns-grey-80;
         }
         &.is-active {
             &:hover {
