@@ -36,6 +36,6 @@
     margin-top: 10px;
     @include font(14px, normal, $lh-copy);
     color: $ns-grey-20;
-    padding: $quarter-gutter;
+    padding: space(1);
     background-color: $ns-grey-94;
 }

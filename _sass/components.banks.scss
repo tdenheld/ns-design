@@ -3,7 +3,7 @@
 
     @include respond-min($m) {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: $half-gutter;
+        grid-gap: space(2);
     }
 
     @include respond-min($l) {

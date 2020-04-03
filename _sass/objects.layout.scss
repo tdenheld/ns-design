@@ -16,7 +16,7 @@
 .f-grid {
     display: flex;
     flex-wrap: wrap;
-    margin: -$half-gutter;
+    margin: -space(2);
 }
 
 .f-grid--center {
@@ -25,7 +25,7 @@
 
 .f-grid__unit {
     flex: 1 100%;
-    padding: $half-gutter;
+    padding: space(2);
 }
 
 .f-grid__unit-1\@ml {

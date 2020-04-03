@@ -33,7 +33,7 @@ a {
     @include font(16px, normal, 0.6);
 
     svg {
-        margin-right: $half-gutter;
+        margin-right: space(2);
         fill: $ns-light-blue;
         transition: all 250ms $ease;
     }

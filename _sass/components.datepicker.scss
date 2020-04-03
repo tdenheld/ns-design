@@ -75,7 +75,7 @@
     left: 0;
     right: 0;
     height: 350px;
-    padding-top: $half-gutter;
+    padding-top: space(2);
     background-color: $ns-white;
     border-radius: 8px 8px 0 0;
     box-shadow: 0 0 60px rgba($ns-black, 0.18);
@@ -98,8 +98,8 @@
 .datepicker-bs__label {
     @include font(18px, bold, 1.5);
     color: $ns-blue;
-    padding: $half-gutter 0;
-    margin-bottom: $half-gutter;
+    padding: space(2) 0;
+    margin-bottom: space(2);
     border-bottom: 1px solid $ns-grey-90;
     text-align: center;
 }

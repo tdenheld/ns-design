@@ -1,6 +1,6 @@
 .selector__item {
     position: relative;
-    margin-bottom: $half-gutter;
+    margin-bottom: space(2);
     padding: 20px;
     border-radius: 4px;
     transition: $fade-all;
@@ -52,7 +52,7 @@
 
 .selector__property {
     position: relative;
-    padding: $half-gutter 0;
+    padding: space(2) 0;
     border-top: 1px solid $ns-grey-90;
 
     &:last-child {
@@ -63,7 +63,7 @@
 .selector__property-container {
     display: grid;
     grid-template-columns: 1fr max-content;
-    grid-column-gap: $half-gutter;
+    grid-column-gap: space(2);
     align-items: center;
     min-height: 28px;
 

@@ -17,7 +17,7 @@
     max-width: 600px;
 
     @include respond-min($m) {
-        margin-bottom: $half-gutter;
+        margin-bottom: space(2);
         grid-template-columns: 2fr 5fr;
     }
 
@@ -102,8 +102,8 @@
     border-top: 1px solid $ns-grey-90;
 
     @include respond-min($m) {
-        margin: $one-half-gutter 0;
-        padding-top: $one-half-gutter;
+        margin: space(6) 0;
+        padding-top: space(6);
     }
 }
 
@@ -112,12 +112,12 @@
 // ----------------------------------------------
 .ff-cta {
     margin: space(4) 0;
-    padding-top: $half-gutter;
+    padding-top: space(2);
     border-top: 1px solid $ns-grey-90;
     text-align: right;
 
     @include respond-min($m) {
-        margin: $one-half-gutter 0;
+        margin: space(6) 0;
     }
 }
 
