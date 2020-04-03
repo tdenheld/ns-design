@@ -114,98 +114,101 @@
 
 @for $i from 0 through 20 {	
 	// margin
-	.ma-#{$i} {	@include spacer($i, margin); }
-	.mh-#{$i} {	@include spacer($i, margin-left); @include spacer($i, margin-right); }
-	.mv-#{$i} {	@include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-	.mt-#{$i} {	@include spacer($i, margin-top); }
-	.mb-#{$i} {	@include spacer($i, margin-bottom); }
-	.ml-#{$i} {	@include spacer($i, margin-left); }
-	.mr-#{$i} {	@include spacer($i, margin-right); }
+	.ma-#{$i} {	margin: space($i) }
+	.mh-#{$i} {	margin-left: space($i); margin-right: space($i); }
+	.mv-#{$i} {	margin-top: space($i); margin-bottom: space($i); }
+	.mt-#{$i} {	margin-top: space($i); }
+	.mb-#{$i} {	margin-bottom: space($i); }
+	.ml-#{$i} {	margin-left: space($i); }
+	.mr-#{$i} {	margin-right: space($i); }
 
 	// padding
-	.pa-#{$i} {	@include spacer($i, padding); }
-	.ph-#{$i} {	@include spacer($i, padding-left); @include spacer($i, padding-right); }
-	.pv-#{$i} {	@include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-	.pt-#{$i} {	@include spacer($i, padding-top); }
-	.pb-#{$i} {	@include spacer($i, padding-bottom); }
-	.pl-#{$i} {	@include spacer($i, padding-left); }
-    .pr-#{$i} {	@include spacer($i, padding-right); }
+	.pa-#{$i} {	padding: space($i); }
+	.ph-#{$i} {	padding-left: space($i); padding-right: space($i); }
+	.pv-#{$i} {	padding-top: space($i); padding-bottom: space($i); }
+	.pt-#{$i} {	padding-top: space($i); }
+	.pb-#{$i} {	padding-bottom: space($i); }
+	.pl-#{$i} {	padding-left: space($i); }
+    .pr-#{$i} {	padding-right: space($i); }
+
+    @include respond-min($m) {
+        // margin
+        .ma-#{$i}\@m { margin: space($i) }
+        .mh-#{$i}\@m { margin-left: space($i); margin-right: space($i); }
+        .mv-#{$i}\@m { margin-top: space($i); margin-bottom: space($i); }
+        .mt-#{$i}\@m { margin-top: space($i); }
+        .mb-#{$i}\@m { margin-bottom: space($i); }
+        .ml-#{$i}\@m { margin-left: space($i); }
+        .mr-#{$i}\@m { margin-right: space($i); }
+
+        // padding
+        .pa-#{$i}\@m { padding: space($i); }
+        .ph-#{$i}\@m { padding-left: space($i); padding-right: space($i); }
+        .pv-#{$i}\@m { padding-top: space($i); padding-bottom: space($i); }
+        .pt-#{$i}\@m { padding-top: space($i); }
+        .pb-#{$i}\@m { padding-bottom: space($i); }
+        .pl-#{$i}\@m { padding-left: space($i); }
+        .pr-#{$i}\@m { padding-right: space($i); }
+	}
     
     @include respond-max($m) {
         // margin
-        .ma-#{$i}-until\@m { @include spacer($i, margin); }
-        .mh-#{$i}-until\@m { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-        .mv-#{$i}-until\@m { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-        .mt-#{$i}-until\@m { @include spacer($i, margin-top); }
-        .mb-#{$i}-until\@m { @include spacer($i, margin-bottom); }
-        .ml-#{$i}-until\@m { @include spacer($i, margin-left); }
-        .mr-#{$i}-until\@m { @include spacer($i, margin-right); }
+        .ma-#{$i}-until\@m { margin: space($i) }
+        .mh-#{$i}-until\@m { margin-left: space($i); margin-right: space($i); }
+        .mv-#{$i}-until\@m { margin-top: space($i); margin-bottom: space($i); }
+        .mt-#{$i}-until\@m { margin-top: space($i); }
+        .mb-#{$i}-until\@m { margin-bottom: space($i); }
+        .ml-#{$i}-until\@m { margin-left: space($i); }
+        .mr-#{$i}-until\@m { margin-right: space($i); }
 
         // padding
-        .pa-#{$i}-until\@m { @include spacer($i, padding); }
-        .ph-#{$i}-until\@m { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-        .pv-#{$i}-until\@m { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-        .pt-#{$i}-until\@m { @include spacer($i, padding-top); }
-        .pb-#{$i}-until\@m { @include spacer($i, padding-bottom); }
-        .pl-#{$i}-until\@m { @include spacer($i, padding-left); }
-        .pr-#{$i}-until\@m { @include spacer($i, padding-right); }
-    }		
-	@include respond-min($m) {
-		// margin
-		.ma-#{$i}\@m { @include spacer($i, margin); }
-		.mh-#{$i}\@m { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-		.mv-#{$i}\@m { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-		.mt-#{$i}\@m { @include spacer($i, margin-top); }
-		.mb-#{$i}\@m { @include spacer($i, margin-bottom); }
-		.ml-#{$i}\@m { @include spacer($i, margin-left); }
-		.mr-#{$i}\@m { @include spacer($i, margin-right); }
+        .pa-#{$i}-until\@m { padding: space($i); }
+        .ph-#{$i}-until\@m { padding-left: space($i); padding-right: space($i); }
+        .pv-#{$i}-until\@m { padding-top: space($i); padding-bottom: space($i); }
+        .pt-#{$i}-until\@m { padding-top: space($i); }
+        .pb-#{$i}-until\@m { padding-bottom: space($i); }
+        .pl-#{$i}-until\@m { padding-left: space($i); }
+        .pr-#{$i}-until\@m { padding-right: space($i); }
+    }
 
-		// padding
-		.pa-#{$i}\@m { @include spacer($i, padding); }
-		.ph-#{$i}\@m { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-		.pv-#{$i}\@m { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-		.pt-#{$i}\@m { @include spacer($i, padding-top); }
-		.pb-#{$i}\@m { @include spacer($i, padding-bottom); }
-		.pl-#{$i}\@m { @include spacer($i, padding-left); }
-		.pr-#{$i}\@m { @include spacer($i, padding-right); }
-	}
 	@include respond-min($l) {
-		// margin
-		.ma-#{$i}\@l { @include spacer($i, margin); }
-		.mh-#{$i}\@l { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-		.mv-#{$i}\@l { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-		.mt-#{$i}\@l { @include spacer($i, margin-top); }
-		.mb-#{$i}\@l { @include spacer($i, margin-bottom); }
-		.ml-#{$i}\@l { @include spacer($i, margin-left); }
-		.mr-#{$i}\@l { @include spacer($i, margin-right); }
-				 
-		// padding
-		.pa-#{$i}\@l { @include spacer($i, padding); }
-		.ph-#{$i}\@l { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-		.pv-#{$i}\@l { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-		.pt-#{$i}\@l { @include spacer($i, padding-top); }
-		.pb-#{$i}\@l { @include spacer($i, padding-bottom); }
-		.pl-#{$i}\@l { @include spacer($i, padding-left); }
-		.pr-#{$i}\@l { @include spacer($i, padding-right); }
-	}
+        // margin
+        .ma-#{$i}\@l { margin: space($i) }
+        .mh-#{$i}\@l { margin-left: space($i); margin-right: space($i); }
+        .mv-#{$i}\@l { margin-top: space($i); margin-bottom: space($i); }
+        .mt-#{$i}\@l { margin-top: space($i); }
+        .mb-#{$i}\@l { margin-bottom: space($i); }
+        .ml-#{$i}\@l { margin-left: space($i); }
+        .mr-#{$i}\@l { margin-right: space($i); }
+
+        // padding
+        .pa-#{$i}\@l { padding: space($i); }
+        .ph-#{$i}\@l { padding-left: space($i); padding-right: space($i); }
+        .pv-#{$i}\@l { padding-top: space($i); padding-bottom: space($i); }
+        .pt-#{$i}\@l { padding-top: space($i); }
+        .pb-#{$i}\@l { padding-bottom: space($i); }
+        .pl-#{$i}\@l { padding-left: space($i); }
+        .pr-#{$i}\@l { padding-right: space($i); }
+    }
+    
 	@include respond-min($xxl) {
-		// margin
-		.ma-#{$i}\@xxl { @include spacer($i, margin); }
-		.mh-#{$i}\@xxl { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-		.mv-#{$i}\@xxl { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-		.mt-#{$i}\@xxl { @include spacer($i, margin-top); }
-		.mb-#{$i}\@xxl { @include spacer($i, margin-bottom); }
-		.ml-#{$i}\@xxl { @include spacer($i, margin-left); }
-		.mr-#{$i}\@xxl { @include spacer($i, margin-right); }
-				 
-		// padding
-		.pa-#{$i}\@xxl { @include spacer($i, padding); }
-		.ph-#{$i}\@xxl { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-		.pv-#{$i}\@xxl { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-		.pt-#{$i}\@xxl { @include spacer($i, padding-top); }
-		.pb-#{$i}\@xxl { @include spacer($i, padding-bottom); }
-		.pl-#{$i}\@xxl { @include spacer($i, padding-left); }
-		.pr-#{$i}\@xxl { @include spacer($i, padding-right); }
+        // margin
+        .ma-#{$i}\@xxl { margin: space($i) }
+        .mh-#{$i}\@xxl { margin-left: space($i); margin-right: space($i); }
+        .mv-#{$i}\@xxl { margin-top: space($i); margin-bottom: space($i); }
+        .mt-#{$i}\@xxl { margin-top: space($i); }
+        .mb-#{$i}\@xxl { margin-bottom: space($i); }
+        .ml-#{$i}\@xxl { margin-left: space($i); }
+        .mr-#{$i}\@xxl { margin-right: space($i); }
+
+        // padding
+        .pa-#{$i}\@xxl { padding: space($i); }
+        .ph-#{$i}\@xxl { padding-left: space($i); padding-right: space($i); }
+        .pv-#{$i}\@xxl { padding-top: space($i); padding-bottom: space($i); }
+        .pt-#{$i}\@xxl { padding-top: space($i); }
+        .pb-#{$i}\@xxl { padding-bottom: space($i); }
+        .pl-#{$i}\@xxl { padding-left: space($i); }
+        .pr-#{$i}\@xxl { padding-right: space($i); }
 	}
 }
 
@@ -289,15 +292,16 @@
 
 // max widths
 @for $i from 0 through 32 {
-    $x: $i * 50;
-    $y: $i * 50px;
-    .mxw-#{$x} {
-        max-width: #{$y};
+    $class: $i * 50;
+    $value: $i * 50px;
+
+    .mxw-#{$class} {
+        max-width: #{$value};
     }
 
     @include respond-min($m) {
-        .mxw-#{$x}\@m {
-            max-width: #{$y};
+        .mxw-#{$class}\@m {
+            max-width: #{$value};
         }
     }
 }
@@ -318,9 +322,9 @@
 // gap
 // -------------------------
 @for $i from 0 through 12 {
-	.gap-#{$i} { @include spacer($i, grid-gap); }
-	.col-gap-#{$i} { @include spacer($i, grid-column-gap); }
-	.row-gap-#{$i} { @include spacer($i, grid-row-gap); }
+	.gap-#{$i} { grid-gap: space($i); }
+	.col-gap-#{$i} { grid-column-gap: space($i); }
+	.row-gap-#{$i} { grid-row-gap: space($i); }
 }
 
 // fractions
@@ -865,11 +869,11 @@
 	.txt-c\@m  { text-align: center; }
 	.txt-j\@m  { text-align: justify; }
 }
-@include m {
-	.txt-l\@m  { text-align: left; }
-	.txt-r\@m  { text-align: right; }
-	.txt-c\@m  { text-align: center; }
-	.txt-j\@m  { text-align: justify; }
+@include respond-min($ml) {
+	.txt-l\@ml  { text-align: left; }
+	.txt-r\@ml  { text-align: right; }
+	.txt-c\@ml  { text-align: center; }
+	.txt-j\@ml  { text-align: justify; }
 }
 @include respond-min($l) {
 	.txt-l\@l  { text-align: left; }

@@ -3,8 +3,8 @@
     background-color: $ns-grey-94;
     border-bottom: 1px solid $ns-grey-90;
 
-    @include md {
-        padding: $gutter 0;
+    @include respond-min($l) {
+        padding: space(4) 0;
     }
 }
 

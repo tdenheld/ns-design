@@ -1,7 +1,7 @@
 .container--narrow {
     padding: 0 14px;
 
-    @include sm {
+    @include respond-min($m) {
         padding: 0 2rem;
     }
 }
@@ -28,32 +28,32 @@
     padding: $half-gutter;
 }
 
-.f-grid__unit--m-1 {
-    @include m {
+.f-grid__unit-1\@ml {
+    @include respond-min($ml) {
         flex: 1;
     }
 }
 
-.f-grid__unit--m-2 {
-    @include m {
+.f-grid__unit-2\@ml {
+    @include respond-min($ml) {
         flex: 2;
     }
 }
 
-.f-grid__unit--m-3 {
-    @include m {
+.f-grid__unit-3\@ml {
+    @include respond-min($ml) {
         flex: 3;
     }
 }
 
-.f-grid__unit--m-4 {
-    @include m {
+.f-grid__unit-4\@ml {
+    @include respond-min($ml) {
         flex: 4;
     }
 }
 
-.f-grid__unit--m-5 {
-    @include m {
+.f-grid__unit-5\@ml {
+    @include respond-min($ml) {
         flex: 5;
     }
 }

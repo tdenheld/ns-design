@@ -12,7 +12,7 @@
         margin: 0;
     }
 
-    @include sm {
+    @include respond-min($m) {
         width: auto;
     }
 }

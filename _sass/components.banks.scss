@@ -1,12 +1,12 @@
 .banks {
     display: grid;
 
-    @include sm {
+    @include respond-min($m) {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: $half-gutter;
     }
 
-    @include md {
+    @include respond-min($l) {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -26,7 +26,7 @@
     cursor: pointer;
     transition: $fade-all;
 
-    @include sm {
+    @include respond-min($m) {
         margin: 0;
         border-radius: 4px;
     }

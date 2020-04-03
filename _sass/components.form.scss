@@ -6,23 +6,23 @@
 // ----------------------------------------
 .ff {
     position: relative;
-    margin-bottom: $gutter;
+    margin-bottom: space(4);
 }
 
 // modifiers
 .ff--grid {
     display: grid;
-    grid-column-gap: $gutter;
+    grid-column-gap: space(4);
     grid-row-gap: 4px;
     max-width: 600px;
 
-    @include sm {
+    @include respond-min($m) {
         margin-bottom: $half-gutter;
         grid-template-columns: 2fr 5fr;
     }
 
     .ff__label {
-        @include sm {
+        @include respond-min($m) {
             position: relative;
             top: 11px;
             text-align: right;
@@ -31,11 +31,11 @@
 }
 
 .ff--radio {
-    margin: $gutter 0;
+    margin: space(4) 0;
     grid-row-gap: 8px;
 
     .ff__label {
-        @include sm {
+        @include respond-min($m) {
             top: 0;
         }
     }
@@ -97,11 +97,11 @@
 // section
 // ----------------------------------------------
 .ff-section {
-    margin: $gutter 0;
-    padding-top: $gutter;
+    margin: space(4) 0;
+    padding-top: space(4);
     border-top: 1px solid $ns-grey-90;
 
-    @include sm {
+    @include respond-min($m) {
         margin: $one-half-gutter 0;
         padding-top: $one-half-gutter;
     }
@@ -111,12 +111,12 @@
 // cta
 // ----------------------------------------------
 .ff-cta {
-    margin: $gutter 0;
+    margin: space(4) 0;
     padding-top: $half-gutter;
     border-top: 1px solid $ns-grey-90;
     text-align: right;
 
-    @include sm {
+    @include respond-min($m) {
         margin: $one-half-gutter 0;
     }
 }

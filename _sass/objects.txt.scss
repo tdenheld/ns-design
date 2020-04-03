@@ -15,15 +15,15 @@
 .h-xxxl {
     @include font(38px, bold, $lh-title);
 
-    @include xs {
+    @include respond-min($sm) {
         font-size: toRem(48px);
     }
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(60px);
     }
 
-    @include md {
+    @include respond-min($l) {
         font-size: toRem(80px);
     }
 }
@@ -31,11 +31,11 @@
 .h-xxl {
     @include font(38px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(56px);
     }
 
-    @include md {
+    @include respond-min($l) {
         font-size: toRem(72px);
     }
 }
@@ -43,11 +43,11 @@
 .h-xl {
     @include font(38px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(48px);
     }
 
-    @include md {
+    @include respond-min($l) {
         font-size: toRem(60px);
     }
 }
@@ -55,7 +55,7 @@
 .h-l {
     @include font(36px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(48px);
     }
 }
@@ -63,7 +63,7 @@
 .h-m {
     @include font(32px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(40px);
     }
 }
@@ -71,7 +71,7 @@
 .h-s {
     @include font(28px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(36px);
     }
 }
@@ -79,7 +79,7 @@
 .h-xs {
     @include font(24px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(32px);
     }
 }
@@ -87,7 +87,7 @@
 .h-xxs {
     @include font(24px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(28px);
     }
 }
@@ -95,7 +95,7 @@
 .h-xxxs {
     @include font(20px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(24px);
     }
 }
@@ -103,7 +103,7 @@
 .h-xxxxs {
     @include font(18px, bold, $lh-title);
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(20px);
     }
 }

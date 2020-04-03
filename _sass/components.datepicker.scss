@@ -46,7 +46,7 @@
     padding: 14px 0 0;
     border-radius: 4px;
     background-color: $ns-white;
-    box-shadow: 0 2px 35px rgba($ns-black, 0.15);
+    box-shadow: $box-shadow-dropdown;
     transform-origin: 0 0;
     opacity: 0;
     z-index: 1;

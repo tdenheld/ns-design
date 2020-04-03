@@ -1,5 +1,5 @@
 .notification {
-    margin-bottom: $gutter;
+    margin-bottom: space(4);
     padding: 20px;
     background-color: $ns-white;
     border: 1px solid $ns-grey-90;
@@ -7,7 +7,7 @@
     @include font(14px, normal, $lh-copy);
     color: $ns-blue;
 
-    @include sm {
+    @include respond-min($m) {
         font-size: toRem(16px);
     }
 }

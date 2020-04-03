@@ -16,38 +16,14 @@
 }
 
 
-// media queries
-// ------------------------------
-@mixin xs { @media (min-width: $xs) { @content; }} 
-@mixin sm { @media (min-width: $sm) { @content; }}
-@mixin m  { @media (min-width: $m) { @content; }}
-@mixin md { @media (min-width: $md) { @content; }}
-@mixin lg { @media (min-width: $lg) { @content; }}
-
-// max-width breakpoints
-@mixin xxs-max { @media (max-width: $xxs) { @content; }}
-@mixin xs-max  { @media (max-width: $xs) { @content; }}
-@mixin sm-max  { @media (max-width: $sm) { @content; }}
-@mixin m-max   { @media (max-width: $m) { @content; }}
-@mixin md-max  { @media (max-width: $md) { @content; }}
-@mixin lg-max  { @media (max-width: $lg) { @content; }}
-
-// exclusive breakpoints (min-max)
-@mixin sm-ex { @media (min-width: $sm) and (max-width: $m) { @content; }}
-@mixin m-ex  { @media (min-width: $m) and (max-width: $md) { @content; }}
-@mixin md-ex { @media (min-width: $md) and (max-width: $lg) { @content; }}
-
-
 
 // spacers
 // ------------------------------
-@mixin spacer($factor, $property) {
-    $size: $gutter / 4; // 7 pixels 
-    
+@function space($factor) {
     @if $factor == 0 {
-        #{$property}: $factor;
-    } @else {
-        #{$property}: $size * $factor;
+        @return $factor;
+    } @else { 
+        @return $factor * $global-baseline;
     }
 }
 

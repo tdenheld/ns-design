@@ -85,7 +85,7 @@
             fill: $ns-blue;
         }
 
-        @include sm {
+        @include respond-min($m) {
             font-size: toRem(18px);
         }
     }

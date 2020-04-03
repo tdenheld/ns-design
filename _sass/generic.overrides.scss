@@ -9,7 +9,7 @@
 }
 
 .content--footer-light {
-    @include md {
+    @include respond-min($l) {
         min-height: calc(100vh - 140px);
     }
 }
@@ -31,7 +31,7 @@
 }
 
 .notificationBar__text {
-    @include sm-max {
+    @include respond-max($m) {
         font-size: toRem(14px);
     }
 }
@@ -53,7 +53,7 @@ input,
 }
 
 .overlay__content--cookie {
-    @include sm-max {
+    @include respond-max($m) {
         min-height: calc(100vh - 14px);
     }
 }
@@ -61,8 +61,8 @@ input,
 .overlay__body--cookie {
     padding-bottom: 84px;
     
-    @include sm {
-        padding-bottom: $gutter;
+    @include respond-min($m) {
+        padding-bottom: space(4);
     }
 }
 
