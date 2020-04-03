@@ -29,8 +29,8 @@ $xxxl: 1408px;
     }
 }
 
-@mixin respond-max($maxWidth) {
-    @media screen and (max-width: $maxWidth - 0.1px) {
+@mixin respond-max($width) {
+    @media screen and (max-width: $width - 0.1px) {
         @content;
     }
 }
