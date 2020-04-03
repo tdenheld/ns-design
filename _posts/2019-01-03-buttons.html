@@ -2,16 +2,16 @@
 title: Buttons
 ---
 
-<section class="mv-4 mv-8@sm">
+<section class="mv-4 mv-8@m">
     <div class="container container--narrow">
-        <header class="mb-4 mb-8@sm">
+        <header class="mb-4 mb-8@m">
             <h1 class="f-blue">{{ page.title }}</h1>
             <hr>
         </header>
 
         {% for buttonGroup in site.data.buttons %}
         <h2 class="h-xxs mb-2">{{ buttonGroup.title }}</h2>
-        <div class="g g-2@sm g-4-md gap-4 mb-4">
+        <div class="g g-2@m g-4@l gap-4 mb-4">
             {% for button in buttonGroup.button %}
             <div class="{{ button.bg }}">
                 {% if button %}
@@ -27,7 +27,7 @@ title: Buttons
         {% endfor %}
 
         <h2 class="h-xxs mb-2">Toggle</h2>
-        <div class="g g-2@sm g-4-md gap-4 mb-4">
+        <div class="g g-2@m g-4@l gap-4 mb-4">
             <div class="toggle">
                 <div class="toggleButton">
                     <input type="radio" class="toggleButton__input" id="1" name="class" value="1" required="">
@@ -42,7 +42,7 @@ title: Buttons
         <hr class="mb-4">
 
         <h2 class="h-xxs mb-2">Toggle subtle</h2>
-        <div class="g g-2@sm g-4-md gap-4 mb-4">
+        <div class="g g-2@m g-4@l gap-4 mb-4">
             <div class="toggle toggle--subtle">
                 <div class="toggleButton">
                     <input type="radio" class="toggleButton__input" id="3" name="va" value="3" required="" checked>
@@ -61,7 +61,7 @@ title: Buttons
         <hr class="mb-4">
 
         <h2 class="h-xxs mb-2">Button glued</h2>
-        <div class="g g-2@sm g-4-md gap-4 mb-4">
+        <div class="g g-2@m g-4@l gap-4 mb-4">
             <div class="button-glued">
                 <button class="button button--secondary button--icon">
                     {% include icons/plus--small.svg %}
@@ -96,7 +96,7 @@ title: Buttons
         <hr class="mb-4">
 
         <h2 class="h-xl mt-8 mb-4">Guidelines</h2>
-        <ul class="mxw-750 mb-8 mb-12@sm">
+        <ul class="mxw-750 mb-8 mb-12@m">
             <li>
                 Never use more then one primairy button on a single page. Except a long page where the same call to
                 action destination is repeated at the bottom of the page.
