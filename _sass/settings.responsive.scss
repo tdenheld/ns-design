@@ -1,0 +1,74 @@
+// ---------------------------------------------------------------------------
+//  Breakpoints
+// ---------------------------------------------------------------------------
+
+// the $s breakpoint value should be the default starting point
+// for all styles not encapsulated in media queries and therefore
+// should never be used!
+
+$s: 16px;
+$sm: 480px;
+$m: 640px;
+$ml: 768px;
+$l: 912px;
+$xl: 1024px;
+$xxl: 1200px;
+$xxxl: 1408px;
+
+
+
+
+// ---------------------------------------------------------------------------
+// Mixin for responsive behavior
+// Thanks: http://jakearchibald.github.io/sass-ie/
+// ---------------------------------------------------------------------------
+
+@mixin respond-min($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin respond-max($maxWidth) {
+    @media screen and (max-width: $maxWidth - 0.1px) {
+        @content;
+    }
+}
+
+@mixin respond-minMax($minWidth, $maxWidth) {
+    @media screen and (min-width: $minWidth) and (max-width: $maxWidth - 0.1px) {
+        @content;
+    }
+}
+
+
+
+// --------------------------------------------------
+// +++ RESP FONT SIZE +++
+// --------------------------------------------------
+
+// Sets a font size which increases when the viewport gets wider, so text will have an optimal fit.
+
+// Usage:
+// - set a minimum font-size in px, number only. Default is 12.
+// - set a maximum font-size in px, number only. Default is 16.
+// If 12 and 16 are OK, no args are necessary.
+
+// Examples:
+// ---------
+// 'resp-font-size(14,18);' (custom sizes)
+// 'resp-font-size();' (default sizes)
+
+// Max font-size will be reached at a viewport width of 1024px.
+
+@mixin resp-font-size($fontSizeMin: 12, $fontSizeMax: 16) {
+    // calculate factor needed to grow from min to max
+    $vwFactor: (($fontSizeMax - $fontSizeMin) / 10) - (.1024 / ($fontSizeMin));
+    // set font size to be calculated
+    font-size: calc(#{$fontSizeMin}px + #{$vwFactor}vw);
+
+    // from 1024px viewport, use max size
+    @include respond-min($xl) {
+        font-size: #{$fontSizeMax}px;
+    }
+}

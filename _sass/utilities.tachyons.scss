@@ -83,33 +83,33 @@
 .pa-2r {padding: 2rem;}
 .mt-nf-1px:not(:first-child) { margin-top: -1px; }
 
-@include sm {
-    .ma-auto-sm {margin: auto;}
-    .mh-auto-sm {margin: 0 auto;}
-    .mv-auto-sm {margin: auto 0;}
-    .ml-auto-sm {margin-left: auto;}
-    .mr-auto-sm {margin-right: auto;}
-    .pa-2r-sm {padding: 2rem;}    
+@include respond-min($m) {
+    .ma-auto\@m {margin: auto;}
+    .mh-auto\@m {margin: 0 auto;}
+    .mv-auto\@m {margin: auto 0;}
+    .ml-auto\@m {margin-left: auto;}
+    .mr-auto\@m {margin-right: auto;}
+    .pa-2r\@m {padding: 2rem;}    
 }
-@include m-max {
-    .ma-auto-m-max {margin: auto;}
-    .mh-auto-m-max {margin: 0 auto;}
-    .mv-auto-m-max {margin: auto 0;}
-    .ml-auto-m-max {margin-left: auto;}
-    .mr-auto-m-max {margin-right: auto;}
-    .pa-2r-m-max {padding: 2rem;}    
+@include respond-max($m) {
+    .ma-auto-until\@m {margin: auto;}
+    .mh-auto-until\@m {margin: 0 auto;}
+    .mv-auto-until\@m {margin: auto 0;}
+    .ml-auto-until\@m {margin-left: auto;}
+    .mr-auto-until\@m {margin-right: auto;}
+    .pa-2r-until\@m {padding: 2rem;}    
 }
-@include md {
-    .ma-auto-md {margin: auto;}
-    .mh-auto-md {margin: 0 auto;}
-    .mv-auto-md {margin: auto 0;}
-    .pa-2r-md {padding: 2rem;}  
+@include respond-min($l) {
+    .ma-auto\@l {margin: auto;}
+    .mh-auto\@l {margin: 0 auto;}
+    .mv-auto\@l {margin: auto 0;}
+    .pa-2r\@l {padding: 2rem;}  
 }
-@include lg {
-    .ma-auto-lg {margin: auto;}
-    .mh-auto-lg {margin: 0 auto;}
-    .mv-auto-lg {margin: auto 0;}
-    .pa-2r-lg {padding: 2rem;}   
+@include respond-min($xxl) {
+    .ma-auto\@xxl {margin: auto;}
+    .mh-auto\@xxl {margin: 0 auto;}
+    .mv-auto\@xxl {margin: auto 0;}
+    .pa-2r\@xxl {padding: 2rem;}   
 }
 
 @for $i from 0 through 20 {	
@@ -131,81 +131,81 @@
 	.pl-#{$i} {	@include spacer($i, padding-left); }
     .pr-#{$i} {	@include spacer($i, padding-right); }
     
-    @include sm-max {
+    @include respond-max($m) {
         // margin
-        .ma-#{$i}-sm-max { @include spacer($i, margin); }
-        .mh-#{$i}-sm-max { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-        .mv-#{$i}-sm-max { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-        .mt-#{$i}-sm-max { @include spacer($i, margin-top); }
-        .mb-#{$i}-sm-max { @include spacer($i, margin-bottom); }
-        .ml-#{$i}-sm-max { @include spacer($i, margin-left); }
-        .mr-#{$i}-sm-max { @include spacer($i, margin-right); }
+        .ma-#{$i}-until\@m { @include spacer($i, margin); }
+        .mh-#{$i}-until\@m { @include spacer($i, margin-left); @include spacer($i, margin-right); }
+        .mv-#{$i}-until\@m { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
+        .mt-#{$i}-until\@m { @include spacer($i, margin-top); }
+        .mb-#{$i}-until\@m { @include spacer($i, margin-bottom); }
+        .ml-#{$i}-until\@m { @include spacer($i, margin-left); }
+        .mr-#{$i}-until\@m { @include spacer($i, margin-right); }
 
         // padding
-        .pa-#{$i}-sm-max { @include spacer($i, padding); }
-        .ph-#{$i}-sm-max { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-        .pv-#{$i}-sm-max { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-        .pt-#{$i}-sm-max { @include spacer($i, padding-top); }
-        .pb-#{$i}-sm-max { @include spacer($i, padding-bottom); }
-        .pl-#{$i}-sm-max { @include spacer($i, padding-left); }
-        .pr-#{$i}-sm-max { @include spacer($i, padding-right); }
+        .pa-#{$i}-until\@m { @include spacer($i, padding); }
+        .ph-#{$i}-until\@m { @include spacer($i, padding-left); @include spacer($i, padding-right); }
+        .pv-#{$i}-until\@m { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
+        .pt-#{$i}-until\@m { @include spacer($i, padding-top); }
+        .pb-#{$i}-until\@m { @include spacer($i, padding-bottom); }
+        .pl-#{$i}-until\@m { @include spacer($i, padding-left); }
+        .pr-#{$i}-until\@m { @include spacer($i, padding-right); }
     }		
-	@include sm {
+	@include respond-min($m) {
 		// margin
-		.ma-#{$i}-sm { @include spacer($i, margin); }
-		.mh-#{$i}-sm { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-		.mv-#{$i}-sm { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-		.mt-#{$i}-sm { @include spacer($i, margin-top); }
-		.mb-#{$i}-sm { @include spacer($i, margin-bottom); }
-		.ml-#{$i}-sm { @include spacer($i, margin-left); }
-		.mr-#{$i}-sm { @include spacer($i, margin-right); }
+		.ma-#{$i}\@m { @include spacer($i, margin); }
+		.mh-#{$i}\@m { @include spacer($i, margin-left); @include spacer($i, margin-right); }
+		.mv-#{$i}\@m { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
+		.mt-#{$i}\@m { @include spacer($i, margin-top); }
+		.mb-#{$i}\@m { @include spacer($i, margin-bottom); }
+		.ml-#{$i}\@m { @include spacer($i, margin-left); }
+		.mr-#{$i}\@m { @include spacer($i, margin-right); }
 
-		// paddin-sm
-		.pa-#{$i}-sm { @include spacer($i, padding); }
-		.ph-#{$i}-sm { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-		.pv-#{$i}-sm { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-		.pt-#{$i}-sm { @include spacer($i, padding-top); }
-		.pb-#{$i}-sm { @include spacer($i, padding-bottom); }
-		.pl-#{$i}-sm { @include spacer($i, padding-left); }
-		.pr-#{$i}-sm { @include spacer($i, padding-right); }
+		// padding
+		.pa-#{$i}\@m { @include spacer($i, padding); }
+		.ph-#{$i}\@m { @include spacer($i, padding-left); @include spacer($i, padding-right); }
+		.pv-#{$i}\@m { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
+		.pt-#{$i}\@m { @include spacer($i, padding-top); }
+		.pb-#{$i}\@m { @include spacer($i, padding-bottom); }
+		.pl-#{$i}\@m { @include spacer($i, padding-left); }
+		.pr-#{$i}\@m { @include spacer($i, padding-right); }
 	}
-	@include md {
+	@include respond-min($l) {
 		// margin
-		.ma-#{$i}-md { @include spacer($i, margin); }
-		.mh-#{$i}-md { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-		.mv-#{$i}-md { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-		.mt-#{$i}-md { @include spacer($i, margin-top); }
-		.mb-#{$i}-md { @include spacer($i, margin-bottom); }
-		.ml-#{$i}-md { @include spacer($i, margin-left); }
-		.mr-#{$i}-md { @include spacer($i, margin-right); }
+		.ma-#{$i}\@l { @include spacer($i, margin); }
+		.mh-#{$i}\@l { @include spacer($i, margin-left); @include spacer($i, margin-right); }
+		.mv-#{$i}\@l { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
+		.mt-#{$i}\@l { @include spacer($i, margin-top); }
+		.mb-#{$i}\@l { @include spacer($i, margin-bottom); }
+		.ml-#{$i}\@l { @include spacer($i, margin-left); }
+		.mr-#{$i}\@l { @include spacer($i, margin-right); }
 				 
-		// paddin-md
-		.pa-#{$i}-md { @include spacer($i, padding); }
-		.ph-#{$i}-md { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-		.pv-#{$i}-md { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-		.pt-#{$i}-md { @include spacer($i, padding-top); }
-		.pb-#{$i}-md { @include spacer($i, padding-bottom); }
-		.pl-#{$i}-md { @include spacer($i, padding-left); }
-		.pr-#{$i}-md { @include spacer($i, padding-right); }
+		// padding
+		.pa-#{$i}\@l { @include spacer($i, padding); }
+		.ph-#{$i}\@l { @include spacer($i, padding-left); @include spacer($i, padding-right); }
+		.pv-#{$i}\@l { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
+		.pt-#{$i}\@l { @include spacer($i, padding-top); }
+		.pb-#{$i}\@l { @include spacer($i, padding-bottom); }
+		.pl-#{$i}\@l { @include spacer($i, padding-left); }
+		.pr-#{$i}\@l { @include spacer($i, padding-right); }
 	}
-	@include lg {
+	@include respond-min($xxl) {
 		// margin
-		.ma-#{$i}-lg { @include spacer($i, margin); }
-		.mh-#{$i}-lg { @include spacer($i, margin-left); @include spacer($i, margin-right); }
-		.mv-#{$i}-lg { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
-		.mt-#{$i}-lg { @include spacer($i, margin-top); }
-		.mb-#{$i}-lg { @include spacer($i, margin-bottom); }
-		.ml-#{$i}-lg { @include spacer($i, margin-left); }
-		.mr-#{$i}-lg { @include spacer($i, margin-right); }
+		.ma-#{$i}\@xxl { @include spacer($i, margin); }
+		.mh-#{$i}\@xxl { @include spacer($i, margin-left); @include spacer($i, margin-right); }
+		.mv-#{$i}\@xxl { @include spacer($i, margin-top); @include spacer($i, margin-bottom); }
+		.mt-#{$i}\@xxl { @include spacer($i, margin-top); }
+		.mb-#{$i}\@xxl { @include spacer($i, margin-bottom); }
+		.ml-#{$i}\@xxl { @include spacer($i, margin-left); }
+		.mr-#{$i}\@xxl { @include spacer($i, margin-right); }
 				 
-		// paddin-lg
-		.pa-#{$i}-lg { @include spacer($i, padding); }
-		.ph-#{$i}-lg { @include spacer($i, padding-left); @include spacer($i, padding-right); }
-		.pv-#{$i}-lg { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
-		.pt-#{$i}-lg { @include spacer($i, padding-top); }
-		.pb-#{$i}-lg { @include spacer($i, padding-bottom); }
-		.pl-#{$i}-lg { @include spacer($i, padding-left); }
-		.pr-#{$i}-lg { @include spacer($i, padding-right); }
+		// padding
+		.pa-#{$i}\@xxl { @include spacer($i, padding); }
+		.ph-#{$i}\@xxl { @include spacer($i, padding-left); @include spacer($i, padding-right); }
+		.pv-#{$i}\@xxl { @include spacer($i, padding-top); @include spacer($i, padding-bottom); }
+		.pt-#{$i}\@xxl { @include spacer($i, padding-top); }
+		.pb-#{$i}\@xxl { @include spacer($i, padding-bottom); }
+		.pl-#{$i}\@xxl { @include spacer($i, padding-left); }
+		.pr-#{$i}\@xxl { @include spacer($i, padding-right); }
 	}
 }
 
@@ -232,59 +232,59 @@
 .w-90 {  width:  90%; }
 .w-100 { width: 100%; }
 
-@include sm {
-	.w-auto-sm {    width:    auto; }
-	.w-inherit-sm { width: inherit; }
-	.w-10-sm {  width:  10%; }
-	.w-20-sm {  width:  20%; }
-	.w-25-sm {  width:  25%; }
-	.w-30-sm {  width:  30%; }
-	.w-33-sm {  width:  33%; }
-	.w-34-sm {  width:  34%; }
-	.w-40-sm {  width:  40%; }
-	.w-50-sm {  width:  50%; }
-	.w-60-sm {  width:  60%; }
-	.w-70-sm {  width:  70%; }
-	.w-75-sm {  width:  75%; }
-	.w-80-sm {  width:  80%; }
-	.w-90-sm {  width:  90%; }
-	.w-100-sm { width: 100%; }
+@include respond-min($m) {
+	.w-auto\@m {    width:    auto; }
+	.w-inherit\@m { width: inherit; }
+	.w-10\@m {  width:  10%; }
+	.w-20\@m {  width:  20%; }
+	.w-25\@m {  width:  25%; }
+	.w-30\@m {  width:  30%; }
+	.w-33\@m {  width:  33%; }
+	.w-34\@m {  width:  34%; }
+	.w-40\@m {  width:  40%; }
+	.w-50\@m {  width:  50%; }
+	.w-60\@m {  width:  60%; }
+	.w-70\@m {  width:  70%; }
+	.w-75\@m {  width:  75%; }
+	.w-80\@m {  width:  80%; }
+	.w-90\@m {  width:  90%; }
+	.w-100\@m { width: 100%; }
 }
-@include md {
-	.w-auto-md {    width:    auto; }
-	.w-inherit-md { width: inherit; }
-	.w-10-md {  width:  10%; }
-	.w-20-md {  width:  20%; }
-	.w-25-md {  width:  25%; }
-	.w-30-md {  width:  30%; }
-	.w-33-md {  width:  33%; }
-	.w-34-md {  width:  34%; }
-	.w-40-md {  width:  40%; }
-	.w-50-md {  width:  50%; }
-	.w-60-md {  width:  60%; }
-	.w-70-md {  width:  70%; }
-	.w-75-md {  width:  75%; }
-	.w-80-md {  width:  80%; }
-	.w-90-md {  width:  90%; }
-	.w-100-md { width: 100%; }
+@include respond-min($l) {
+	.w-auto\@l {    width:    auto; }
+	.w-inherit\@l { width: inherit; }
+	.w-10\@l {  width:  10%; }
+	.w-20\@l {  width:  20%; }
+	.w-25\@l {  width:  25%; }
+	.w-30\@l {  width:  30%; }
+	.w-33\@l {  width:  33%; }
+	.w-34\@l {  width:  34%; }
+	.w-40\@l {  width:  40%; }
+	.w-50\@l {  width:  50%; }
+	.w-60\@l {  width:  60%; }
+	.w-70\@l {  width:  70%; }
+	.w-75\@l {  width:  75%; }
+	.w-80\@l {  width:  80%; }
+	.w-90\@l {  width:  90%; }
+	.w-100\@l { width: 100%; }
 }
-@include lg {
-	.w-auto-lg {    width:    auto; }
-	.w-inherit-lg { width: inherit; }
-	.w-10-lg {  width:  10%; }
-	.w-20-lg {  width:  20%; }
-	.w-25-lg {  width:  25%; }
-	.w-30-lg {  width:  30%; }
-	.w-33-lg {  width:  33%; }
-	.w-34-lg {  width:  34%; }
-	.w-40-lg {  width:  40%; }
-	.w-50-lg {  width:  50%; }
-	.w-60-lg {  width:  60%; }
-	.w-70-lg {  width:  70%; }
-	.w-75-lg {  width:  75%; }
-	.w-80-lg {  width:  80%; }
-	.w-90-lg {  width:  90%; }
-	.w-100-lg { width: 100%; }
+@include respond-min($xxl) {
+	.w-auto\@xxl {    width:    auto; }
+	.w-inherit\@xxl { width: inherit; }
+	.w-10\@xxl {  width:  10%; }
+	.w-20\@xxl {  width:  20%; }
+	.w-25\@xxl {  width:  25%; }
+	.w-30\@xxl {  width:  30%; }
+	.w-33\@xxl {  width:  33%; }
+	.w-34\@xxl {  width:  34%; }
+	.w-40\@xxl {  width:  40%; }
+	.w-50\@xxl {  width:  50%; }
+	.w-60\@xxl {  width:  60%; }
+	.w-70\@xxl {  width:  70%; }
+	.w-75\@xxl {  width:  75%; }
+	.w-80\@xxl {  width:  80%; }
+	.w-90\@xxl {  width:  90%; }
+	.w-100\@xxl { width: 100%; }
 }
 
 // max widths
@@ -295,17 +295,15 @@
         max-width: #{$y};
     }
 
-    @include sm {
-        .mxw-#{$x}-sm {
+    @include respond-min($m) {
+        .mxw-#{$x}\@m {
             max-width: #{$y};
         }
     }
 }
 
-.mxw-init {
-    max-width: initial;
-}
-
+.mxw-init { max-width: initial; }
+.mxw-auto { max-width: auto; }
 
 
 
@@ -334,29 +332,29 @@
 .g-5 {grid-template-columns: repeat(5,1fr);}
 .g-6 {grid-template-columns: repeat(6,1fr);}
 
-@include sm {
-	.g-1-sm {grid-template-columns: 1fr;}
-	.g-2-sm {grid-template-columns: repeat(2,1fr);}
-	.g-3-sm {grid-template-columns: repeat(3,1fr);}
-	.g-4-sm {grid-template-columns: repeat(4,1fr);}
-	.g-5-sm {grid-template-columns: repeat(5,1fr);}
-	.g-6-sm {grid-template-columns: repeat(6,1fr);}
+@include respond-min($m) {
+	.g-1\@m {grid-template-columns: 1fr;}
+	.g-2\@m {grid-template-columns: repeat(2,1fr);}
+	.g-3\@m {grid-template-columns: repeat(3,1fr);}
+	.g-4\@m {grid-template-columns: repeat(4,1fr);}
+	.g-5\@m {grid-template-columns: repeat(5,1fr);}
+	.g-6\@m {grid-template-columns: repeat(6,1fr);}
 }
-@include md {
-	.g-1-md {grid-template-columns: 1fr;}
-	.g-2-md {grid-template-columns: repeat(2,1fr);}
-	.g-3-md {grid-template-columns: repeat(3,1fr);}
-	.g-4-md {grid-template-columns: repeat(4,1fr);}
-	.g-5-md {grid-template-columns: repeat(5,1fr);}
-	.g-6-md {grid-template-columns: repeat(6,1fr);}
+@include respond-min($l) {
+	.g-1\@l {grid-template-columns: 1fr;}
+	.g-2\@l {grid-template-columns: repeat(2,1fr);}
+	.g-3\@l {grid-template-columns: repeat(3,1fr);}
+	.g-4\@l {grid-template-columns: repeat(4,1fr);}
+	.g-5\@l {grid-template-columns: repeat(5,1fr);}
+	.g-6\@l {grid-template-columns: repeat(6,1fr);}
 }
-@include lg {
-	.g-1-lg {grid-template-columns: 1fr;}
-	.g-2-lg {grid-template-columns: repeat(2,1fr);}
-	.g-3-lg {grid-template-columns: repeat(3,1fr);}
-	.g-4-lg {grid-template-columns: repeat(4,1fr);}
-	.g-5-lg {grid-template-columns: repeat(5,1fr);}
-	.g-6-lg {grid-template-columns: repeat(6,1fr);}
+@include respond-min($xxl) {
+	.g-1\@xxl {grid-template-columns: 1fr;}
+	.g-2\@xxl {grid-template-columns: repeat(2,1fr);}
+	.g-3\@xxl {grid-template-columns: repeat(3,1fr);}
+	.g-4\@xxl {grid-template-columns: repeat(4,1fr);}
+	.g-5\@xxl {grid-template-columns: repeat(5,1fr);}
+	.g-6\@xxl {grid-template-columns: repeat(6,1fr);}
 }
 
 // combos
@@ -373,44 +371,44 @@
 .g-5-3 {grid-template-columns: 5fr 3fr;}
 .g-3-5 {grid-template-columns: 3fr 5fr;}
 
-@include sm {
-	.g-m-1-sm {grid-template-columns: max-content 1fr;}
-	.g-1-m-sm {grid-template-columns: 1fr max-content;}
-	.g-m-m-sm {grid-template-columns: max-content max-content;}
-	.g-2-1-sm {grid-template-columns: 2fr 1fr;}
-	.g-1-2-sm {grid-template-columns: 1fr 2fr;}
-	.g-3-2-sm {grid-template-columns: 3fr 2fr;}
-	.g-2-3-sm {grid-template-columns: 2fr 3fr;}
-	.g-4-1-sm {grid-template-columns: 4fr 1fr;}
-	.g-1-4-sm {grid-template-columns: 1fr 4fr;}
-	.g-5-3-sm {grid-template-columns: 5fr 3fr;}
-	.g-3-5-sm {grid-template-columns: 3fr 5fr;}
+@include respond-min($m) {
+	.g-m-1\@m {grid-template-columns: max-content 1fr;}
+	.g-1-m\@m {grid-template-columns: 1fr max-content;}
+	.g-m-m\@m {grid-template-columns: max-content max-content;}
+	.g-2-1\@m {grid-template-columns: 2fr 1fr;}
+	.g-1-2\@m {grid-template-columns: 1fr 2fr;}
+	.g-3-2\@m {grid-template-columns: 3fr 2fr;}
+	.g-2-3\@m {grid-template-columns: 2fr 3fr;}
+	.g-4-1\@m {grid-template-columns: 4fr 1fr;}
+	.g-1-4\@m {grid-template-columns: 1fr 4fr;}
+	.g-5-3\@m {grid-template-columns: 5fr 3fr;}
+	.g-3-5\@m {grid-template-columns: 3fr 5fr;}
 }
-@include md {
-	.g-m-1-md {grid-template-columns: max-content 1fr;}
-	.g-1-m-md {grid-template-columns: 1fr max-content;}
-	.g-m-m-md {grid-template-columns: max-content max-content;}
-	.g-2-1-md {grid-template-columns: 2fr 1fr;}
-	.g-1-2-md {grid-template-columns: 1fr 2fr;}
-	.g-3-2-md {grid-template-columns: 3fr 2fr;}
-	.g-2-3-md {grid-template-columns: 2fr 3fr;}
-	.g-4-1-md {grid-template-columns: 4fr 1fr;}
-	.g-1-4-md {grid-template-columns: 1fr 4fr;}
-	.g-5-3-md {grid-template-columns: 5fr 3fr;}
-	.g-3-5-md {grid-template-columns: 3fr 5fr;}
+@include respond-min($l) {
+	.g-m-1\@l {grid-template-columns: max-content 1fr;}
+	.g-1-m\@l {grid-template-columns: 1fr max-content;}
+	.g-m-m\@l {grid-template-columns: max-content max-content;}
+	.g-2-1\@l {grid-template-columns: 2fr 1fr;}
+	.g-1-2\@l {grid-template-columns: 1fr 2fr;}
+	.g-3-2\@l {grid-template-columns: 3fr 2fr;}
+	.g-2-3\@l {grid-template-columns: 2fr 3fr;}
+	.g-4-1\@l {grid-template-columns: 4fr 1fr;}
+	.g-1-4\@l {grid-template-columns: 1fr 4fr;}
+	.g-5-3\@l {grid-template-columns: 5fr 3fr;}
+	.g-3-5\@l {grid-template-columns: 3fr 5fr;}
 }
-@include lg {
-	.g-m-1-lg {grid-template-columns: max-content 1fr;}
-	.g-1-m-lg {grid-template-columns: 1fr max-content;}
-	.g-m-m-lg {grid-template-columns: max-content max-content;}
-	.g-2-1-lg {grid-template-columns: 2fr 1fr;}
-	.g-1-2-lg {grid-template-columns: 1fr 2fr;}
-	.g-3-2-lg {grid-template-columns: 3fr 2fr;}
-	.g-2-3-lg {grid-template-columns: 2fr 3fr;}
-	.g-4-1-lg {grid-template-columns: 4fr 1fr;}
-	.g-1-4-lg {grid-template-columns: 1fr 4fr;}
-	.g-5-3-lg {grid-template-columns: 5fr 3fr;}
-	.g-3-5-lg {grid-template-columns: 3fr 5fr;}
+@include respond-min($xxl) {
+	.g-m-1\@xxl {grid-template-columns: max-content 1fr;}
+	.g-1-m\@xxl {grid-template-columns: 1fr max-content;}
+	.g-m-m\@xxl {grid-template-columns: max-content max-content;}
+	.g-2-1\@xxl {grid-template-columns: 2fr 1fr;}
+	.g-1-2\@xxl {grid-template-columns: 1fr 2fr;}
+	.g-3-2\@xxl {grid-template-columns: 3fr 2fr;}
+	.g-2-3\@xxl {grid-template-columns: 2fr 3fr;}
+	.g-4-1\@xxl {grid-template-columns: 4fr 1fr;}
+	.g-1-4\@xxl {grid-template-columns: 1fr 4fr;}
+	.g-5-3\@xxl {grid-template-columns: 5fr 3fr;}
+	.g-3-5\@xxl {grid-template-columns: 3fr 5fr;}
 }
 
 //childs
@@ -422,29 +420,29 @@
 .gc-5 {grid-column: span 5;}
 .gc-6 {grid-column: span 6;}
 
-@include sm {
-	.gc-1-sm {grid-column: span 1;}
-	.gc-2-sm {grid-column: span 2;}
-	.gc-3-sm {grid-column: span 3;}
-	.gc-4-sm {grid-column: span 4;}
-	.gc-5-sm {grid-column: span 5;}
-	.gc-6-sm {grid-column: span 6;}
+@include respond-min($m) {
+	.gc-1\@m {grid-column: span 1;}
+	.gc-2\@m {grid-column: span 2;}
+	.gc-3\@m {grid-column: span 3;}
+	.gc-4\@m {grid-column: span 4;}
+	.gc-5\@m {grid-column: span 5;}
+	.gc-6\@m {grid-column: span 6;}
 }
-@include md {
-	.gc-1-md {grid-column: span 1;}
-	.gc-2-md {grid-column: span 2;}
-	.gc-3-md {grid-column: span 3;}
-	.gc-4-md {grid-column: span 4;}
-	.gc-5-md {grid-column: span 5;}
-	.gc-6-md {grid-column: span 6;}
+@include respond-min($l) {
+	.gc-1\@l {grid-column: span 1;}
+	.gc-2\@l {grid-column: span 2;}
+	.gc-3\@l {grid-column: span 3;}
+	.gc-4\@l {grid-column: span 4;}
+	.gc-5\@l {grid-column: span 5;}
+	.gc-6\@l {grid-column: span 6;}
 }
-@include lg {
-	.gc-1-lg {grid-column: span 1;}
-	.gc-2-lg {grid-column: span 2;}
-	.gc-3-lg {grid-column: span 3;}
-	.gc-4-lg {grid-column: span 4;}
-	.gc-5-lg {grid-column: span 5;}
-	.gc-6-lg {grid-column: span 6;}
+@include respond-min($xxl) {
+	.gc-1\@xxl {grid-column: span 1;}
+	.gc-2\@xxl {grid-column: span 2;}
+	.gc-3\@xxl {grid-column: span 3;}
+	.gc-4\@xxl {grid-column: span 4;}
+	.gc-5\@xxl {grid-column: span 5;}
+	.gc-6\@xxl {grid-column: span 6;}
 }
 
 // alignment
@@ -467,90 +465,62 @@
 .justify-between { justify-content: space-between; }
 .justify-around  { justify-content: space-around; }
 
-.content-start   { align-content: start; }
-.content-end     { align-content: end; }
-.content-center  { align-content: center; }
-.content-between { align-content: space-between; }
-.content-around  { align-content: space-around; }
-.content-stretch { align-content: stretch; }
-
-@include sm {
-	.items-start-sm     { align-items: start; }
-	.items-end-sm       { align-items: end; }
-	.items-center-sm    { align-items: center; }
-	.items-baseline-sm  { align-items: baseline; }
-	.items-stretch-sm   { align-items: stretch; }
+@include respond-min($m) {
+	.items-start\@m     { align-items: start; }
+	.items-end\@m       { align-items: end; }
+	.items-center\@m    { align-items: center; }
+	.items-baseline\@m  { align-items: baseline; }
+	.items-stretch\@m   { align-items: stretch; }
 	
-	.self-start-sm      { align-self: start; }
-	.self-end-sm        { align-self: end; }
-	.self-center-sm     { align-self: center; }
-	.self-baseline-sm   { align-self: baseline; }
-	.self-stretch-sm    { align-self: stretch; }
+	.self-start\@m      { align-self: start; }
+	.self-end\@m        { align-self: end; }
+	.self-center\@m     { align-self: center; }
+	.self-baseline\@m   { align-self: baseline; }
+	.self-stretch\@m    { align-self: stretch; }
 	
-	.justify-start-sm   { justify-content: start; }
-	.justify-end-sm     { justify-content: end; }
-	.justify-center-sm  { justify-content: center; }
-	.justify-between-sm { justify-content: space-between; }
-	.justify-around-sm  { justify-content: space-around; }
-	
-	.content-start-sm   { align-content: start; }
-	.content-end-sm     { align-content: end; }
-	.content-center-sm  { align-content: center; }
-	.content-between-sm { align-content: space-between; }
-	.content-around-sm  { align-content: space-around; }
-	.content-stretch-sm { align-content: stretch; }
+	.justify-start\@m   { justify-content: start; }
+	.justify-end\@m     { justify-content: end; }
+	.justify-center\@m  { justify-content: center; }
+	.justify-between\@m { justify-content: space-between; }
+	.justify-around\@m  { justify-content: space-around; }
 }
-@include md {
-	.items-start-md     { align-items: start; }
-	.items-end-md       { align-items: end; }
-	.items-center-md    { align-items: center; }
-	.items-baseline-md  { align-items: baseline; }
-	.items-stretch-md   { align-items: stretch; }
+@include respond-min($l) {
+	.items-start\@l     { align-items: start; }
+	.items-end\@l       { align-items: end; }
+	.items-center\@l    { align-items: center; }
+	.items-baseline\@l  { align-items: baseline; }
+	.items-stretch\@l   { align-items: stretch; }
 	
-	.self-start-md      { align-self: start; }
-	.self-end-md        { align-self: end; }
-	.self-center-md     { align-self: center; }
-	.self-baseline-md   { align-self: baseline; }
-	.self-stretch-md    { align-self: stretch; }
+	.self-start\@l      { align-self: start; }
+	.self-end\@l        { align-self: end; }
+	.self-center\@l     { align-self: center; }
+	.self-baseline\@l   { align-self: baseline; }
+	.self-stretch\@l    { align-self: stretch; }
 	
-	.justify-start-md   { justify-content: start; }
-	.justify-end-md     { justify-content: end; }
-	.justify-center-md  { justify-content: center; }
-	.justify-between-md { justify-content: space-between; }
-	.justify-around-md  { justify-content: space-around; }
-	
-	.content-start-md   { align-content: start; }
-	.content-end-md     { align-content: end; }
-	.content-center-md  { align-content: center; }
-	.content-between-md { align-content: space-between; }
-	.content-around-md  { align-content: space-around; }
-	.content-stretch-md { align-content: stretch; }
+	.justify-start\@l   { justify-content: start; }
+	.justify-end\@l     { justify-content: end; }
+	.justify-center\@l  { justify-content: center; }
+	.justify-between\@l { justify-content: space-between; }
+	.justify-around\@l  { justify-content: space-around; }
 }
-@include lg {
-	.items-start-lg     { align-items: start; }
-	.items-end-lg       { align-items: end; }
-	.items-center-lg    { align-items: center; }
-	.items-baseline-lg  { align-items: baseline; }
-	.items-stretch-lg   { align-items: stretch; }
+@include respond-min($xxl) {
+	.items-start\@xxl     { align-items: start; }
+	.items-end\@xxl       { align-items: end; }
+	.items-center\@xxl    { align-items: center; }
+	.items-baseline\@xxl  { align-items: baseline; }
+	.items-stretch\@xxl   { align-items: stretch; }
 	
-	.self-start-lg      { align-self: start; }
-	.self-end-lg        { align-self: end; }
-	.self-center-lg     { align-self: center; }
-	.self-baseline-lg   { align-self: baseline; }
-	.self-stretch-lg    { align-self: stretch; }
+	.self-start\@xxl      { align-self: start; }
+	.self-end\@xxl        { align-self: end; }
+	.self-center\@xxl     { align-self: center; }
+	.self-baseline\@xxl   { align-self: baseline; }
+	.self-stretch\@xxl    { align-self: stretch; }
 	
-	.justify-start-lg   { justify-content: start; }
-	.justify-end-lg     { justify-content: end; }
-	.justify-center-lg  { justify-content: center; }
-	.justify-between-lg { justify-content: space-between; }
-	.justify-around-lg  { justify-content: space-around; }
-	
-	.content-start-lg   { align-content: start; }
-	.content-end-lg     { align-content: end; }
-	.content-center-lg  { align-content: center; }
-	.content-between-lg { align-content: space-between; }
-	.content-around-lg  { align-content: space-around; }
-	.content-stretch-lg { align-content: stretch; }
+	.justify-start\@xxl   { justify-content: start; }
+	.justify-end\@xxl     { justify-content: end; }
+	.justify-center\@xxl  { justify-content: center; }
+	.justify-between\@xxl { justify-content: space-between; }
+	.justify-around\@xxl  { justify-content: space-around; }
 }
 
 // order
@@ -566,41 +536,41 @@
 .order-8 { order: 8; }
 .order-last { order: 99999; }
 
-@include sm {
-	.order-0-sm { order: 0; }
-	.order-1-sm { order: 1; }
-	.order-2-sm { order: 2; }
-	.order-3-sm { order: 3; }
-	.order-4-sm { order: 4; }
-	.order-5-sm { order: 5; }
-	.order-6-sm { order: 6; }
-	.order-7-sm { order: 7; }
-	.order-8-sm { order: 8; }
-	.order-last-sm { order: 99999; }
+@include respond-min($m) {
+	.order-0\@m { order: 0; }
+	.order-1\@m { order: 1; }
+	.order-2\@m { order: 2; }
+	.order-3\@m { order: 3; }
+	.order-4\@m { order: 4; }
+	.order-5\@m { order: 5; }
+	.order-6\@m { order: 6; }
+	.order-7\@m { order: 7; }
+	.order-8\@m { order: 8; }
+	.order-last\@m { order: 99999; }
 }
-@include md {
-	.order-0-md { order: 0; }
-	.order-1-md { order: 1; }
-	.order-2-md { order: 2; }
-	.order-3-md { order: 3; }
-	.order-4-md { order: 4; }
-	.order-5-md { order: 5; }
-	.order-6-md { order: 6; }
-	.order-7-md { order: 7; }
-	.order-8-md { order: 8; }
-	.order-last-md { order: 99999; }
+@include respond-min($l) {
+	.order-0\@l { order: 0; }
+	.order-1\@l { order: 1; }
+	.order-2\@l { order: 2; }
+	.order-3\@l { order: 3; }
+	.order-4\@l { order: 4; }
+	.order-5\@l { order: 5; }
+	.order-6\@l { order: 6; }
+	.order-7\@l { order: 7; }
+	.order-8\@l { order: 8; }
+	.order-last\@l { order: 99999; }
 }
-@include lg {
-	.order-0-lg { order: 0; }
-	.order-1-lg { order: 1; }
-	.order-2-lg { order: 2; }
-	.order-3-lg { order: 3; }
-	.order-4-lg { order: 4; }
-	.order-5-lg { order: 5; }
-	.order-6-lg { order: 6; }
-	.order-7-lg { order: 7; }
-	.order-8-lg { order: 8; }
-	.order-last-lg { order: 99999; }
+@include respond-min($xxl) {
+	.order-0\@xxl { order: 0; }
+	.order-1\@xxl { order: 1; }
+	.order-2\@xxl { order: 2; }
+	.order-3\@xxl { order: 3; }
+	.order-4\@xxl { order: 4; }
+	.order-5\@xxl { order: 5; }
+	.order-6\@xxl { order: 6; }
+	.order-7\@xxl { order: 7; }
+	.order-8\@xxl { order: 8; }
+	.order-last\@xxl { order: 99999; }
 }
 
 
@@ -622,6 +592,22 @@
      Seen or not
 --------------------*/
 
+// hidden
+// ----------------------------------------------------------------------
+.hidden\@sm  { @include respond-min($sm) { display: none; }}
+.hidden\@m   { @include respond-min($m) { display: none; }}
+.hidden\@ml  { @include respond-min($ml) { display: none; }}
+.hidden\@l   { @include respond-min($l) { display: none; }}
+.hidden\@xl  { @include respond-min($xl) { display: none; }}
+.hidden\@xxl { @include respond-min($xxl) { display: none; }}
+
+.hidden-until\@sm  { @include respond-max($sm) { display: none; }}
+.hidden-until\@m   { @include respond-max($m) { display: none; }}
+.hidden-until\@ml  { @include respond-max($ml) { display: none; }}
+.hidden-until\@l   { @include respond-max($l) { display: none; }}
+.hidden-until\@xl  { @include respond-max($xl) { display: none; }}
+.hidden-until\@xxl { @include respond-max($xxl) { display: none; }}
+
 // opacities
 // ----------------------------------------------------------------------
 .o-100 { opacity: 1;    }
@@ -642,25 +628,6 @@
 .o-05  { opacity: .05;  }
 .o-025 { opacity: .025; }
 .o-0   { opacity: 0;    }
-
-// visibility breakpoints
-// ----------------------------------------------------------------------
-.visible-xs { @include sm     { display: none; }}
-.visible-lg { @include lg-max { display: none; }}
-
-.hidden-xxs { @include xs-max { display: none; }}
-.hidden-xs  { @include sm-max { display: none; }}
-.hidden-m   { @include m-max  { display: none; }}
-.hidden-sm  { @include sm-ex  { display: none; }}
-.hidden-md  { @include md-ex  { display: none; }}
-.hidden-lg  { @include lg     { display: none; }}
-
-// hidden objects
-// ----------------------------------------------------------------------
-.hidden-obj {
-    position: absolute;
-    visibility: hidden;
-}
 
 
 
@@ -690,119 +657,119 @@
 .f80 {font-size: toRem(80px);}
 .f96 {font-size: toRem(96px);}
 
-@include xs {
-	.f16-xs {font-size: toRem(16px);}
-	.f18-xs {font-size: toRem(18px);}
-	.f20-xs {font-size: toRem(20px);}
-	.f24-xs {font-size: toRem(24px);}
-	.f28-xs {font-size: toRem(28px);}
-	.f30-xs {font-size: toRem(30px);}
-	.f32-xs {font-size: toRem(32px);}
-	.f36-xs {font-size: toRem(36px);}
-	.f38-xs {font-size: toRem(38px);}
-	.f40-xs {font-size: toRem(40px);}
-	.f48-xs {font-size: toRem(48px);}
-	.f56-xs {font-size: toRem(56px);}
-	.f60-xs {font-size: toRem(60px);}
-	.f64-xs {font-size: toRem(64px);}
-	.f72-xs {font-size: toRem(72px);}
-	.f80-xs {font-size: toRem(80px);}
-	.f96-xs {font-size: toRem(96px);}
+@include respond-min($sm) {
+	.f16\@sm {font-size: toRem(16px);}
+	.f18\@sm {font-size: toRem(18px);}
+	.f20\@sm {font-size: toRem(20px);}
+	.f24\@sm {font-size: toRem(24px);}
+	.f28\@sm {font-size: toRem(28px);}
+	.f30\@sm {font-size: toRem(30px);}
+	.f32\@sm {font-size: toRem(32px);}
+	.f36\@sm {font-size: toRem(36px);}
+	.f38\@sm {font-size: toRem(38px);}
+	.f40\@sm {font-size: toRem(40px);}
+	.f48\@sm {font-size: toRem(48px);}
+	.f56\@sm {font-size: toRem(56px);}
+	.f60\@sm {font-size: toRem(60px);}
+	.f64\@sm {font-size: toRem(64px);}
+	.f72\@sm {font-size: toRem(72px);}
+	.f80\@sm {font-size: toRem(80px);}
+	.f96\@sm {font-size: toRem(96px);}
 }
-@include xs-max {
-	.f16-xs-max {font-size: toRem(16px);}
-	.f18-xs-max {font-size: toRem(18px);}
-	.f20-xs-max {font-size: toRem(20px);}
-	.f24-xs-max {font-size: toRem(24px);}
-	.f28-xs-max {font-size: toRem(28px);}
-	.f30-xs-max {font-size: toRem(30px);}
-	.f32-xs-max {font-size: toRem(32px);}
-	.f36-xs-max {font-size: toRem(36px);}
-	.f38-xs-max {font-size: toRem(38px);}
-	.f40-xs-max {font-size: toRem(40px);}
-	.f48-xs-max {font-size: toRem(48px);}
-	.f56-xs-max {font-size: toRem(56px);}
-	.f60-xs-max {font-size: toRem(60px);}
-	.f64-xs-max {font-size: toRem(64px);}
-	.f72-xs-max {font-size: toRem(72px);}
-	.f80-xs-max {font-size: toRem(80px);}
-	.f96-xs-max {font-size: toRem(96px);}
+@include respond-max($sm) {
+	.f16-until\@-sm {font-size: toRem(16px);}
+	.f18-until\@-sm {font-size: toRem(18px);}
+	.f20-until\@-sm {font-size: toRem(20px);}
+	.f24-until\@-sm {font-size: toRem(24px);}
+	.f28-until\@-sm {font-size: toRem(28px);}
+	.f30-until\@-sm {font-size: toRem(30px);}
+	.f32-until\@-sm {font-size: toRem(32px);}
+	.f36-until\@-sm {font-size: toRem(36px);}
+	.f38-until\@-sm {font-size: toRem(38px);}
+	.f40-until\@-sm {font-size: toRem(40px);}
+	.f48-until\@-sm {font-size: toRem(48px);}
+	.f56-until\@-sm {font-size: toRem(56px);}
+	.f60-until\@-sm {font-size: toRem(60px);}
+	.f64-until\@-sm {font-size: toRem(64px);}
+	.f72-until\@-sm {font-size: toRem(72px);}
+	.f80-until\@-sm {font-size: toRem(80px);}
+	.f96-until\@-sm {font-size: toRem(96px);}
 }
-@include sm-max {
-	.f16-sm-max {font-size: toRem(16px);}
-	.f18-sm-max {font-size: toRem(18px);}
-	.f20-sm-max {font-size: toRem(20px);}
-	.f24-sm-max {font-size: toRem(24px);}
-	.f28-sm-max {font-size: toRem(28px);}
-	.f30-sm-max {font-size: toRem(30px);}
-	.f32-sm-max {font-size: toRem(32px);}
-	.f36-sm-max {font-size: toRem(36px);}
-	.f38-sm-max {font-size: toRem(38px);}
-	.f40-sm-max {font-size: toRem(40px);}
-	.f48-sm-max {font-size: toRem(48px);}
-	.f56-sm-max {font-size: toRem(56px);}
-	.f60-sm-max {font-size: toRem(60px);}
-	.f64-sm-max {font-size: toRem(64px);}
-	.f72-sm-max {font-size: toRem(72px);}
-	.f80-sm-max {font-size: toRem(80px);}
-	.f96-sm-max {font-size: toRem(96px);}
+@include respond-min($m) {
+	.f16\@m {font-size: toRem(16px);}
+	.f18\@m {font-size: toRem(18px);}
+	.f20\@m {font-size: toRem(20px);}
+	.f24\@m {font-size: toRem(24px);}
+	.f28\@m {font-size: toRem(28px);}
+	.f30\@m {font-size: toRem(30px);}
+	.f32\@m {font-size: toRem(32px);}
+	.f36\@m {font-size: toRem(36px);}
+	.f38\@m {font-size: toRem(38px);}
+	.f40\@m {font-size: toRem(40px);}
+	.f48\@m {font-size: toRem(48px);}
+	.f56\@m {font-size: toRem(56px);}
+	.f60\@m {font-size: toRem(60px);}
+	.f64\@m {font-size: toRem(64px);}
+	.f72\@m {font-size: toRem(72px);}
+	.f80\@m {font-size: toRem(80px);}
+	.f96\@m {font-size: toRem(96px);}
 }
-@include sm {
-	.f16-sm {font-size: toRem(16px);}
-	.f18-sm {font-size: toRem(18px);}
-	.f20-sm {font-size: toRem(20px);}
-	.f24-sm {font-size: toRem(24px);}
-	.f28-sm {font-size: toRem(28px);}
-	.f30-sm {font-size: toRem(30px);}
-	.f32-sm {font-size: toRem(32px);}
-	.f36-sm {font-size: toRem(36px);}
-	.f38-sm {font-size: toRem(38px);}
-	.f40-sm {font-size: toRem(40px);}
-	.f48-sm {font-size: toRem(48px);}
-	.f56-sm {font-size: toRem(56px);}
-	.f60-sm {font-size: toRem(60px);}
-	.f64-sm {font-size: toRem(64px);}
-	.f72-sm {font-size: toRem(72px);}
-	.f80-sm {font-size: toRem(80px);}
-	.f96-sm {font-size: toRem(96px);}
+@include respond-max($m) {
+	.f16-until\@m {font-size: toRem(16px);}
+	.f18-until\@m {font-size: toRem(18px);}
+	.f20-until\@m {font-size: toRem(20px);}
+	.f24-until\@m {font-size: toRem(24px);}
+	.f28-until\@m {font-size: toRem(28px);}
+	.f30-until\@m {font-size: toRem(30px);}
+	.f32-until\@m {font-size: toRem(32px);}
+	.f36-until\@m {font-size: toRem(36px);}
+	.f38-until\@m {font-size: toRem(38px);}
+	.f40-until\@m {font-size: toRem(40px);}
+	.f48-until\@m {font-size: toRem(48px);}
+	.f56-until\@m {font-size: toRem(56px);}
+	.f60-until\@m {font-size: toRem(60px);}
+	.f64-until\@m {font-size: toRem(64px);}
+	.f72-until\@m {font-size: toRem(72px);}
+	.f80-until\@m {font-size: toRem(80px);}
+	.f96-until\@m {font-size: toRem(96px);}
 }
-@include md {
-	.f16-md {font-size: toRem(16px);}
-	.f18-md {font-size: toRem(18px);}
-	.f20-md {font-size: toRem(20px);}
-	.f24-md {font-size: toRem(24px);}
-	.f28-md {font-size: toRem(28px);}
-	.f30-md {font-size: toRem(30px);}
-	.f32-md {font-size: toRem(32px);}
-	.f36-md {font-size: toRem(36px);}
-	.f38-md {font-size: toRem(38px);}
-	.f40-md {font-size: toRem(40px);}
-	.f48-md {font-size: toRem(48px);}
-	.f56-md {font-size: toRem(56px);}
-	.f60-md {font-size: toRem(60px);}
-	.f64-md {font-size: toRem(64px);}
-	.f72-md {font-size: toRem(72px);}
-	.f80-md {font-size: toRem(80px);}
-	.f96-md {font-size: toRem(96px);}
+@include respond-min($l) {
+	.f16\@l {font-size: toRem(16px);}
+	.f18\@l {font-size: toRem(18px);}
+	.f20\@l {font-size: toRem(20px);}
+	.f24\@l {font-size: toRem(24px);}
+	.f28\@l {font-size: toRem(28px);}
+	.f30\@l {font-size: toRem(30px);}
+	.f32\@l {font-size: toRem(32px);}
+	.f36\@l {font-size: toRem(36px);}
+	.f38\@l {font-size: toRem(38px);}
+	.f40\@l {font-size: toRem(40px);}
+	.f48\@l {font-size: toRem(48px);}
+	.f56\@l {font-size: toRem(56px);}
+	.f60\@l {font-size: toRem(60px);}
+	.f64\@l {font-size: toRem(64px);}
+	.f72\@l {font-size: toRem(72px);}
+	.f80\@l {font-size: toRem(80px);}
+	.f96\@l {font-size: toRem(96px);}
 }
-@include lg {
-	.f16-lg {font-size: toRem(16px);}
-	.f18-lg {font-size: toRem(18px);}
-	.f20-lg {font-size: toRem(20px);}
-	.f24-lg {font-size: toRem(24px);}
-	.f28-lg {font-size: toRem(28px);}
-	.f30-lg {font-size: toRem(30px);}
-	.f32-lg {font-size: toRem(32px);}
-	.f36-lg {font-size: toRem(36px);}
-	.f38-lg {font-size: toRem(38px);}
-	.f40-lg {font-size: toRem(40px);}
-	.f48-lg {font-size: toRem(48px);}
-	.f56-lg {font-size: toRem(56px);}
-	.f60-lg {font-size: toRem(60px);}
-	.f64-lg {font-size: toRem(64px);}
-	.f72-lg {font-size: toRem(72px);}
-	.f80-lg {font-size: toRem(80px);}
-	.f96-lg {font-size: toRem(96px);}
+@include respond-min($xxl) {
+	.f16\@xxl {font-size: toRem(16px);}
+	.f18\@xxl {font-size: toRem(18px);}
+	.f20\@xxl {font-size: toRem(20px);}
+	.f24\@xxl {font-size: toRem(24px);}
+	.f28\@xxl {font-size: toRem(28px);}
+	.f30\@xxl {font-size: toRem(30px);}
+	.f32\@xxl {font-size: toRem(32px);}
+	.f36\@xxl {font-size: toRem(36px);}
+	.f38\@xxl {font-size: toRem(38px);}
+	.f40\@xxl {font-size: toRem(40px);}
+	.f48\@xxl {font-size: toRem(48px);}
+	.f56\@xxl {font-size: toRem(56px);}
+	.f60\@xxl {font-size: toRem(60px);}
+	.f64\@xxl {font-size: toRem(64px);}
+	.f72\@xxl {font-size: toRem(72px);}
+	.f80\@xxl {font-size: toRem(80px);}
+	.f96\@xxl {font-size: toRem(96px);}
 }
 
 // line-heights
@@ -812,23 +779,23 @@
 .lh-title, .lh-title div { line-height: $lh-title; }
 .lh-copy  { line-height: $lh-copy; }
 
-@include sm {
-	.lh-none-sm  { line-height: 0; }
-	.lh-solid-sm { line-height: $lh-solid; }
-	.lh-title-sm { line-height: $lh-title; }
-	.lh-copy-sm  { line-height: $lh-copy; }
+@include respond-min($m) {
+	.lh-none\@m  { line-height: 0; }
+	.lh-solid\@m { line-height: $lh-solid; }
+	.lh-title\@m { line-height: $lh-title; }
+	.lh-copy\@m  { line-height: $lh-copy; }
 }
-@include md {
-	.lh-none-md  { line-height: 0; }
-	.lh-solid-md { line-height: $lh-solid; }
-	.lh-title-md { line-height: $lh-title; }
-	.lh-copy-md  { line-height: $lh-copy; }
+@include respond-min($l) {
+	.lh-none\@l  { line-height: 0; }
+	.lh-solid\@l { line-height: $lh-solid; }
+	.lh-title\@l { line-height: $lh-title; }
+	.lh-copy\@l  { line-height: $lh-copy; }
 }
-@include lg {
-	.lh-none-lg  { line-height: 0; }
-	.lh-solid-lg { line-height: $lh-solid; }
-	.lh-title-lg { line-height: $lh-title; }
-	.lh-copy-lg  { line-height: $lh-copy; }
+@include respond-min($xxl) {
+	.lh-none\@xxl  { line-height: 0; }
+	.lh-solid\@xxl { line-height: $lh-solid; }
+	.lh-title\@xxl { line-height: $lh-title; }
+	.lh-copy\@xxl  { line-height: $lh-copy; }
 }
 
 // font colors
@@ -844,7 +811,9 @@
 .f-grey {color: $ns-grey;}
 .f-grey-10 {color: $ns-grey-10;}
 .f-grey-20 {color: $ns-grey-20;}
+.f-grey-30 {color: $ns-grey-30;}
 .f-grey-40 {color: $ns-grey-40;}
+.f-grey-50 {color: $ns-grey-50;}
 .f-grey-60 {color: $ns-grey-60;}
 .f-grey-70 {color: $ns-grey-70;}
 .f-grey-80 {color: $ns-grey-80;}
@@ -890,29 +859,29 @@
 .txt-c  { text-align: center; }
 .txt-j  { text-align: justify; }
 
-@include sm {
-	.txt-l-sm  { text-align: left; }
-	.txt-r-sm  { text-align: right; }
-	.txt-c-sm  { text-align: center; }
-	.txt-j-sm  { text-align: justify; }
+@include respond-min($m) {
+	.txt-l\@m  { text-align: left; }
+	.txt-r\@m  { text-align: right; }
+	.txt-c\@m  { text-align: center; }
+	.txt-j\@m  { text-align: justify; }
 }
 @include m {
-	.txt-l-m  { text-align: left; }
-	.txt-r-m  { text-align: right; }
-	.txt-c-m  { text-align: center; }
-	.txt-j-m  { text-align: justify; }
+	.txt-l\@m  { text-align: left; }
+	.txt-r\@m  { text-align: right; }
+	.txt-c\@m  { text-align: center; }
+	.txt-j\@m  { text-align: justify; }
 }
-@include md {
-	.txt-l-md  { text-align: left; }
-	.txt-r-md  { text-align: right; }
-	.txt-c-md  { text-align: center; }
-	.txt-j-md  { text-align: justify; }
+@include respond-min($l) {
+	.txt-l\@l  { text-align: left; }
+	.txt-r\@l  { text-align: right; }
+	.txt-c\@l  { text-align: center; }
+	.txt-j\@l  { text-align: justify; }
 }
-@include lg {
-	.txt-l-lg  { text-align: left; }
-	.txt-r-lg  { text-align: right; }
-	.txt-c-lg  { text-align: center; }
-	.txt-j-lg  { text-align: justify; }
+@include respond-min($xxl) {
+	.txt-l\@xxl  { text-align: left; }
+	.txt-r\@xxl  { text-align: right; }
+	.txt-c\@xxl  { text-align: center; }
+	.txt-j\@xxl  { text-align: justify; }
 }
 
 
@@ -931,7 +900,9 @@
 .svg-grey svg {fill: $ns-grey;}
 .svg-grey-10 svg {fill: $ns-grey-10;}
 .svg-grey-20 svg {fill: $ns-grey-20;}
+.svg-grey-30 svg {fill: $ns-grey-30;}
 .svg-grey-40 svg {fill: $ns-grey-40;}
+.svg-grey-50 svg {fill: $ns-grey-50;}
 .svg-grey-60 svg {fill: $ns-grey-60;}
 .svg-grey-70 svg {fill: $ns-grey-70;}
 .svg-grey-80 svg {fill: $ns-grey-80;}
@@ -965,21 +936,21 @@
 .bo-l-white {border-left: 1px solid $ns-white;}
 .bo-r-white {border-right: 1px solid $ns-white;}
 
-.bo-a-6 {border: 1px solid $ns-grey-70;}
-.bo-h-6 {border-right: 1px solid $ns-grey-70; border-left: 1px solid $ns-grey-70;}
-.bo-v-6 {border-top: 1px solid $ns-grey-70; border-bottom: 1px solid $ns-grey-70;}
-.bo-t-6 {border-top: 1px solid $ns-grey-70;}
-.bo-b-6 {border-bottom: 1px solid $ns-grey-70;}
-.bo-l-6 {border-left: 1px solid $ns-grey-70;}
-.bo-r-6 {border-right: 1px solid $ns-grey-70;}
+.bo-a-70 {border: 1px solid $ns-grey-70;}
+.bo-h-70 {border-right: 1px solid $ns-grey-70; border-left: 1px solid $ns-grey-70;}
+.bo-v-70 {border-top: 1px solid $ns-grey-70; border-bottom: 1px solid $ns-grey-70;}
+.bo-t-70 {border-top: 1px solid $ns-grey-70;}
+.bo-b-70 {border-bottom: 1px solid $ns-grey-70;}
+.bo-l-70 {border-left: 1px solid $ns-grey-70;}
+.bo-r-70 {border-right: 1px solid $ns-grey-70;}
 
-.bo-a-6b {border: 1px solid $ns-grey-80;}
-.bo-h-6b {border-right: 1px solid $ns-grey-80; border-left: 1px solid $ns-grey-80;}
-.bo-v-6b {border-top: 1px solid $ns-grey-80; border-bottom: 1px solid $ns-grey-80;}
-.bo-t-6b {border-top: 1px solid $ns-grey-80;}
-.bo-b-6b {border-bottom: 1px solid $ns-grey-80;}
-.bo-l-6b {border-left: 1px solid $ns-grey-80;}
-.bo-r-6b {border-right: 1px solid $ns-grey-80;}
+.bo-a-80 {border: 1px solid $ns-grey-80;}
+.bo-h-80 {border-right: 1px solid $ns-grey-80; border-left: 1px solid $ns-grey-80;}
+.bo-v-80 {border-top: 1px solid $ns-grey-80; border-bottom: 1px solid $ns-grey-80;}
+.bo-t-80 {border-top: 1px solid $ns-grey-80;}
+.bo-b-80 {border-bottom: 1px solid $ns-grey-80;}
+.bo-l-80 {border-left: 1px solid $ns-grey-80;}
+.bo-r-80 {border-right: 1px solid $ns-grey-80;}
 
 .bo-a-a15 {border: 1px solid $ns-grey-alpha-15;}
 .bo-h-a15 {border-right: 1px solid $ns-grey-alpha-15; border-left: 1px solid $ns-grey-alpha-15;}
@@ -1011,11 +982,12 @@
 
 // box shadows
 // -------------------------
-.bs-none {box-shadow: none;}
-.bs-s {box-shadow: $box-shadow-soft;}
-.bs-m {box-shadow: $box-shadow-medium;}
-.bs-h {box-shadow: $box-shadow-hard;}
-.bs-c {box-shadow: $box-shadow-container;}
+.bs-none { box-shadow: none; }
+.bs-s    { box-shadow: $box-shadow-soft; }
+.bs-m    { box-shadow: $box-shadow-medium; }
+.bs-h    { box-shadow: $box-shadow-hard; }
+.bs-c    { box-shadow: $box-shadow-container; }
+.bs-dd   { box-shadow: $box-shadow-dropdown; }
 
 // text-shadows
 // -------------------------
@@ -1048,7 +1020,9 @@
 .bg-grey {background-color: $ns-grey;}
 .bg-grey-10 {background-color: $ns-grey-10;}
 .bg-grey-20 {background-color: $ns-grey-20;}
+.bg-grey-30 {background-color: $ns-grey-30;}
 .bg-grey-40 {background-color: $ns-grey-40;}
+.bg-grey-50 {background-color: $ns-grey-50;}
 .bg-grey-60 {background-color: $ns-grey-60;}
 .bg-grey-70 {background-color: $ns-grey-70;}
 .bg-grey-80 {background-color: $ns-grey-80;}

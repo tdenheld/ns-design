@@ -76,7 +76,6 @@ $bs-autofill;
 --------------------*/
 
 $navbar-height: 			60px;
-$subnav-breakpoint:			822px;
 $button-height:				45px;
 $border-radius:             4px;
 
@@ -84,7 +83,10 @@ $box-shadow-soft:			0 2px 28px rgba($ns-black, 0.1);
 $box-shadow-soft-contrast:	0 2px 20px rgba($ns-white, 0.2);
 $box-shadow-medium:			0 5px 35px rgba($ns-black, 0.15);
 $box-shadow-hard:			0 5px 35px rgba($ns-black, 0.25);
+$box-shadow-dropdown:       0 2px 35px rgba($ns-black, 0.15);
 $box-shadow-container:		0 1px 0 rgba($ns-grey, 0.15);
+$box-shadow-navbar:		    0 1px 1px rgba($ns-black, 0.03),
+                            0 10px 20px rgba($ns-black, 0.04);
 
 $text-shadow-1:				1px 1px 0 rgba($ns-black, 0.5);
 $text-shadow-2:				0 0 50px rgba($ns-black, 0.15), 1px 1px 0 rgba($ns-black, 0.3);
