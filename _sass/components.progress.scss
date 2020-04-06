@@ -4,7 +4,7 @@
     border-bottom: 1px solid $ns-grey-90;
 
     @include respond-min($l) {
-        padding: space(4) 0;
+        padding: $gutter 0;
     }
 }
 

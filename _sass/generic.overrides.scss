@@ -62,7 +62,7 @@ input,
     padding-bottom: 84px;
     
     @include respond-min($m) {
-        padding-bottom: space(4);
+        padding-bottom: $gutter;
     }
 }
 

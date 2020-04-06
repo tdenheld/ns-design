@@ -6,13 +6,13 @@
 // ----------------------------------------
 .ff {
     position: relative;
-    margin-bottom: space(4);
+    margin-bottom: $gutter;
 }
 
 // modifiers
 .ff--grid {
     display: grid;
-    grid-column-gap: space(4);
+    grid-column-gap: $gutter;
     grid-row-gap: 4px;
     max-width: 600px;
 
@@ -31,7 +31,7 @@
 }
 
 .ff--radio {
-    margin: space(4) 0;
+    margin: $gutter 0;
     grid-row-gap: 8px;
 
     .ff__label {
@@ -97,8 +97,8 @@
 // section
 // ----------------------------------------------
 .ff-section {
-    margin: space(4) 0;
-    padding-top: space(4);
+    margin: $gutter 0;
+    padding-top: $gutter;
     border-top: 1px solid $ns-grey-90;
 
     @include respond-min($m) {
@@ -111,7 +111,7 @@
 // cta
 // ----------------------------------------------
 .ff-cta {
-    margin: space(4) 0;
+    margin: $gutter 0;
     padding-top: space(2);
     border-top: 1px solid $ns-grey-90;
     text-align: right;
