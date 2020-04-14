@@ -20,7 +20,7 @@ defaults:
       path: ""
     values:
       layout: "default"
-      title: "NS Design"
+      title: "NS Design 3.0"
   - scope:
       path: ""
       type: "posts"
