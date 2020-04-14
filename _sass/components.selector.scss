@@ -63,7 +63,7 @@
 .selector__property-container {
     display: grid;
     grid-template-columns: 1fr max-content;
-    grid-column-gap: space(2);
+    column-gap: space(2);
     align-items: center;
     min-height: 28px;
 

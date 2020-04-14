@@ -322,9 +322,9 @@
 // gap
 // -------------------------
 @for $i from 0 through 12 {
-	.gap-#{$i} { grid-gap: space($i); }
-	.col-gap-#{$i} { grid-column-gap: space($i); }
-	.row-gap-#{$i} { grid-row-gap: space($i); }
+	.gap-#{$i} { gap: space($i); }
+	.col-gap-#{$i} { column-gap: space($i); }
+	.row-gap-#{$i} { row-gap: space($i); }
 }
 
 // fractions

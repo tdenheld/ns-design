@@ -3,7 +3,7 @@
 
     @include respond-min($m) {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: space(2);
+        gap: space(2);
     }
 
     @include respond-min($l) {
@@ -16,7 +16,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 36px 1fr max-content;
-    grid-gap: 10px;
+    gap: 10px;
     margin-bottom: -1px;
     padding: 10px 20px 10px 10px;
     align-items: center;

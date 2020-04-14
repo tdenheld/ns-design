@@ -12,8 +12,8 @@
 // modifiers
 .ff--grid {
     display: grid;
-    grid-column-gap: $gutter;
-    grid-row-gap: 4px;
+    column-gap: $gutter;
+    row-gap: 4px;
     max-width: 600px;
 
     @include respond-min($m) {
@@ -32,7 +32,7 @@
 
 .ff--radio {
     margin: $gutter 0;
-    grid-row-gap: 8px;
+    row-gap: 8px;
 
     .ff__label {
         @include respond-min($m) {
