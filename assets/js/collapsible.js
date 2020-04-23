@@ -8,9 +8,10 @@
         const header = el.querySelector('.js-collapsible-header');
         const content = el.querySelector('.js-collapsible-content');
 
-        header.onclick = () => {
+        header.addEventListener('click', e => {
+            e.preventDefault();
             el.classList.toggle('is-active');
             slideToggle(content, 200);
-        }
+        });
     });
 })();
