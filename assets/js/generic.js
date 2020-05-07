@@ -22,6 +22,14 @@ const removeAllChilds = node => {
     while (node.firstChild) node.removeChild(node.firstChild);
 }
 
+const checkLocalStorage = (value) => {
+    if (localStorage.getItem(value)) return localStorage.getItem(value).trim();
+}
+
+const checkSessionStorage = (value) => {
+    if (sessionStorage.getItem(value)) return sessionStorage.getItem(value).trim();
+}
+
 const debounce = (callback, time) => {
     let interval;
     return (...args) => {
