@@ -22,6 +22,7 @@
 @import "objects.txt";
 
 // Components
+@import "components.alerts";
 @import "components.banks";
 @import "components.buttons";
 @import "components.collapsible";
@@ -30,13 +31,14 @@
 @import "components.links";
 @import "components.lists";
 @import "components.loader";
-@import "components.notifications";
+@import "components.progress";
 @import "components.safe-pay";
 @import "components.selector";
 @import "components.suggest";
 @import "components.switch";
 @import "components.toggle";
 @import "components.tooltip";
+@import "components.video";
 
 // Utilities
 @import "utilities.animate";
