@@ -38,21 +38,6 @@ $ls-heading: -0.016em;
 
 
 /*-------------------
-       Forms
---------------------*/
-
-$input-border: 1px solid $ns-grey-80;
-$input-border-hover: 1px solid $ns-grey-60;
-
-$bs-focus: 0 0 0 1px $ns-light-blue,
-0 2px 28px rgba($ns-black, 0.1);
-$bs-autofill: 0 0 0px 1000px $ns-blue-4 inset;
-$bs-autofill-focus: $bs-focus,
-$bs-autofill;
-
-
-
-/*-------------------
        Shadows
 --------------------*/
 
@@ -73,7 +58,24 @@ $gradient-tile: 			linear-gradient(to bottom,
 							rgba($ns-black, 0) 0%,
 							rgba($ns-black, 0) 10%,
 							rgba($ns-black, 0.55) 60%,
-                            rgba($ns-black, 0.85) 100%);          
+                            rgba($ns-black, 0.85) 100%);
+
+                            
+
+
+/*-------------------
+       Forms
+--------------------*/
+
+$input-border: 1px solid $ns-grey-80;
+$input-border-hover: 1px solid $ns-grey-60;
+
+$bs-focus: 0 0 0 1px $ns-light-blue, $box-shadow-soft;
+$bs-autofill: 0 0 0px 1000px $ns-blue-4 inset;
+$bs-autofill-focus: $bs-focus,
+$bs-autofill;
+
+
 
                             
 /*-------------------
