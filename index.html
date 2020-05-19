@@ -2,13 +2,49 @@
 bg: bg-grey-94
 ---
 
-<section class="mv-4 mv-8@m">
+<section class="mv-6 mv-8@m">
     <div class="container container--narrow">
         <h1 class="alt">{{ page.title }}</h1>
-        {% for entry in site.posts reversed %}
-        <p class="mb-1">
-            <a href="{{ entry.url }}" class="arrowLink">{{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}</a>
-        </p>
-        {% endfor %}
+        {% assign category = site.posts | where: 'category', 'fundamentals' %}
+        {% if category.size > 0 %}
+        <div class="mb-6 mb-8@m">
+            <h2 class="h-xs mb-3">Fundamentals</h2>
+            {% for entry in category reversed %}
+            <p class="mb-1">
+                <a href="{{ entry.url }}" class="arrowLink">
+                    {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
+                </a>
+            </p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% assign category = site.posts | where: 'category', 'components' %}
+        {% if category.size > 0 %}
+        <div class="mb-6 mb-8@m">
+            <h2 class="h-xs mb-3">Components</h2>
+            {% for entry in category reversed %}
+            <p class="mb-1">
+                <a href="{{ entry.url }}" class="arrowLink">
+                    {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
+                </a>
+            </p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% assign category = site.posts | where: 'category', 'templates' %}
+        {% if category.size > 0 %}
+        <div class="mb-6 mb-8@m">
+            <h2 class="h-xs mb-3">Templates</h2>
+            {% for entry in category reversed %}
+            <p class="mb-1">
+                <a href="{{ entry.url }}" class="arrowLink">
+                    {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
+                </a>
+            </p>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
 </section>
