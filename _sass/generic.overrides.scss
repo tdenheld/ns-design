@@ -3,9 +3,9 @@
 -------------------*/
 
 .content {
-    background-color: transparent;
-    margin-top: $navbar-height - 1;
+    // margin-top: $navbar-height - 1;
     min-height: calc(100vh - 500px);
+    background-color: transparent;
 }
 
 .content--footer-light {
