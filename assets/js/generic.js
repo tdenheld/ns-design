@@ -115,19 +115,19 @@ const slideToggle = (n, d, u) => {
 const toggle = () => {
     const obj = '.js-toggle';
     if (!exists(obj)) return;
-    ß(obj).map((el) => el.onclick = () => el.classList.toggle('is-active'));
+    ß(obj).map(el => el.onclick = () => el.classList.toggle('is-active'));
 }
 
 const clearSession = () => {
     const obj = '.js-clear-session';
     if (!exists(obj)) return;
-    ß(obj).map((el) => el.onclick = () => sessionStorage.clear());
+    ß(obj).map(el => el.onclick = () => sessionStorage.clear());
 }
 
 const button = () => {
     const obj = '.button';
     if (!exists(obj)) return;
-    ß(obj).map((el) => el.onclick = () => {
+    ß(obj).map(el => el.onclick = () => {
         if (el.hasAttribute('data-loader')) el.classList.toggle('is-loading');
     });
 }
@@ -136,7 +136,7 @@ const tooltip = () => {
     const obj = '.js-tooltip';
     if (!exists(obj)) return;
 
-    ß(obj).map((el) => el.onclick = () => {
+    ß(obj).map(el => el.onclick = () => {
         slideToggle(el.parentElement.nextElementSibling, 200);
         el.classList.toggle('is-active');
         const offset = -el.parentElement.offsetHeight / 2 + 4 + 'px';

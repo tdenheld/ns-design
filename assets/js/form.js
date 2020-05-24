@@ -98,7 +98,7 @@
     }
 
     if (!exists('.js-select-other')) return;
-    ß('.js-select-other').map((el) => {
+    ß('.js-select-other').map(el => {
         if (el.value === 'other') slideDown(el.nextElementSibling, 200);
         el.addEventListener('change', e => check(e.target));
     });
@@ -150,7 +150,7 @@
         const obj = '.js-set-data';
         if (!exists(obj)) return;
 
-        ß(obj).map((el) => {
+        ß(obj).map(el => {
             const value = (el.nodeName === 'INPUT') ? el.value : el.textContent;
             localStorage.setItem(el.id, value);
         });
@@ -160,7 +160,7 @@
         const obj = '[data-id]';
         if (!exists(obj)) return;
 
-        ß(obj).map((el) => {
+        ß(obj).map(el => {
             const data = checkLocalStorage(el.dataset.id);
             if (!data) return;
             (el.nodeName === 'INPUT') ? el.value = data: el.textContent = data;
@@ -169,7 +169,7 @@
     getData();
 
     const submit = '.js-submit';
-    if (exists(submit)) ß(submit).map((el) => el.addEventListener('click', () => setData()));
+    if (exists(submit)) ß(submit).map(el => el.addEventListener('click', () => setData()));
 
     // split chipcard number to 4 chunks
     ß('.js-ovcp').map(el => {

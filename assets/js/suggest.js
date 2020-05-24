@@ -34,7 +34,7 @@
             this.highlight(container);
         },
         highlight(node) {
-            ß('.js-suggest-item', node).map((el) => el.classList.remove('is-active'));
+            ß('.js-suggest-item', node).map(el => el.classList.remove('is-active'));
             ß('.js-suggest-item', node)[this.position].classList.add('is-active');
         },
         showDefault(container) {
@@ -62,11 +62,11 @@
     }
 
     const processStationInput = (inputVal, container) => {
-        getStations(inputVal).then((value) => {
+        getStations(inputVal).then(value => {
             suggest.set('amount', Math.min(value.length, 4));
             if (value.length > 0) {
                 removeAllChilds(container);
-                value.slice(0, 4).map((value) => {
+                value.slice(0, 4).map(value => {
                     container.innerHTML += suggest.template.array(value);
                 });
                 suggest.set('position', 0);
@@ -95,9 +95,9 @@
     }
 
     const inputStation = obj => {
-        ß(obj).map((element) => {
-            const input = element.querySelector('input');
-            const container = element.querySelector('.js-suggest');
+        ß(obj).map(el => {
+            const input = el.querySelector('input');
+            const container = el.querySelector('.js-suggest');
 
             input.addEventListener('keydown', e => {
                 if (valueInArray(e.key, ['ArrowDown', 'ArrowUp'])) e.preventDefault();
@@ -141,10 +141,10 @@
     document.addEventListener('mouseover', e => {
         if (e.target.matches('.js-suggest-item')) {
             const items = e.target.parentNode.children;
-            Array.from(items).map((element) => {
-                element.classList.remove('is-active');
+            Array.from(items).map(el => {
+                el.classList.remove('is-active');
             });
-            const arr = Array.from(items).filter((value) => {
+            const arr = Array.from(items).filter(value => {
                 return value.matches('.js-suggest-item');
             });
             e.target.classList.add('is-active');
