@@ -30,6 +30,10 @@ const checkSessionStorage = (value) => {
     if (sessionStorage.getItem(value)) return sessionStorage.getItem(value).trim();
 }
 
+const insertAfter = (newNode, referenceNode) => {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
 const debounce = (callback, time) => {
     let interval;
     return (...args) => {
