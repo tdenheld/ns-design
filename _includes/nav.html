@@ -1,0 +1,50 @@
+{% assign category = site.posts | where: 'category', 'fundamentals' %}
+{% if category.size > 0 %}
+<div class="{{ include.margin }}">
+    <h2 class="{{ include.headingClass }}">Fundamentals</h2>
+
+    <ul class="list-clear">
+        {% for entry in category reversed %}
+        <li class="mb-1">
+            <a href="{{ entry.url }}" class="{{ include.linkClass }}">
+                {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% assign category = site.posts | where: 'category', 'components' %}
+{% if category.size > 0 %}
+<div class="{{ include.margin }}">
+    <h2 class="{{ include.headingClass }}">Components</h2>
+
+    <ul class="list-clear">
+        {% for entry in category reversed %}
+        <li class="mb-1">
+            <a href="{{ entry.url }}" class="{{ include.linkClass }}">
+                {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% assign category = site.posts | where: 'category', 'templates' %}
+{% if category.size > 0 %}
+<div class="{{ include.margin }}">
+    <h2 class="{{ include.headingClass }}">Templates</h2>
+
+    <ul class="list-clear">
+        {% for entry in category reversed %}
+        <li class="mb-1">
+            <a href="{{ entry.url }}" class="{{ include.linkClass }}">
+                {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

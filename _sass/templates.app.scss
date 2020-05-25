@@ -1,0 +1,66 @@
+.t-header {
+    position: fixed;
+    width: 100%;
+    padding: space(3) 0;
+    background-color: $ns-white;
+    box-shadow: $box-shadow-container;
+    z-index: 999;
+
+    a,
+    a:hover,
+    a:focus {
+        box-shadow: none;
+    }
+
+    .container {
+        @include respond-min($xxxl) {
+            margin: 0;
+            padding: 0 space(3);
+        }
+    }
+}
+
+
+
+// ------------------------------------
+.t-grid {
+    display: grid;
+
+    @include respond-min($xxxl) {
+        grid-template-columns: max-content 1fr;
+    }
+}
+
+
+
+// ------------------------------------
+.t-nav {
+    display: none;
+    position: relative;
+    height: calc(100vh - #{$navbar-height});
+    width: 240px;
+
+    @include respond-min($xxxl) {
+        display: block;
+    }
+}
+
+.t-nav__scroll-container {
+    position: fixed;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 58px space(3);
+    box-shadow: $box-shadow-soft;
+    background-color: $ns-white;
+    width: 240px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.t-nav__link,
+.t-nav__link:hover,
+.t-nav__link:focus {
+    box-shadow: none;
+}
