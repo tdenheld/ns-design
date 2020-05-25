@@ -81,6 +81,7 @@
 .mh-auto {margin: 0 auto;}
 .mv-auto {margin: auto 0;}
 .pa-2r {padding: 2rem;}
+.ph-2r {padding-left: 2rem; padding-right: 2rem;}
 .mt-nf-1px:not(:first-child) { margin-top: -1px; }
 
 @include respond-min($m) {
@@ -973,13 +974,15 @@
 
 // radius
 // --------------------------------------------
-.br-0    {border-radius: 0;}
-.br-4    {border-radius: $border-radius;}
-.br-8    {border-radius: 8px;}
-.br-12   {border-radius: 12px;}
-.br-16   {border-radius: 16px;}
-.br-pill {border-radius: 100px;}
-.br-50ct {border-radius: 50%;}
+.br-0           {border-radius: 0;}
+.br-4           {border-radius: $border-radius;}
+.br-8           {border-radius: 8px;}
+.br-8-top       {border-radius: 8px 8px 0 0;}
+.br-8-bottom    {border-radius: 0 0 8px 8px;}
+.br-12          {border-radius: 12px;}
+.br-16          {border-radius: 16px;}
+.br-pill        {border-radius: 100px;}
+.br-50ct        {border-radius: 50%;}
 
 
 
