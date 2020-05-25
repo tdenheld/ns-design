@@ -39,6 +39,12 @@
 
 .tile__heading {
     margin-bottom: space(2);
+    @extend .h-xxxs;
+}
+
+.tile__contentLabelHeading {
+    @extend .h-xxxs;
+    color: $ns-white;
 }
 
 .tile__content {
@@ -64,19 +70,12 @@
 // ------------------------------------
 .richText {
     h2 {
-        color: $ns-blue;
-        letter-spacing: $ls-heading;
-
-        @include font(24px, bold, $lh-title);
-
-        @include respond-min($m) {
-            font-size: toRem(32px);
-        }
+        @extend .h-xs;
     }
 
     p,
     li {
-        @include font(18px, normal, $lh-copy);
+        @extend .txt-body;
     }
 }
 
@@ -86,6 +85,32 @@
     }
 }
 
+.bodyItem {
+    h1 {
+        @extend .h-xl;
+        margin-bottom: space(2);
+    }
+
+    h2 {
+        @extend .h-xs;
+    }
+
+    h3 {
+        @extend .h-xxxs;
+    }
+
+    p {
+        @extend .txt-body;
+    }
+}
+
+.articleSeparator {
+    margin-bottom: space(4);
+
+    @include respond-min($m) {
+        margin-bottom: space(6);
+    }
+}
 
 .header {
     box-shadow: 0 1px 0 0 rgba(7, 7, 33, .15);
