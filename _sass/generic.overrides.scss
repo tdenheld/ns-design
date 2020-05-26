@@ -50,6 +50,7 @@
 .tile__content {
     p {
         margin-bottom: 1.25rem;
+        color: $ns-grey-40;
     }
 }
 
@@ -76,6 +77,7 @@
     p,
     li {
         @extend .txt-body;
+        color: $ns-grey-40;
     }
 }
 
@@ -99,8 +101,9 @@
         @extend .h-xxxs;
     }
 
-    p {
+    p, li {
         @extend .txt-body;
+        color: $ns-grey-40;
     }
 }
 
