@@ -1,3 +1,4 @@
+.h, // base heading class without size
 .h-xxxl,
 .h-xxl,
 .h-xl,
@@ -8,12 +9,14 @@
 .h-xxs,
 .h-xxxs,
 .h-xxxxs {
+    font-weight: bold;
     color: $ns-blue;
     letter-spacing: $ls-heading;
+    line-height: $lh-title;
 }
 
 .h-xxxl {
-    @include font(38px, bold, $lh-title);
+    font-size: toRem(38px);
 
     @include respond-min($sm) {
         font-size: toRem(48px);
@@ -29,7 +32,7 @@
 }
 
 .h-xxl {
-    @include font(38px, bold, $lh-title);
+    font-size: toRem(38px);
 
     @include respond-min($m) {
         font-size: toRem(56px);
@@ -41,7 +44,7 @@
 }
 
 .h-xl {
-    @include font(38px, bold, $lh-title);
+    font-size: toRem(38px);
 
     @include respond-min($m) {
         font-size: toRem(48px);
@@ -53,7 +56,7 @@
 }
 
 .h-l {
-    @include font(36px, bold, $lh-title);
+    font-size: toRem(36px);
 
     @include respond-min($m) {
         font-size: toRem(48px);
@@ -61,7 +64,7 @@
 }
 
 .h-m {
-    @include font(32px, bold, $lh-title);
+    font-size: toRem(32px);
 
     @include respond-min($m) {
         font-size: toRem(40px);
@@ -69,7 +72,7 @@
 }
 
 .h-s {
-    @include font(28px, bold, $lh-title);
+    font-size: toRem(28px);
 
     @include respond-min($m) {
         font-size: toRem(36px);
@@ -77,7 +80,7 @@
 }
 
 .h-xs {
-    @include font(24px, bold, $lh-title);
+    font-size: toRem(24px);
 
     @include respond-min($m) {
         font-size: toRem(32px);
@@ -85,7 +88,7 @@
 }
 
 .h-xxs {
-    @include font(24px, bold, $lh-title);
+    font-size: toRem(24px);
 
     @include respond-min($m) {
         font-size: toRem(28px);
@@ -93,7 +96,7 @@
 }
 
 .h-xxxs {
-    @include font(20px, bold, $lh-title);
+    font-size: toRem(20px);
 
     @include respond-min($m) {
         font-size: toRem(24px);
@@ -101,7 +104,7 @@
 }
 
 .h-xxxxs {
-    @include font(18px, bold, $lh-title);
+    font-size: toRem(18px);
 
     @include respond-min($m) {
         font-size: toRem(20px);

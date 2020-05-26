@@ -3,40 +3,42 @@
 }
 
 // modifiers
-.c-tile--hover {
-    cursor: pointer;
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: - space(2);
-        left: - space(2);
-        width: calc(100% + #{$gutter});
-        height: calc(100% + #{$gutter});
-        border-radius: $border-radius-l;
-        box-shadow: $box-shadow-tile-hover;
-        opacity: 0;
-        transition: $fade-all;
-    }
-
-    &:hover,
-    &:focus {
-        &:before {
-            opacity: 1;
-        }
-
-        .c-tile__heading:after {
-            transform: scaleX(1);
-        }
-    }
-}
-
-.c-tile--hover-heading {
-    .c-tile__heading {
+.no-touch {
+    .c-tile--hover {
         cursor: pointer;
-
-        &:hover:after {
-            transform: scaleX(1);
+    
+        &:before {
+            content: '';
+            position: absolute;
+            top: - space(2);
+            left: - space(2);
+            width: calc(100% + #{$gutter});
+            height: calc(100% + #{$gutter});
+            border-radius: $border-radius-l;
+            box-shadow: $box-shadow-tile-hover;
+            opacity: 0;
+            transition: $fade-all;
+        }
+    
+        &:hover,
+        &:focus {
+            &:before {
+                opacity: 1;
+            }
+    
+            .c-tile__heading {
+                box-shadow: inset 0 -1px 0 rgba($ns-blue, 1);
+            }
+        }
+    }
+    
+    .c-tile--hover-heading {
+        .c-tile__heading {
+            cursor: pointer;
+    
+            &:hover:after {
+                transform: scaleX(1);
+            }
         }
     }
 }
@@ -53,21 +55,8 @@
 }
 
 .c-tile__heading {
-    display: inline-block;
-    position: relative;
-
-    &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 2px;
-        left: 0;
-        background-color: $ns-blue;
-        transform: scaleX(0);
-        transform-origin: 0 0;
-        transition: $fade-link;
-    }
+    display: inline;
+    transition: $fade-all;
 }
 
 .c-tile__price {
