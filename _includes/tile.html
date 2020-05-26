@@ -1,5 +1,17 @@
 <div class="c-tile">
+    {% if include.img %}
     <img src="/assets/img/{{ include.img }}.jpg" alt="{{ include.img }}" class="c-tile__img mb-2">
-    <h3 class="h-xxxs mb-1">{{ include.title }}</h3>
+    {% endif %}
+
+    {% if include.specs %}
+    <p class="f14 f-grey-40 mb-3px">{{ include.specs }}</p>
+    {% endif %}
+
+    {% if include.heading %}
+    <h3 class="c-tile__heading h-xxxs mb-1">{{ include.heading }}</h3>
+    {% endif %}
+
+    {% if include.description %}
     <p class="f-grey-40">{{ include.description }}</p>
+    {% endif %}
 </div>
