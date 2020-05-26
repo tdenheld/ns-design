@@ -1,4 +1,4 @@
-<div class="c-tile">
+<div class="c-tile {{ include.class }}">
     {% if include.img %}
     <img src="/assets/img/{{ include.img }}.jpg" alt="{{ include.img }}" class="c-tile__img mb-2">
     {% endif %}
@@ -13,5 +13,19 @@
 
     {% if include.description %}
     <p class="f-grey-40">{{ include.description }}</p>
+    {% endif %}
+
+    {% if include.price %}
+    <p class="c-tile__price mt-2">Vanaf <b>€ {{ include.price }}</b></p>
+    {% endif %}
+
+    {% if include.links %}
+    <ul class="list pt-1">
+        <li class="list__item"><a href="" class="link-clean-u">Online kaartje kopen</a></li>
+        <li class="list__item"><a href="" class="link-clean-u">Abonnementen</a></li>
+        <li class="list__item"><a href="" class="link-clean-u">Spoordeelwinkel</a></li>
+        <li class="list__item"><a href="" class="link-clean-u">OV-fiets en meer</a></li>
+        <li class="list__item"><a href="" class="link-clean-u">Internationale treinkaartjes</a></li>
+    </ul>
     {% endif %}
 </div>

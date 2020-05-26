@@ -3,39 +3,66 @@ title: Tiles
 category: components
 ---
 
-<section class="mv-4 mv-8@m">
+<section class="mt-4 mb-8 mv-8@m">
     <div class="container container--narrow">
         <header class="mb-4 mb-8@m">
             <h1 class="f-blue">{{ page.title }}</h1>
             <hr>
         </header>
 
-        <ul>
-            <li>Base</li>
-            <li>Wandeling</li>
-            <li>Spoordeelwinkel</li>
-            <li>Highlight</li>
-            <li>Banner</li>
-            <li>Content Banner</li>
-            <li>Reisplanner</li>
-            <li>Product</li>
-            <li>Landing (zakelijk)</li>
-        </ul>
+        <div class="g g-2@m g-3@xl gap-4 mb-4 mb-8@m">
+            <ul class="ma-0">
+                <li>Base</li>
+                <li>Wandeling</li>
+                <li>Spoordeelwinkel</li>
+                <li>Links</li>
+                <li>Links Highlight</li>
+            </ul>
+            <ul class="ma-0">
+                <li>Banner</li>
+                <li>Content Banner</li>
+                <li>Reisplanner</li>
+                <li>Product</li>
+                <li>Landing (zakelijk)</li>
+            </ul>
+        </div>
 
-        <hr class="mv-4 mv-8@m">
+        <hr class="mb-4 mb-8@m">
 
-        <div class="g g-2@m g-3@xl col-gap-4 row-gap-10">
-            {% include tile.html 
-                img="no1" 
-                heading="Stationsontwikkelingen" 
-                description="NS wil voorzien in makkelijk, snel, veilig en betaalbaar reizen" 
+        <div class="g g-2@m g-3@xl col-gap-4 row-gap-8">
+            {% include tile.html
+                class="c-tile--hover"
+                img="no19"
+                heading="Stationsontwikkelingen"
+                description="NS wil voorzien in makkelijk, snel, veilig en betaalbaar reizen"
             %}
 
-            {% include tile.html 
+            {% include tile.html
+                class="c-tile--hover"
                 img="no2"
                 specs="6,5 tot 10 km"
-                heading="Helderse Duinen" 
-                description="Van station Den Helder Zuid naar station Den Helder" 
+                heading="Wandeling Helderse Duinen"
+                description="Van station Den Helder Zuid naar station Den Helder"
+            %}
+
+            {% include tile.html
+                class="c-tile--hover"
+                img="no5"
+                specs="Spoordeelwinkel"
+                heading="Dagje Rotterdam"
+                description="Dagretour + Koffie"
+                price="25"
+            %}
+
+            {% include tile.html
+                heading="Producten"
+                links=true
+            %}
+
+            {% include tile.html
+                class="c-tile--highlight c-tile--hover-heading"
+                heading="Klantenservice"
+                links=true
             %}
         </div>
     </div>

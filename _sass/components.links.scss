@@ -48,3 +48,13 @@ a {
         }
     }
 }
+
+.link-clean,
+.link-clean:focus,
+.link-clean:hover {
+    box-shadow: none;
+}
+
+.link-clean-u {
+    box-shadow: 0 1px 0 rgba($ns-blue, 0);
+}
