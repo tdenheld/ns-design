@@ -353,6 +353,14 @@
 	.g-5\@l {grid-template-columns: repeat(5,1fr);}
 	.g-6\@l {grid-template-columns: repeat(6,1fr);}
 }
+@include respond-min($xl) {
+	.g-1\@xl {grid-template-columns: 1fr;}
+	.g-2\@xl {grid-template-columns: repeat(2,1fr);}
+	.g-3\@xl {grid-template-columns: repeat(3,1fr);}
+	.g-4\@xl {grid-template-columns: repeat(4,1fr);}
+	.g-5\@xl {grid-template-columns: repeat(5,1fr);}
+	.g-6\@xl {grid-template-columns: repeat(6,1fr);}
+}
 @include respond-min($xxl) {
 	.g-1\@xxl {grid-template-columns: 1fr;}
 	.g-2\@xxl {grid-template-columns: repeat(2,1fr);}
@@ -998,6 +1006,7 @@
 .bs-h    { box-shadow: $box-shadow-hard; }
 .bs-c    { box-shadow: $box-shadow-container; }
 .bs-dd   { box-shadow: $box-shadow-dropdown; }
+.bs-tile { box-shadow: $box-shadow-tile; }
 
 // text-shadows
 // -------------------------

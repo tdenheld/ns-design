@@ -9,14 +9,9 @@ category: components
             <h1 class="f-blue">{{ page.title }}</h1>
             <hr>
         </header>
-    </div>
-</section>
 
-<section>
-    <div class="container container--narrow">
         <ul>
             <li>Base</li>
-            <li>Image</li>
             <li>Wandeling</li>
             <li>Spoordeelwinkel</li>
             <li>Highlight</li>
@@ -26,5 +21,15 @@ category: components
             <li>Product</li>
             <li>Landing (zakelijk)</li>
         </ul>
+
+        <hr class="mv-4 mv-8@m">
+
+        <div class="g g-2@m g-3@xl col-gap-4 row-gap-10">
+            {% include tile.html img="no1" title="Stationsontwikkelingen" description="NS wil voorzien in makkelijk, snel, veilig en betaalbaar reizen." %}
+            {% include tile.html img="no2" title="Reizigersvervoer" description="NS wil voorzien in makkelijk, snel, veilig en betaalbaar reizen." %}
+            {% include tile.html img="no3" title="Onderhoud van treinen" description="NS wil voorzien in makkelijk, snel, veilig en betaalbaar reizen." %}
+            {% include tile.html img="no4" title="Dagje Rotterdam" %}
+            {% include tile.html img="no5" title="Dagje Rotterdam" %}
+        </div>
     </div>
 </section>
