@@ -1,4 +1,4 @@
-<div>
+<div class="{{ include.span }}">
     <div class="c-tile {{ include.class }}">
         {% if include.img %}
         <img src="/assets/img/{{ include.img }}.jpg" alt="{{ include.img }}" class="c-tile__img mb-2">
@@ -9,13 +9,11 @@
         {% endif %}
 
         {% if include.heading %}
-        <div class="mb-4px">
-            <h3 class="c-tile__heading h f24">{{ include.heading }}</h3>
-        </div>
+        <div><h3 class="c-tile__heading h f24">{{ include.heading }}</h3></div>
         {% endif %}
 
         {% if include.description %}
-        <p class="f-grey-40">{{ include.description }}</p>
+        <p class="f-grey-40 mt-4px">{{ include.description }}</p>
         {% endif %}
 
         {% if include.price %}
@@ -23,13 +21,17 @@
         {% endif %}
 
         {% if include.links %}
-        <ul class="list-clear pt-2">
-            <li class="mb-2"><a href="" class="link-clean-u">Online kaartje kopen</a></li>
-            <li class="mb-2"><a href="" class="link-clean-u">Abonnementen</a></li>
-            <li class="mb-2"><a href="" class="link-clean-u">Spoordeelwinkel</a></li>
-            <li class="mb-2"><a href="" class="link-clean-u">OV-fiets en meer</a></li>
-            <li class="mb-2"><a href="" class="link-clean-u">Internationale treinkaartjes</a></li>
+        <ul class="list-clear mt-3">
+            {% for entry in include.links %}
+            <li class="mb-2"><a href="" class="link-clean-u">{{ entry }}</a></li>
+            {% endfor %}
         </ul>
+        {% endif %}
+
+        {% if include.cta %}
+        <div class="mt-1 {% if include.price %}mt-2{% endif %}">
+            <a href="#" class="link-clean">{{ include.cta }} <span class="pos-r top-1px">→</span></a>
+        </div>
         {% endif %}
     </div>
 </div>

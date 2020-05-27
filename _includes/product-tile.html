@@ -1,0 +1,40 @@
+<div class="{{ include.span }}">
+    <div class="product-tile {{ include.class }}
+        {% if include.highlight %}product-tile--hightlight{% endif %}">
+
+        {% if include.highlight %}
+        <div class="product-tile__highlight">
+            {{ include.highlight }}
+        </div>
+        {% endif %}
+
+        <div class="product-tile__grid">
+            <h2 class="product-tile__heading product-tile__heading--underline fw-b">
+                {{ include.title }}
+                <span class="hidden-xs hidden-sm">
+                    {% include icons/chevron-m--small.svg %}
+                </span>
+            </h2>
+
+            {% if include.price-message %}
+            <p class="f14 lh-title f-blue ml-1">{{ include.price-message }}</p>
+            {% else %}
+
+            <div class="product-tile__price">
+                <h3 class="product-tile__heading">
+                    <b>€ {{ include.price }}</b>
+                    <span class="product-tile__period f14 lh-title f-blue">
+                        / {{ include.period }}
+                    </span>
+                </h3>
+            </div>
+            {% endif %}
+        </div>
+
+        <ul class="list-tick list-tick--small pr-6">
+            {% for detail in include.details %}
+            <li>{{ detail }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

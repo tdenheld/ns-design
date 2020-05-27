@@ -1,34 +1,42 @@
 ---
 title: Tiles
 category: components
+
+products:
+    links:
+        - Online kaartje kopen
+        - Abonnementen
+        - 'Spoordeelwinkel: Trein + Uitje'
+        - OV-fiets en meer
+        - Voordelig dagje uit
+        - Internationale treinkaartjes
+
+subscription:
+    details:
+        - 40% korting in het weekend
+        - 40% korting buiten de spits
+        - 20% korting in de spits
 ---
 
-<section class="mt-4 mb-8 mv-8@m">
+<section class="mv-4 mv-8@m">
     <div class="container container--narrow">
-        <header class="mb-4 mb-8@m">
+        <header>
             <h1 class="f-blue">{{ page.title }}</h1>
             <hr>
         </header>
+    </div>
+</section>
 
-        <div class="g g-2@m g-3@xl gap-3 mb-4 mb-8@m">
-            <ul class="ma-0">
-                <li>Base</li>
-                <li>Wandeling</li>
-                <li>Spoordeelwinkel</li>
-                <li>Links</li>
-                <li>Banner</li>
-            </ul>
-            <ul class="ma-0">
-                <li>Content Banner</li>
-                <li>Reisplanner</li>
-                <li>Product</li>
-                <li>Landing (zakelijk)</li>
-            </ul>
-        </div>
+<section class="mb-4 mb-8@m">
+    <div class="container container--narrow">
+        <header class="mb-6">
+            <h2 class="h-xxs mb-1">Base tiles</h2>
+            <p class="txt-body mxw-500">
+                This base tile is common use in the CMS system. Prefered on a white background.
+            </p>
+        </header>
 
-        <hr class="mb-4 mb-8@m">
-
-        <div class="g g-2@m g-3@xl col-gap-4 row-gap-8">
+        <div class="g g-2@m g-3@xl col-gap-4 row-gap-8 mb-8 mb-12@m">
             {% include tile.html
                 class="c-tile--hover"
                 img="no19"
@@ -50,12 +58,56 @@ category: components
                 specs="Spoordeelwinkel"
                 heading="Dagje Rotterdam"
                 description="Dagretour + Koffie"
-                price="25"
+                price=25
             %}
 
             {% include tile.html
                 heading="Producten"
-                links=true
+                links=page.products.links
+            %}
+
+            {% include tile.html
+                class="c-tile--hover"
+                img="no21"
+                specs="Bestel NS Flex"
+                heading="Per maand kiezen of je met korting reist"
+                cta="Ja, ik wil NS Flex"
+            %}
+
+            {% include tile.html
+                class="c-tile--hover c-tile--tall"
+                img="no9"
+                specs="NS Favourites"
+                heading="Stedengids Amsterdam"
+                cta="Laat je inspireren"
+            %}
+
+            {% include tile.html
+                span="gc-2@m"
+                class="c-tile--hover c-tile--tall"
+                img="no6"
+                specs="Treinpakkers"
+                heading="Dagje uit naar keuze"
+                price=19
+            %}
+        </div>
+    </div>
+</section>
+
+<section class="mb-4 mb-8@m bg-grey-94 pv-8">
+    <div class="container container--narrow">
+        <header class="mb-6">
+            <h2 class="h-xxs mb-1">Product tiles</h2>
+            <p class="txt-body mxw-500">
+                Always use this tile in combination with a non-white background colour.
+            </p>
+        </header>
+        <div class="g g-2@m g-3@xl gap-4">
+            {% include product-tile.html
+                title="Altijd Voordeel"
+                price="32"
+                period="mnd"
+                details=page.subscription.details
             %}
         </div>
     </div>

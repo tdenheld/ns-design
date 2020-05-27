@@ -122,6 +122,7 @@
 // --------------------------------------------
 .txt-body {
     @include font(18px, normal, $lh-copy);
+    color: $ns-grey-40;
 }
 
 .txt-default {
