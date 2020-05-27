@@ -155,6 +155,7 @@
 .product-tile__grid {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2px;
 }
 
 .product-tile__heading {
@@ -192,12 +193,6 @@
     right: 21px;
     top: 21px;
     text-align: right;
-}
-
-.product-tile__period {
-    @media (min-width: 374px) {
-        display: block;
-    }
 }
 
 .product-tile__highlight {

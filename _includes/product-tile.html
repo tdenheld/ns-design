@@ -25,16 +25,16 @@
             <div class="product-tile__price">
                 <h3 class="product-tile__heading">
                     <b>€ {{ include.price }}</b>
-                    <span class="product-tile__period f14 lh-title f-blue">
+                    <div class="f14 lh-title f-blue">
                         / {{ include.period }}
-                    </span>
+                    </div>
                 </h3>
             </div>
             {% endif %}
         </div>
 
         {% if include.message %}
-        <p class="f12 f-green-sexy-2 mb-3 pos-r">{{ include.message }}</p>
+        <p class="pos-r f12 f-green-sexy-2 mb-2 pr-8">{{ include.message }}</p>
         {% endif %}
 
         <ul class="list-tick list-tick--small mt-2 pr-6">
