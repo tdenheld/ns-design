@@ -8,7 +8,8 @@ a {
     font-weight: inherit;
     transition: $fade-link;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $ns-blue;
         box-shadow: 0 1px 0 rgba($ns-blue, 1);
     }
