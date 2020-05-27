@@ -37,7 +37,7 @@ bike:
     <div class="container container--narrow">
         <header class="mb-6">
             <h2 class="h-xxs mb-1">Base tiles</h2>
-            <p class="txt-body mxw-500">
+            <p class="txt-body f-blue mxw-500">
                 This base tile is common use in the CMS system. Prefered on a white background.
             </p>
         </header>
@@ -104,11 +104,11 @@ bike:
     <div class="container container--narrow">
         <header class="mb-6">
             <h2 class="h-xxs mb-1">Product tiles</h2>
-            <p class="txt-body mxw-500">
+            <p class="txt-body f-blue mxw-500">
                 Always use this tile in combination with a non-white background colour.
             </p>
         </header>
-        <div class="g g-2@m g-3@xl gap-4">
+        <div class="g g-2@ml g-3@xl gap-4">
             {% include product-tile.html
                 title="Dal Voordeel"
                 price="5"
@@ -118,6 +118,7 @@ bike:
 
             {% include product-tile.html
                 title="Altijd Voordeel"
+                highlight="Meest gekozen"
                 price="32"
                 period="mnd"
                 details=page.subscription.details

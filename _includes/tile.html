@@ -17,7 +17,9 @@
         {% endif %}
 
         {% if include.price %}
-        <p class="c-tile__price mt-1">Vanaf <b>€ {{ include.price }}</b></p>
+        <p class="c-tile__price mt-1 {% unless include.description %}mt-10px{% endunless %}">
+            Vanaf <b>€ {{ include.price }}</b>
+        </p>
         {% endif %}
 
         {% if include.links %}
