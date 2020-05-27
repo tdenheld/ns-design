@@ -124,6 +124,34 @@
     }
 }
 
+.product-tile--read-only {
+    cursor: default;
+
+    &:before {
+        box-shadow: none;
+        border: 1px solid $ns-grey-80;
+        background: transparent;
+    }
+
+    &:hover {
+        transform: none;
+
+        &:before {
+            box-shadow: none;
+            border: 1px solid $ns-grey-80;
+            transform: none;
+        }
+    }
+
+    .button {
+        box-shadow: none;
+        border: 1px solid $ns-grey-80;
+        background-color: transparent;
+        color: $ns-grey-40;
+        cursor: default;
+    }
+}
+
 .product-tile__grid {
     display: flex;
     justify-content: space-between;

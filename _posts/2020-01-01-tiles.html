@@ -104,8 +104,22 @@ subscription:
         </header>
         <div class="g g-2@m g-3@xl gap-4">
             {% include product-tile.html
+                title="Dal Voordeel"
+                price="5"
+                period="mnd"
+                details=page.subscription.details
+            %}
+
+            {% include product-tile.html
                 title="Altijd Voordeel"
                 price="32"
+                period="mnd"
+                details=page.subscription.details
+            %}
+
+            {% include product-tile.html
+                title="Weekend Voordeel"
+                price="2"
                 period="mnd"
                 details=page.subscription.details
             %}
@@ -114,9 +128,29 @@ subscription:
                 title="Jaarabonnement"
                 price="75"
                 period="jaar"
-                message="Onbeperkt toegang tot de stalling"
+                message="Onbeperkt toegang tot deze stalling"
                 details=page.subscription.details
-                cta="Bestel direct"
+                cta="Bekijk en bestel"
+            %}
+
+            {% include product-tile.html
+                title="Op rekening"
+                price="1,25"
+                period="dag"
+                message="Eerste 24 uur gratis bij deze stalling"
+                details=page.subscription.details
+                cta="Meld je gratis aan"
+                button="button--brand"
+            %}
+
+            {% include product-tile.html
+                class="product-tile--read-only"
+                title="Per keer betalen"
+                price="1,25"
+                period="dag"
+                message="Eerste 24 uur gratis bij deze stalling"
+                details=page.subscription.details
+                cta="Aanmelden niet nodig"
             %}
         </div>
     </div>
