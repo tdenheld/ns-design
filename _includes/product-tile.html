@@ -9,11 +9,13 @@
         {% endif %}
 
         <div class="product-tile__grid">
-            <h2 class="product-tile__heading product-tile__heading--underline fw-b">
+            <h2 class="product-tile__heading {% unless include.cta %}product-tile__heading--underline{% endunless %} fw-b">
                 {{ include.title }}
-                <span class="hidden-xs hidden-sm">
+                {% unless include.cta %}
+                <span class="hidden-until@ml">
                     {% include icons/chevron-m--small.svg %}
                 </span>
+                {% endunless %}
             </h2>
 
             {% if include.price-message %}
@@ -31,10 +33,20 @@
             {% endif %}
         </div>
 
-        <ul class="list-tick list-tick--small pr-6">
+        {% if include.message %}
+        <p class="f12 f-green-sexy-2 mb-3 pos-r">{{ include.message }}</p>
+        {% endif %}
+
+        <ul class="list-tick list-tick--small mt-2 pr-6">
             {% for detail in include.details %}
             <li>{{ detail }}</li>
             {% endfor %}
         </ul>
+
+        {% if include.cta %}
+        <div class="mt-3 self-end">
+            <button class="button button--brand button--buy w-100">{{ include.cta }}</button>
+        </div>
+        {% endif %}
     </div>
 </div>

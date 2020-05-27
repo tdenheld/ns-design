@@ -132,7 +132,6 @@
 .product-tile__heading {
     @include font(18px, normal, $lh-title);
     color: $ns-blue;
-    margin-bottom: 10px;
 
     @include respond-min($m) {
         font-size: toRem(20px);
