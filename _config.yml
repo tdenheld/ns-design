@@ -15,6 +15,8 @@ jekyll-minifier:
 autoprefixer:
   only_production: true
 
+timezone: Europe/Amsterdam
+
 defaults:
   - scope:
       path: ""

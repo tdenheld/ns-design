@@ -214,16 +214,12 @@
 }
 
 // nudges
-.mb-1px { margin-bottom: 1px; }
-.mb-2px { margin-bottom: 2px; }
-.mb-3px { margin-bottom: 3px; }
-.mb-4px { margin-bottom: 4px; }
-
-.mt-1px { margin-top: 1px; }
-.mt-2px { margin-top: 2px; }
-.mt-3px { margin-top: 3px; }
-.mt-4px { margin-top: 4px; }
-.mt-10px { margin-top: 10px; }
+@for $i from 1 through 12 {	
+    .mt-#{$i}px { margin-top: #{$i}px; }
+    .mb-#{$i}px { margin-bottom: #{$i}px; }
+    .ml-#{$i}px { margin-left: #{$i}px; }
+    .mr-#{$i}px { margin-right: #{$i}px; }
+}
 
 
 /*-------------------
@@ -995,6 +991,14 @@
 .bo-b-a15 {border-bottom: 1px solid $ns-grey-alpha-15;}
 .bo-l-a15 {border-left: 1px solid $ns-grey-alpha-15;}
 .bo-r-a15 {border-right: 1px solid $ns-grey-alpha-15;}
+
+.bo-a-a10 {border: 1px solid $ns-grey-alpha-10;}
+.bo-h-a10 {border-right: 1px solid $ns-grey-alpha-10; border-left: 1px solid $ns-grey-alpha-10;}
+.bo-v-a10 {border-top: 1px solid $ns-grey-alpha-10; border-bottom: 1px solid $ns-grey-alpha-10;}
+.bo-t-a10 {border-top: 1px solid $ns-grey-alpha-10;}
+.bo-b-a10 {border-bottom: 1px solid $ns-grey-alpha-10;}
+.bo-l-a10 {border-left: 1px solid $ns-grey-alpha-10;}
+.bo-r-a10 {border-right: 1px solid $ns-grey-alpha-10;}
 
 .bo-a-blue {border: 1px solid $ns-blue;}
 .bo-b-blue {border-bottom: 1px solid $ns-blue;}
