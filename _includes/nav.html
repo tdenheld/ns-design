@@ -6,7 +6,7 @@
     <ul class="list-clear">
         {% for entry in category reversed %}
         <li class="mb-1">
-            <a href="{{ entry.url }}" class="{{ include.linkClass }}">
+            <a href="{{ entry.url }}" class="{% unless page.url == entry.url %}link-clean-u{% endunless %}">
                 {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
             </a>
         </li>
@@ -23,7 +23,7 @@
     <ul class="list-clear">
         {% for entry in category reversed %}
         <li class="mb-1">
-            <a href="{{ entry.url }}" class="{{ include.linkClass }}">
+            <a href="{{ entry.url }}" class="{% unless page.url == entry.url %}link-clean-u{% endunless %}">
                 {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
             </a>
         </li>
@@ -40,7 +40,7 @@
     <ul class="list-clear">
         {% for entry in category reversed %}
         <li class="mb-1">
-            <a href="{{ entry.url }}" class="{{ include.linkClass }}">
+            <a href="{{ entry.url }}" class="{% unless page.url == entry.url %}link-clean-u{% endunless %}">
                 {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
             </a>
         </li>
@@ -57,7 +57,7 @@
     <ul class="list-clear">
         {% for entry in category reversed %}
         <li class="mb-1">
-            <a href="{{ entry.url }}" class="{{ include.linkClass }}">
+            <a href="{{ entry.url }}" class="{% unless page.url == entry.url %}link-clean-u{% endunless %}">
                 {{ entry.url | remove: '/' | replace: '-',' ' | capitalize }}
             </a>
         </li>
