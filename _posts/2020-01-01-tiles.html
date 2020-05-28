@@ -38,7 +38,7 @@ bike:
         <header class="mb-6">
             <h2 class="h-xxs mb-1">Base tiles</h2>
             <p class="txt-body f-blue mxw-500">
-                This base tile is common use in the CMS system. Prefered on a white background.
+                This base tile is common use in the CMS system. Used on a white background.
             </p>
         </header>
 
@@ -100,7 +100,7 @@ bike:
     </div>
 </section>
 
-<section class="mb-4 mb-8@m bg-grey-94 pv-8">
+<section class="bg-grey-94 pv-8">
     <div class="container container--narrow">
         <header class="mb-6">
             <h2 class="h-xxs mb-1">Product tiles</h2>
@@ -125,8 +125,8 @@ bike:
             %}
 
             {% include product-tile.html
-                title="Weekend Voordeel"
-                price="2"
+                title="Weekend Vrij"
+                price="20"
                 period="mnd"
                 details=page.subscription.details
             %}
@@ -145,7 +145,7 @@ bike:
                 price="1,25"
                 period="dag"
                 message="Eerste 24 uur gratis bij deze stalling"
-                details=page.bike.details
+                details=page.subscription.details
                 cta="Meld je gratis aan"
                 button="button--brand"
             %}

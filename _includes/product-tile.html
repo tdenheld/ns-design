@@ -1,52 +1,49 @@
-<div class="{{ include.span }}">
-    <div class="product-tile {{ include.class }}
-        {% if include.highlight %}product-tile--hightlight{% endif %}">
+<div class="product-tile {{ include.class }} {% if include.highlight %}product-tile--hightlight{% endif %}">
 
-        {% if include.highlight %}
-        <div class="product-tile__highlight">
-            {{ include.highlight }}
-        </div>
-        {% endif %}
+    {% if include.highlight %}
+    <div class="product-tile__highlight">
+        {{ include.highlight }}
+    </div>
+    {% endif %}
 
-        <div class="product-tile__grid">
-            <h2 class="product-tile__heading {% unless include.cta %}product-tile__heading--underline{% endunless %} fw-b">
-                {{ include.title }}
-                {% unless include.cta %}
-                <span class="hidden-until@ml">
-                    {% include icons/chevron-m--small.svg %}
-                </span>
-                {% endunless %}
-            </h2>
+    <div class="mb-2px">
+        <h2 class="product-tile__heading fw-b {% unless include.cta %}product-tile__heading--underline{% endunless %}">
+            {{ include.title }}
+            {% unless include.cta %}
+            <span class="hidden-until@ml">
+                {% include icons/chevron-m--small.svg %}
+            </span>
+            {% endunless %}
+        </h2>
 
-            {% if include.price-message %}
-            <p class="f14 lh-title f-blue ml-1">{{ include.price-message }}</p>
-            {% else %}
+        {% if include.price-message %}
+        <p class="f14 lh-title f-blue ml-1">{{ include.price-message }}</p>
+        {% else %}
 
-            <div class="product-tile__price">
-                <h3 class="product-tile__heading">
-                    <b>€ {{ include.price }}</b>
-                    <div class="f14 lh-title f-blue">
-                        / {{ include.period }}
-                    </div>
-                </h3>
-            </div>
-            {% endif %}
-        </div>
-
-        {% if include.message %}
-        <p class="pos-r f12 f-green-sexy-2 mb-2 pr-8">{{ include.message }}</p>
-        {% endif %}
-
-        <ul class="list-tick list-tick--small mt-2 pr-6">
-            {% for detail in include.details %}
-            <li>{{ detail }}</li>
-            {% endfor %}
-        </ul>
-
-        {% if include.cta %}
-        <div class="mt-3 self-end">
-            <button class="button {{ include.button }} w-100">{{ include.cta }}</button>
+        <div class="product-tile__price">
+            <h3 class="product-tile__heading">
+                <b>€ {{ include.price }}</b>
+                <div class="f14 lh-title f-blue">
+                    / {{ include.period }}
+                </div>
+            </h3>
         </div>
         {% endif %}
     </div>
+
+    {% if include.message %}
+    <p class="pos-r f12 f-green-sexy-2 mb-1 pr-8">{{ include.message }}</p>
+    {% endif %}
+
+    <ul class="list-tick list-tick--small mt-2 pr-6">
+        {% for detail in include.details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if include.cta %}
+    <div class="mt-3 self-end">
+        <button class="button {{ include.button }} w-100">{{ include.cta }}</button>
+    </div>
+    {% endif %}
 </div>

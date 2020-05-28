@@ -80,11 +80,14 @@
 // product tile
 // --------------------------------------------------
 .product-tile {
-    display: block;
+    display: grid;
+    grid-template-rows: max-content max-content 1fr max-content;
     position: relative;
     padding: 21px;
     cursor: pointer;
     transition: transform 200ms ease-out;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 
     &:before {
         content: '';
@@ -97,7 +100,8 @@
         transition: all 400ms ease-out;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         transform: scale(1.025);
 
         &:before {
@@ -118,6 +122,8 @@
     }
 }
 
+
+// modifiers
 .product-tile--hightlight {
     @include respond-max($ml) {
         margin-top: 4px;
@@ -152,13 +158,9 @@
     }
 }
 
-.product-tile__grid {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2px;
-}
-
+// elements
 .product-tile__heading {
+    display: inline-block;
     @include font(18px, normal, $lh-title);
     color: $ns-blue;
 
