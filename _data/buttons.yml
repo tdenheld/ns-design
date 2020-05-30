@@ -26,20 +26,19 @@
     - modifier: button--tertiary
       disabled: true
 
-- title: Bestellen
+- title: Brand
   button:
     - loader: true
       modifier: button--brand
     - loader: true
       modifier: button--brand button--buy
+    - loader: true
+      modifier: button--brand button--arrow
+      
     - disabled: true
       modifier: button--brand
     - disabled: true
       modifier: button--brand button--buy
-    - loader: true
-      modifier: button--brand button--arrow
-    - disabled: true
-      modifier: button--brand
     - disabled: true
       modifier: button--brand button--arrow
 
