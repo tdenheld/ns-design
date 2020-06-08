@@ -112,7 +112,7 @@ const slideUp = (node, duration, callback) => {
 }
 
 const slideToggle = (n, d, u) => {
-    const dur = u || d
+    const dur = u || d;
     isHidden(n) ? slideDown(n, d) : slideUp(n, dur);
 }
 
