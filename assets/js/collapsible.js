@@ -8,10 +8,14 @@
         const header = el.querySelector('.js-collapsible-header');
         const content = el.querySelector('.js-collapsible-content');
 
-        header.addEventListener('click', e => {
-            e.preventDefault();
+        const toggle = debounce(() => {
             el.classList.toggle('is-active');
             slideToggle(content, 200);
+        }, 200, true);
+
+        header.addEventListener('click', e => {
+            e.preventDefault();
+            toggle();
         });
     });
 })();
