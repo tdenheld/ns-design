@@ -208,3 +208,100 @@
     color: $ns-blue;
     font-size: toRem(14px);
 }
+
+
+
+
+// --------------------------------------------------
+// portal tile
+// --------------------------------------------------
+.portal-tile {
+    position: relative;
+    padding: 21px 0;
+    border-bottom: 1px solid $ns-grey-90;
+    transition: $fade-all;
+    cursor: pointer;
+
+    &:first-child {
+        border-top: 1px solid $ns-grey-90;
+    }
+
+    @include respond-min($m) {
+        padding: 0;
+        border: none;
+
+        &:first-child {
+            border: none;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -#{space(2)};
+        left: -#{space(2)};
+        width: calc(100% + 28px);
+        height: calc(100% + 28px);
+        border-radius: $border-radius-l;
+        z-index: -1;
+        background-color: $ns-white;
+        box-shadow: $box-shadow-tile-hover;
+        opacity: 0;
+        transition: $fade-all;
+    }
+}
+
+.no-touch {
+    .portal-tile:hover,
+    .portal-tile:focus {
+        &:before {
+            @include respond-min($m) {
+                opacity: 1;
+            }
+        }
+
+        .portal-tile__heading:after {
+            transform: scaleX(1);
+        }
+
+        .portal-tile__icon {
+            transform: translateX(5px);
+        }
+    }
+}
+
+.portal-tile__img {
+    border-radius: $border-radius-m;
+    margin-bottom: space(2);
+}
+
+.portal-tile__heading {
+    position: relative;
+    color: $ns-light-blue;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 2px;
+        left: 0;
+        background-color: $ns-light-blue;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: $fade-link;
+    }
+}
+
+.portal-tile__icon {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin-left: 2px;
+    transform-origin: 0 0;
+    transition: $fade-link;
+
+    svg {
+        fill: $ns-light-blue;
+    }
+}

@@ -100,6 +100,26 @@ bike:
     </div>
 </section>
 
+<section class="mb-4 mb-8@m bo-t pt-4 pt-8@m">
+    <div class="container container--narrow">
+        <header class="mb-6">
+            <h2 class="h-xxs mb-1">Portal tiles</h2>
+            <p class="txt-body f-blue mxw-500">
+                Used for the NS Zakelijk portal page — no image on mobile
+            </p>
+        </header>
+
+        <div class="g g-2@m g-3@xl col-gap-4 row-gap-8 mb-8 mb-12@m">
+            {% include tile-portal.html
+                img="mkb"
+                heading="MKB"
+                description="Regel efficiënt de mobiliteit van uw medewerkers. Ontdek met de NS‑Business Card de mogelijkheden in combinatie met de auto."
+                amount="2 - 250"
+            %}
+        </div>
+    </div>
+</section>
+
 <section class="bg-grey-94 pv-8">
     <div class="container container--narrow">
         <header class="mb-6">
@@ -109,14 +129,14 @@ bike:
             </p>
         </header>
         <div class="g g-2@ml g-3@xl gap-4">
-            {% include product-tile.html
+            {% include tile-product.html
                 title="Dal Voordeel"
                 price="5"
                 period="mnd"
                 details=page.subscription.details
             %}
 
-            {% include product-tile.html
+            {% include tile-product.html
                 title="Altijd Voordeel"
                 highlight="Meest gekozen"
                 price="32"
@@ -124,14 +144,14 @@ bike:
                 details=page.subscription.details
             %}
 
-            {% include product-tile.html
+            {% include tile-product.html
                 title="Weekend Vrij"
                 price="20"
                 period="mnd"
                 details=page.subscription.details
             %}
 
-            {% include product-tile.html
+            {% include tile-product.html
                 title="Jaarabonnement"
                 price="75"
                 period="jaar"
@@ -140,7 +160,7 @@ bike:
                 cta="Bekijk en bestel"
             %}
 
-            {% include product-tile.html
+            {% include tile-product.html
                 title="Op rekening"
                 price="1,25"
                 period="dag"
@@ -150,7 +170,7 @@ bike:
                 button="button--brand"
             %}
 
-            {% include product-tile.html
+            {% include tile-product.html
                 class="product-tile--read-only"
                 title="Per keer betalen"
                 price="1,25"
@@ -162,3 +182,6 @@ bike:
         </div>
     </div>
 </section>
+
+<!-- todo: reisplanner tiles -->
+<!-- todo: other tiles -->
