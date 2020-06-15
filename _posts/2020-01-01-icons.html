@@ -14,5 +14,18 @@ category: fundamentals
 
 <section>
     <div class="container container--narrow">
-    </div>        
+        <div class="g g-2@m g-3@l g-4@xxl gap-3 pb-8 pb-16@m">
+            {% for icon in site.static_files %}
+            {% if icon.path contains '/assets/img/icons' %}
+
+            <figure class="pa-4 bo-a br-4 center">
+                <img class="mxw-50" src="{{ icon.path }}" alt="image" />
+                <figcaption class="f12 ml-4">{{ icon.path | remove: '/assets/img/icons/' | remove: '.svg'}}
+                </figcaption>
+            </figure>
+
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </section>
