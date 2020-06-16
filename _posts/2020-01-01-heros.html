@@ -15,13 +15,14 @@ category: components
 <section class="mb-8 mb-16@m">
     <div class="container container--narrow">
         <header class="mb-4">
-            <h2 class="h-xxs mb-1">Text in photo on top left</h2>
+            <h2 class="h-xxs mb-1">Content in photo on top</h2>
             <p class="txt-body f-blue mxw-500">
                 This is the default. Flow, subtitle, breadcrumb and cta button is optional.
             </p>
         </header>
     </div>
     {% include hero-base.html
+        content="inside"
         img="no26"
         subtitle="Subtitle (optional)"
         title="Laat je inspireren door een fraaie hero"
@@ -34,16 +35,35 @@ category: components
 <section class="mb-8 mb-16@m">
     <div class="container container--narrow">
         <header class="mb-4">
-            <h2 class="h-xxs mb-1">Text in photo on bottom left</h2>
+            <h2 class="h-xxs mb-1">Content in photo on bottom</h2>
             <p class="txt-body f-blue mxw-500">
                 Flow, subtitle, breadcrumb and cta button is optional.
             </p>
         </header>
     </div>
     {% include hero-base.html
+        content="inside"
         img="hero-rtd"
         class="hero-base--bottom"
         breadcrumb="Stationsinformatie"
         title="Rotterdam Centraal"
+    %}
+</section>
+
+<section class="mb-8 mb-16@m">
+    <div class="container container--narrow">
+        <header class="mb-4">
+            <h2 class="h-xxs mb-1">Content outside photo on top</h2>
+            <p class="txt-body f-blue mxw-500">
+                Flow, subtitle, breadcrumb and cta button is optional.
+            </p>
+        </header>
+    </div>
+    <hr class="mb-8">
+    {% include hero-base.html
+        content="outsideBefore"
+        img="no12"
+        breadcrumb="Fietsenstallingen"
+        title="Bewaakte fietsenstalling"
     %}
 </section>

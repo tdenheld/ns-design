@@ -23,6 +23,12 @@
     }
 }
 
+.hero-base--outside {
+    @include respond-max($m) {
+        min-height: 200px;
+    }
+}
+
 // elements
 .hero-base__gradient {
     @include full(absolute);
