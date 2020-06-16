@@ -1,0 +1,62 @@
+.hero-base {
+    position: relative;
+    min-height: 340px;
+    padding: $gutter 0;
+
+    @include respond-min($m) {
+        padding: space(8) 0;
+        min-height: 480px;
+    }
+}
+
+.hero-base__gradient {
+    @include full(absolute);
+    background: linear-gradient(80deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0.5) 100%);
+    opacity: 0.35;
+
+    @include respond-min($m) {
+        background: linear-gradient(164deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0) 90%);
+    }
+}
+
+.hero-base__flow {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    width: 100%;
+
+    @include respond-min($l) {
+        left: calc(50% - 427px);
+    }
+
+    @media (min-width: 860px) {
+        width: auto;
+        height: 100%;
+    }
+
+    svg {
+        width: 100%;
+        transform: rotate(180deg);
+
+        @media (min-width: 860px) {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+.hero-base__title {
+    color: $ns-white;
+    text-shadow: $text-shadow-2;
+}
+
+.hero-base__subtitle {
+    color: $ns-white;
+    text-shadow: $text-shadow-2;
+}
+
+.hero-base__img {
+    @include full(absolute);
+    overflow: hidden;
+    object-fit: cover;
+}
