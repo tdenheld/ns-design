@@ -28,8 +28,9 @@
     $d: $x * 1ms;
     
 	.tr-#{$x} {
-		transition: all #{$d} $ease;
+		transition: all #{$d} $ease-out;
     }
+
     .tr-del-#{$x} {
 		transition-delay: #{$d};
 	}
@@ -49,7 +50,6 @@
 .tr-fi-up {
 	opacity: 0;
     transform: translate3d(0, 40px, 0);
-    transition-timing-function: $ease-out;
 	
 	&.is-active {
 		opacity: 1;
@@ -60,7 +60,6 @@
 .tr-si {
 	opacity: 0;
     transform: scale(0.97);
-    transition-timing-function: $ease-out;
 	
 	&.is-active {
 		opacity: 1;
@@ -75,7 +74,6 @@
 .tr-fi-up-si {
 	opacity: 0;
     transform: translate3d(0, 60px, 0) scale(0.95);
-    transition-timing-function: $ease-out;
 	
 	&.is-active {
 		opacity: 1;
@@ -91,7 +89,6 @@
     opacity: 0;
     transform: scaleX(0);
     transform-origin: 0 0;
-    transition-timing-function: $ease-out;
 	
 	&.is-active {
 		opacity: 1;
