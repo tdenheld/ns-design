@@ -1,16 +1,16 @@
-.c-tile {
+.tile-base {
     position: relative;
 }
 
 // modifiers
-.c-tile--tall {
-    .c-tile__img {
+.tile-base--tall {
+    .tile-base__img {
         height: 320px;
     }
 }
 
 .no-touch {
-    .c-tile--hover {
+    .tile-base--hover {
         cursor: pointer;
     
         &:before {
@@ -32,14 +32,14 @@
                 opacity: 1;
             }
     
-            .c-tile__heading {
+            .tile-base__heading {
                 box-shadow: inset 0 -1px 0 rgba($ns-blue, 1);
             }
         }
     }
     
-    .c-tile--hover-heading {
-        .c-tile__heading {
+    .tile-base--hover-heading {
+        .tile-base__heading {
             cursor: pointer;
     
             &:hover:after {
@@ -50,19 +50,19 @@
 }
 
 // elements
-.c-tile__img {
+.tile-base__img {
     width: 100%;
     height: 200px;
     border-radius: $border-radius-m;
     object-fit: cover;
 }
 
-.c-tile__heading {
+.tile-base__heading {
     display: inline;
     transition: $fade-all;
 }
 
-.c-tile__price {
+.tile-base__price {
     display: inline-block;
     padding: 3px 7px;
     background-color: $ns-yellow;
@@ -79,7 +79,7 @@
 // --------------------------------------------------
 // product tile
 // --------------------------------------------------
-.product-tile {
+.tile-product {
     display: grid;
     grid-template-rows: max-content max-content 1fr max-content;
     position: relative;
@@ -110,11 +110,11 @@
         }
 
         @include respond-min($ml) {
-            .product-tile__heading svg {
+            .tile-product__heading svg {
                 transform: translateX(3px);
             }
 
-            .product-tile__heading--underline:after {
+            .tile-product__heading--underline:after {
                 transform: scaleX(1);
             }
         }
@@ -123,13 +123,13 @@
 
 
 // modifiers
-.product-tile--hightlight {
+.tile-product--hightlight {
     @include respond-max($ml) {
         margin-top: 4px;
     }
 }
 
-.product-tile--read-only {
+.tile-product--read-only {
     cursor: default;
 
     &:before {
@@ -158,7 +158,7 @@
 }
 
 // elements
-.product-tile__heading {
+.tile-product__heading {
     display: inline-block;
     @include font(18px, normal, $lh-title);
     color: $ns-blue;
@@ -174,7 +174,7 @@
     }
 }
 
-.product-tile__heading--underline {
+.tile-product__heading--underline {
     &:after {
         content: '';
         position: absolute;
@@ -189,14 +189,14 @@
     }
 }
 
-.product-tile__price {
+.tile-product__price {
     position: absolute;
     right: 21px;
     top: 21px;
     text-align: right;
 }
 
-.product-tile__highlight {
+.tile-product__highlight {
     position: absolute;
     z-index: 1;
     top: -13px;
@@ -215,7 +215,7 @@
 // --------------------------------------------------
 // portal tile
 // --------------------------------------------------
-.portal-tile {
+.tile-portal {
     position: relative;
     padding: 21px 0;
     border-bottom: 1px solid $ns-grey-90;
@@ -252,30 +252,30 @@
 }
 
 .no-touch {
-    .portal-tile:hover,
-    .portal-tile:focus {
+    .tile-portal:hover,
+    .tile-portal:focus {
         &:before {
             @include respond-min($m) {
                 opacity: 1;
             }
         }
 
-        .portal-tile__heading:after {
+        .tile-portal__heading:after {
             transform: scaleX(1);
         }
 
-        .portal-tile__icon {
+        .tile-portal__icon {
             transform: translateX(5px);
         }
     }
 }
 
-.portal-tile__img {
+.tile-portal__img {
     border-radius: $border-radius-m;
     margin-bottom: space(2);
 }
 
-.portal-tile__heading {
+.tile-portal__heading {
     position: relative;
     color: $ns-light-blue;
 
@@ -293,7 +293,7 @@
     }
 }
 
-.portal-tile__icon {
+.tile-portal__icon {
     display: inline-block;
     position: relative;
     top: -1px;

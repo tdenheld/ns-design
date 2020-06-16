@@ -44,23 +44,23 @@ bike:
         </header>
 
         <div class="g g-2@m g-3@xl col-gap-4 row-gap-8 mb-8 mb-12@m">
-            {% include tile.html
-                class="c-tile--hover"
+            {% include tile-base.html
+                class="tile-base--hover"
                 img="no19"
                 heading="Stationsontwikkelingen"
                 description="NS wil voorzien in makkelijk, snel, veilig en betaalbaar reizen"
             %}
 
-            {% include tile.html
-                class="c-tile--hover"
+            {% include tile-base.html
+                class="tile-base--hover"
                 img="no2"
                 specs="6,5 tot 10 km"
                 heading="Wandeling Helderse Duinen"
                 description="Van station Den Helder Zuid naar station Den Helder"
             %}
 
-            {% include tile.html
-                class="c-tile--hover"
+            {% include tile-base.html
+                class="tile-base--hover"
                 img="no5"
                 specs="Spoordeelwinkel"
                 heading="Dagje Rotterdam"
@@ -68,30 +68,30 @@ bike:
                 price=25
             %}
 
-            {% include tile.html
+            {% include tile-base.html
                 heading="Producten"
                 links=page.products.links
             %}
 
-            {% include tile.html
-                class="c-tile--hover"
+            {% include tile-base.html
+                class="tile-base--hover"
                 img="no21"
                 specs="Bestel NS Flex"
                 heading="Per maand kiezen of je met korting reist"
                 cta="Ja, ik wil NS Flex"
             %}
 
-            {% include tile.html
-                class="c-tile--hover c-tile--tall"
+            {% include tile-base.html
+                class="tile-base--hover tile-base--tall"
                 img="no9"
                 specs="NS Favourites"
                 heading="Stedengids Amsterdam"
                 cta="Laat je inspireren"
             %}
 
-            {% include tile.html
+            {% include tile-base.html
                 span="gc-2@m"
-                class="c-tile--hover c-tile--tall"
+                class="tile-base--hover tile-base--tall"
                 img="no6"
                 specs="Treinpakkers"
                 heading="Dagje uit naar keuze"
@@ -174,7 +174,7 @@ bike:
             %}
 
             {% include tile-product.html
-                class="product-tile--read-only"
+                class="tile-product--read-only"
                 title="Per keer betalen"
                 price="1,25"
                 period="dag"

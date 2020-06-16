@@ -1,7 +1,7 @@
 <div class="{{ include.span }}">
-    <div class="c-tile {{ include.class }}">
+    <div class="tile-base {{ include.class }}">
         {% if include.img %}
-        <img src="/assets/img/{{ include.img }}.jpg" alt="{{ include.img }}" class="c-tile__img mb-2">
+        <img src="/assets/img/{{ include.img }}.jpg" alt="{{ include.img }}" class="tile-base__img mb-2">
         {% endif %}
 
         {% if include.specs %}
@@ -9,7 +9,7 @@
         {% endif %}
 
         {% if include.heading %}
-        <div><h3 class="c-tile__heading h f24">{{ include.heading }}</h3></div>
+        <div><h3 class="tile-base__heading h f24">{{ include.heading }}</h3></div>
         {% endif %}
 
         {% if include.description %}
@@ -17,7 +17,7 @@
         {% endif %}
 
         {% if include.price %}
-        <p class="c-tile__price mt-1 {% unless include.description %}mt-10px{% endunless %}">
+        <p class="tile-base__price mt-1 {% unless include.description %}mt-10px{% endunless %}">
             Vanaf <b>€ {{ include.price }}</b>
         </p>
         {% endif %}

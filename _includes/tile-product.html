@@ -1,13 +1,13 @@
-<div class="product-tile {{ include.class }} {% if include.highlight %}product-tile--hightlight{% endif %}">
+<div class="tile-product {{ include.class }} {% if include.highlight %}tile-product--hightlight{% endif %}">
 
     {% if include.highlight %}
-    <div class="product-tile__highlight">
+    <div class="tile-product__highlight">
         {{ include.highlight }}
     </div>
     {% endif %}
 
     <div class="mb-2px">
-        <h2 class="product-tile__heading fw-b {% unless include.cta %}product-tile__heading--underline{% endunless %}">
+        <h2 class="tile-product__heading fw-b {% unless include.cta %}tile-product__heading--underline{% endunless %}">
             {{ include.title }}
             {% unless include.cta %}
             <span class="hidden-until@ml">
@@ -20,8 +20,8 @@
         <p class="f14 lh-title f-blue ml-1">{{ include.price-message }}</p>
         {% else %}
 
-        <div class="product-tile__price">
-            <h3 class="product-tile__heading">
+        <div class="tile-product__price">
+            <h3 class="tile-product__heading">
                 <b>€ {{ include.price }}</b>
                 <div class="f14 lh-title f-blue">
                     / {{ include.period }}
