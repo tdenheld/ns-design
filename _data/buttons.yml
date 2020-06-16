@@ -22,7 +22,7 @@
 - title: Tertiary
   button:
     - modifier: button--tertiary
-    - modifier: button--tertiary fw-b
+    - modifier: button--tertiary button--contrastYellow
     - modifier: button--tertiary
       disabled: true
 

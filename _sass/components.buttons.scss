@@ -163,6 +163,62 @@
             border-color: $ns-light-blue;
         }
     }
+
+    &.button--contrast {
+        background-color: transparent;
+        border-color: rgba($ns-white, 0.5);
+        box-shadow: none;
+        color: $ns-white;
+
+        &:hover {
+            box-shadow: none;
+            border-color: $ns-white;
+            color: $ns-white;
+        }
+
+        &:focus,
+        &:hover:focus {
+            border-color: $ns-white;
+            box-shadow: 0 0 0 1px $ns-white, $box-shadow-soft-contrast;
+
+            svg {
+                fill: $ns-white;
+            }
+        }
+
+        svg {
+            fill: $ns-white;
+        }
+    }
+
+    &.button--contrastYellow {
+        background-color: transparent;
+        border-color: $ns-grey-alpha-20;
+        box-shadow: none;
+        color: $ns-blue;
+    
+        &:hover {
+            box-shadow: none;
+            border-color: $ns-blue;
+            color: $ns-blue;
+        }
+    
+        &:focus {
+            color: $ns-blue;
+            border-color: $ns-light-blue;
+            box-shadow: 0 0 0 1px $ns-light-blue, $box-shadow-soft;
+        }
+    
+        &:hover:focus {
+            color: $ns-blue;
+            border-color: $ns-blue;
+            box-shadow: 0 0 0 1px $ns-blue, $box-shadow-soft;
+        }
+    
+        svg {
+            fill: $ns-blue;
+        }
+    }
 }
 
 
@@ -226,6 +282,10 @@
 
     &:hover:disabled {
         box-shadow: none;
+    }
+
+    &.button--contrastYellow {
+        font-weight: bold;
     }
 }
 
@@ -550,61 +610,5 @@
 
     svg {
         fill: $ns-light-blue;
-    }
-}
-
-.button--secondary.button--contrast {
-    background-color: transparent;
-    border-color: rgba($ns-white, 0.5);
-    box-shadow: none;
-    color: $ns-white;
-
-    &:hover {
-        box-shadow: none;
-        border-color: $ns-white;
-        color: $ns-white;
-    }
-
-    &:focus,
-    &:hover:focus {
-        border-color: $ns-white;
-        box-shadow: 0 0 0 1px $ns-white, $box-shadow-soft-contrast;
-
-        svg {
-            fill: $ns-white;
-        }
-    }
-
-    svg {
-        fill: $ns-white;
-    }
-}
-
-.button--contrastYellow {
-    background-color: transparent;
-    border-color: $ns-grey-alpha-20;
-    box-shadow: none;
-    color: $ns-blue;
-
-    &:hover {
-        box-shadow: none;
-        border-color: $ns-blue;
-        color: $ns-blue;
-    }
-
-    &:focus {
-        color: $ns-blue;
-        border-color: $ns-light-blue;
-        box-shadow: 0 0 0 1px $ns-light-blue, $box-shadow-soft;
-    }
-
-    &:hover:focus {
-        color: $ns-blue;
-        border-color: $ns-blue;
-        box-shadow: 0 0 0 1px $ns-blue, $box-shadow-soft;
-    }
-
-    svg {
-        fill: $ns-blue;
     }
 }
