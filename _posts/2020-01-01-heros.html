@@ -12,14 +12,38 @@ category: components
     </div>
 </section>
 
-<section class="mb-4 mb-8@m">
+<section class="mb-8 mb-16@m">
     <div class="container container--narrow">
-        <header class="mb-6">
-            <h2 class="h-xxs mb-1">Base hero</h2>
+        <header class="mb-4">
+            <h2 class="h-xxs mb-1">Text in photo on top left</h2>
             <p class="txt-body f-blue mxw-500">
-                Text in photo on left-top. Flow, subtitle and cta button is optional.
+                This is the default. Flow, subtitle and cta button is optional.
             </p>
         </header>
     </div>
-    {% include hero-base.html %}
+    {% include hero-base.html
+        img="no26"
+        subtitle="Subtitle (optional)"
+        title="Laat je inspireren door een fraaie hero"
+        flow=true
+        button=true
+        buttonClass="button--brand"
+    %}
+</section>
+
+<section class="mb-8 mb-16@m">
+    <div class="container container--narrow">
+        <header class="mb-4">
+            <h2 class="h-xxs mb-1">Text in photo on bottom left</h2>
+            <p class="txt-body f-blue mxw-500">
+                Flow, subtitle and cta button is optional.
+            </p>
+        </header>
+    </div>
+    {% include hero-base.html
+        img="hero-rtd"
+        class="hero-base--bottom"
+        breadcrumb="Stationsinformatie"
+        title="Rotterdam Centraal"
+    %}
 </section>

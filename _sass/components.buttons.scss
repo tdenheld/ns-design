@@ -546,6 +546,14 @@
     }
 }
 
+// stand alone for clickable icons without any other button styling
+.button-icon {
+    width: 35px;
+    height: 35px;
+    @include center(inline-flex);
+    cursor: pointer;
+}
+
 
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------

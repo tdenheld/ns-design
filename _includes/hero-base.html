@@ -1,20 +1,41 @@
-<div class="hero-base">
-    <img class="hero-base__img" src="/assets/img/no26.jpg" />
+<div class="hero-base {{ include.class }}">
+    <img class="hero-base__img" src="/assets/img/{{ include.img }}.jpg" />
     <div class="hero-base__gradient"></div>
+
+    {% if include.flow %}
     <figure class="hero-base__flow">{% include flows/flow-gradient-white.svg %}</figure>
-    <div class="container container--narrow">
-        <header class="mxw-700">
-            <h1 class="mb-4">
-                <div class="hero-base__subtitle h h-xs h--normal mb-2 a a-fi-right-200px a-stag a-del-350">
-                    Subtitle (optional)
+    {% endif %}
+
+    <div class="hero-base__content">
+        <div class="container container--narrow">
+            <header class="mxw-700">
+                {% if include.breadcrumb %}
+                <ul class="breadcrumb mb-0 a a-fi-right-200px">
+                    <li class="breadcrumb__item f-white ts-2">
+                        <a class="unlink" href="#">
+                            {{ include.breadcrumb }}
+                        </a>
+                    </li>
+                </ul>
+                {% endif %}
+                <h1>
+                    {% if include.subtitle %}
+                    <div class="h h-xs h--normal f-white ts-2 mb-2 a a-fi-right-200px a-stag a-del-350">
+                        {{ include.subtitle }}
+                    </div>
+                    {% endif %}
+
+                    <div class="h h-xl f-white ts-2 a a-fi-right-200px a-stag a-del-350">
+                        {{ include.title }}
+                    </div>
+                </h1>
+
+                {% if include.button %}
+                <div class="mt-4 a a-fi-right-200px a-del-500">
+                    <a href="#" class="button {{ include.buttonClass }}">CTA (optional)</a>
                 </div>
-                <div class="hero-base__title h h-xl a a-fi-right-200px a-stag a-del-350">
-                    Laat je inspireren door een fraaie hero
-                </div>
-            </h1>
-            <div class="a a-fi-right-200px a-del-500">
-                <a href="#" class="button button--brand">CTA (optional)</a>
-            </div>
-        </header>
+                {% endif %}
+            </header>
+        </div>
     </div>
 </div>

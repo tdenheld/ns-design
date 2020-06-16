@@ -1,3 +1,7 @@
+// ------------------------------------------
+// base hero
+// ------------------------------------------
+
 .hero-base {
     position: relative;
     min-height: 340px;
@@ -9,6 +13,17 @@
     }
 }
 
+// modifiers
+.hero-base--bottom {
+    display: grid;
+    align-items: end;
+
+    .hero-base__gradient {
+        background: linear-gradient(0deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0) 80%);
+    }
+}
+
+// elements
 .hero-base__gradient {
     @include full(absolute);
     background: linear-gradient(80deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0.5) 100%);
@@ -43,16 +58,6 @@
             height: 100%;
         }
     }
-}
-
-.hero-base__title {
-    color: $ns-white;
-    text-shadow: $text-shadow-2;
-}
-
-.hero-base__subtitle {
-    color: $ns-white;
-    text-shadow: $text-shadow-2;
 }
 
 .hero-base__img {
