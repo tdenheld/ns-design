@@ -96,7 +96,7 @@
         content: '';
         @include full(absolute);
         background: $ns-white;
-        box-shadow: 0 3px 6px rgba($ns-blue, 0.08);
+        box-shadow: $box-shadow-tile;
         border-bottom: 2px solid rgba($ns-yellow, 0);
         border-radius: $border-radius-m;
         transform-origin: 50% 50%;
@@ -108,7 +108,7 @@
         transform: scale(1.025);
 
         &:before {
-            box-shadow: 0 4px 12px rgba($ns-blue, 0.25);
+            box-shadow: $box-shadow-tile-hover;
             border-color: rgba($ns-yellow, 1);
             transform: scale(1.03);
         }
@@ -158,6 +158,19 @@
         background-color: transparent;
         color: $ns-grey-40;
         cursor: default;
+    }
+}
+
+.tile-product--border {
+    &:before {
+        box-shadow: $box-shadow-tile-border;
+    }
+
+    &:hover,
+    &:focus {
+        &:before {
+            box-shadow: $box-shadow-tile-border-hover;
+        }
     }
 }
 

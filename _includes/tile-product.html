@@ -7,26 +7,26 @@
     {% endif %}
 
     <div class="mb-2px">
-        <h2 class="tile-product__heading fw-b {% unless include.cta %}tile-product__heading--underline{% endunless %}">
+        <h3 class="tile-product__heading fw-b {% unless include.cta %}tile-product__heading--underline{% endunless %}">
             {{ include.title }}
             {% unless include.cta %}
             <span class="hidden-until@ml">
                 {% include icons/chevron-m--small.svg %}
             </span>
             {% endunless %}
-        </h2>
+        </h3>
 
         {% if include.price-message %}
         <p class="f14 lh-title f-blue ml-1">{{ include.price-message }}</p>
         {% else %}
 
         <div class="tile-product__price">
-            <h3 class="tile-product__heading">
+            <h4 class="tile-product__heading">
                 <b>€ {{ include.price }}</b>
                 <div class="f14 lh-title f-blue">
                     / {{ include.period }}
                 </div>
-            </h3>
+            </h4>
         </div>
         {% endif %}
     </div>

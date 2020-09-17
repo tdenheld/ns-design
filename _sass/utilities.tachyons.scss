@@ -1025,13 +1025,14 @@
 
 // box shadows
 // -------------------------
-.bs-none { box-shadow: none; }
-.bs-s    { box-shadow: $box-shadow-soft; }
-.bs-m    { box-shadow: $box-shadow-medium; }
-.bs-h    { box-shadow: $box-shadow-hard; }
-.bs-c    { box-shadow: $box-shadow-container; }
-.bs-dd   { box-shadow: $box-shadow-dropdown; }
-.bs-tile { box-shadow: $box-shadow-tile; }
+.bs-none        { box-shadow: none; }
+.bs-s           { box-shadow: $box-shadow-soft; }
+.bs-m           { box-shadow: $box-shadow-medium; }
+.bs-h           { box-shadow: $box-shadow-hard; }
+.bs-c           { box-shadow: $box-shadow-container; }
+.bs-dd          { box-shadow: $box-shadow-dropdown; }
+.bs-tile        { box-shadow: $box-shadow-tile; }
+.bs-tile-border { box-shadow: $box-shadow-tile-border; }
 
 // text-shadows
 // -------------------------

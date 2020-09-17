@@ -19,9 +19,9 @@ subscription:
 
 bike:
     details:
-        - Betaal maandelijks, alleen voor wat je gebruikt 
-        - Bij alle stallingen, vol is vol 
-        - Alleen persoonlijke OV-chipkaart 
+        - Betaal maandelijks, alleen voor wat je gebruikt
+        - Bij alle stallingen, vol is vol
+        - Alleen persoonlijke OV-chipkaart
 ---
 
 <section class="mv-4 mv-8@m">
@@ -153,6 +153,17 @@ bike:
                 period="mnd"
                 details=page.subscription.details
             %}
+
+            <div class="pa-3 bg-white">
+                <h3 class="f-blue mb-2">Product tile on top of white background</h3>
+                {% include tile-product.html
+                    class="tile-product--border"
+                    title="Dal Voordeel"
+                    price="5"
+                    period="mnd"
+                    details=page.subscription.details
+                %}
+            </div>
 
             {% include tile-product.html
                 title="Jaarabonnement"
