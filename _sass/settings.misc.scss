@@ -52,13 +52,13 @@ $box-shadow-container:		0 1px 0 rgba($ns-grey, 0.15);
 $box-shadow-navbar:		    0 1px 1px rgba($ns-black, 0.03),
                             0 10px 20px rgba($ns-black, 0.04);
 
-$box-shadow-tile:           0 2px 8px rgba($ns-black, 0.024),
-                            0 4px 16px rgba($ns-black, 0.024),
-                            0 8px 24px rgba($ns-black, 0.024);
+$box-shadow-tile:           0 2px 4px rgba($ns-black, 0.024),
+                            0 4px 8px rgba($ns-black, 0.024),
+                            0 8px 16px rgba($ns-black, 0.024);
 
-$box-shadow-tile-hover:     0 4px 8px rgba($ns-black, 0.05),
-                            0 8px 16px rgba($ns-black, 0.05), 
-                            0 16px 32px rgba($ns-black, 0.05);
+$box-shadow-tile-hover:     0 4px 8px rgba($ns-black, 0.048),
+                            0 8px 16px rgba($ns-black, 0.048), 
+                            0 16px 32px rgba($ns-black, 0.048);
 
 $box-shadow-tile-border:    0 0 0 1px $ns-grey-90,
                             $box-shadow-tile;
