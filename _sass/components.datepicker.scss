@@ -179,7 +179,7 @@
     height: 45px;
     border-radius: 50%;
     border: 1px solid rgba($ns-grey-80, 0);
-    transition: $fade-all;
+    transition: $fade;
 
     &.is-active {
         background-color: $ns-light-blue;
@@ -214,7 +214,7 @@
         height: 4px;
         background-color: $ns-light-blue;
         border-radius: 50%;
-        transform: $fade-all;
+        transform: $fade;
     }
 }
 

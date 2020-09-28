@@ -62,7 +62,7 @@
 // icons
 // ----------------------------------------------
 .ff__icon {
-    transition: $fade-all;
+    transition: $fade;
     position: absolute;
     top: 13px;
     right: 14px;
@@ -277,7 +277,7 @@
 
     svg {
         fill: $ns-grey-60;
-        transition: $fade-all;
+        transition: $fade;
     }
 
     span:last-child {
@@ -320,7 +320,7 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.25 7.626'%3E%3Cpath fill='%23ffffff' d='M3.25,7.626a.747.747,0,0,1-.53-.22l-2.5-2.5A.75.75,0,1,1,1.28,3.845L3.208,5.773,7.931.262a.75.75,0,1,1,1.138.977L3.819,7.364a.75.75,0,0,1-.54.261Z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            transition: $fade-all;
+            transition: $fade;
             transform: scale(0);
             transform-origin: 30% 70%;
             opacity: 1;
@@ -397,7 +397,7 @@
 
 .radioButton__label:after {
     background-color: $ns-green-sexy;
-    transition: $fade-all;
+    transition: $fade;
     transform: scale(0);
 }
 
@@ -405,7 +405,7 @@
 .radioButton__input {
     &:checked+.radioButton__label:after {
         background-color: $ns-green-sexy;
-        transition: $fade-all;
+        transition: $fade;
         transform: scale(1);
     }
 

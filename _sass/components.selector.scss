@@ -3,7 +3,7 @@
     margin-bottom: space(2);
     padding: 20px;
     border-radius: 4px;
-    transition: $fade-all;
+    transition: $fade;
     cursor: pointer;
 
     &:before {
@@ -11,7 +11,7 @@
         @include full(absolute);
         border: 1px solid $ns-grey-80;
         border-radius: 4px;
-        transition: $fade-all;
+        transition: $fade;
     }
 
     &:last-child {
@@ -35,7 +35,7 @@
     margin: 0 0 4px;
     @include font(18px, bold, $lh-copy);
     color: $ns-light-blue;
-    transition: $fade-all;
+    transition: $fade;
 }
 
 .selector__description {

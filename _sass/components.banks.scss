@@ -24,7 +24,7 @@
     // styling
     border: 1px solid $ns-grey-90;
     cursor: pointer;
-    transition: $fade-all;
+    transition: $fade;
 
     @include respond-min($m) {
         margin: 0;

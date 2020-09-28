@@ -5,7 +5,7 @@
 $ease:						cubic-bezier(0.700, 0.270, 0.270, 1);
 $easeInOutExpo:				cubic-bezier(1.000, 0.000, 0.000, 1);
 $ease-out:			        cubic-bezier(0.200, 0.900, 0.400, 1);
-$fade-all: 					all 300ms $ease;
+$fade: 					    all 300ms $ease-out;
 $fade-link:                 all 200ms $ease;
 $loader-speed:              800ms;
 
