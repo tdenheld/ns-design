@@ -15,7 +15,9 @@ $xl: 1024px;
 $xxl: 1200px;
 $xxxl: 1480px;
 
-// breakpoints used by utilities
+
+// Breakpoints used by utilities. Each breakpoint generates a huge
+// amount of utility classes
 $breakpoints: (
     "m": $m,
     "l": $l,
