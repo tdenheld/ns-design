@@ -15,6 +15,12 @@ $xl: 1024px;
 $xxl: 1200px;
 $xxxl: 1480px;
 
+// breakpoints used by utilities
+$breakpoints: (
+    "m": $m,
+    "l": $l,
+    "xxl": $xxl
+);
 
 
 
