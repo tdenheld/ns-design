@@ -211,6 +211,14 @@
     text-align: right;
 }
 
+.tile-product__price--message{
+    top: 24px;
+
+    @include respond-min($m) {
+        top: 27px;
+    }
+}
+
 .tile-product__highlight {
     position: absolute;
     z-index: 1;

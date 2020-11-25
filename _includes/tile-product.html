@@ -7,9 +7,11 @@
     {% endif %}
 
     <div class="mb-2px">
-        <h3 class="tile-product__heading fw-b {% unless include.cta %}tile-product__heading--underline{% endunless %}">
+        <h3 class="tile-product__heading fw-b
+            {% unless include.cta or include.footer %}tile-product__heading--underline{% endunless %}">
+
             {{ include.title }}
-            {% unless include.cta %}
+            {% unless include.cta or include.footer %}
             <span class="hidden-until@ml">
                 {% include icons/chevron-m--small.svg %}
             </span>
@@ -17,7 +19,10 @@
         </h3>
 
         {% if include.price-message %}
-        <p class="f14 lh-title f-blue ml-1">{{ include.price-message }}</p>
+        <p class="tile-product__price tile-product__price--message f14 lh-title f-blue">
+            {{ include.price-message }}
+        </p>
+
         {% else %}
 
         <div class="tile-product__price">
@@ -44,6 +49,13 @@
     {% if include.cta %}
     <div class="mt-3 self-end">
         <button class="button {{ include.button }} w-100">{{ include.cta }}</button>
+    </div>
+    {% endif %}
+
+    {% if include.footer %}
+    <div class="pos-r txt-r pt-2 self-end">
+        <hr class="pb-1">
+        <a href="#" class="link-clean">Bekijk en bestel</a>
     </div>
     {% endif %}
 </div>

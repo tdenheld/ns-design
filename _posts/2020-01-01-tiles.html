@@ -148,10 +148,17 @@ bike:
             %}
 
             {% include tile-product.html
+                title="Traject Vrij"
+                price-message="Prijs trajectafhankelijk"
+                details=page.subscription.details
+            %}
+
+            {% include tile-product.html
                 title="Weekend Vrij"
                 price="20"
                 period="mnd"
                 details=page.subscription.details
+                footer=true
             %}
 
             <div class="pa-3 bg-white">
