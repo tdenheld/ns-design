@@ -17,10 +17,6 @@
 .hero-base--bottom {
     display: grid;
     align-items: end;
-
-    .hero-base__gradient {
-        background: linear-gradient(0deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0) 80%);
-    }
 }
 
 .hero-base--outside {
@@ -32,11 +28,15 @@
 // elements
 .hero-base__gradient {
     @include full(absolute);
-    background: linear-gradient(80deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0.5) 100%);
+    background: linear-gradient(80deg, $ns-black 20%, rgba($ns-black, 0.5));
     opacity: 0.35;
 
     @include respond-min($m) {
-        background: linear-gradient(164deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0) 90%);
+        background: linear-gradient(164deg, $ns-black 20%, transparent 90%);
+    }
+
+    .hero-base--bottom & {
+        background: linear-gradient(0deg, $ns-black 20%, transparent 80%);
     }
 }
 

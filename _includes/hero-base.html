@@ -4,7 +4,10 @@
         {% unless include.content=="inside" %}hero-base--outside{% endunless %}">
         
         <img class="hero-base__img" src="/assets/img/{{ include.img }}.jpg" />
+
+        {% unless include.no-gradient %}
         <div class="hero-base__gradient"></div>
+        {% endunless %}
 
         {% if include.flow %}
         <figure class="hero-base__flow o-60">{% include flows/flow-gradient-white.svg %}</figure>
